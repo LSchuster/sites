@@ -59,9 +59,12 @@ Derived from the codebase, not aspiration:
    repo collapse into one free account. (Constraint to respect: only **first-level**
    subdomains get free SSL — `conflicts.<umbrella>.io` yes, `a.b.<umbrella>.io` no.)
 
-Free-plan limits that matter (verified 2026-08): 500 builds/month, 20,000 files/deploy,
-25 MiB/file, 5 custom domains/project. The repo uses ~231 files and a handful of builds per
-week — an order of magnitude of headroom everywhere.
+Free-plan limits that matter (verified 2026-08 against the live pricing page): 500
+builds/month (1 concurrent), 20,000 files/deploy, 25 MiB/file, 100 custom domains/project,
+unlimited sites/requests/bandwidth. SSL certificates are included free (Universal SSL,
+auto-renewing, covers first-level subdomains) — never buy a certificate from a registrar
+upsell. The repo uses ~231 files and a handful of builds per week — an order of magnitude
+of headroom everywhere.
 
 ### Topology
 
