@@ -141,9 +141,9 @@ function drawFoldMarks(page: PDFPage): void {
 
 /** Logo bounding boxes in mm, keyed by the profile's logoSize (default M). */
 const LOGO_BOXES = {
-  S: { w: 40, h: 14 },
-  M: { w: 60, h: 22 },
-  L: { w: 85, h: 30 },
+  S: { w: 60, h: 22 },
+  M: { w: 85, h: 30 },
+  L: { w: 110, h: 38 },
 } as const;
 
 function drawLogo(ctx: Ctx): void {
