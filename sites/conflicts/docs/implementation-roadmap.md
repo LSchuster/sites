@@ -8,7 +8,7 @@ Path: **Current state → Public beta (P0+P1) → Public release (P2) → Moneti
 Growth (G)**.
 
 **2026-08-07, restructure done:** the repo became a multi-site monorepo; this site now
-lives in `sites/conflicts/` and will deploy to `conflicts.<umbrella>.io` under one shared
+lives in `sites/conflicts/` and will deploy to `conflicts.teespoon.io` under one shared
 umbrella domain (`publication-plan.md` § The domain). Paths in the tasks below are
 relative to `sites/conflicts/` unless they start with `sites/` or `.github/`. Run all npm
 commands inside `sites/conflicts/`.
@@ -38,13 +38,13 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
   to the GitHub noreply address. `data/raw/` confirmed absent from the pushed tree,
   `public/data/` present.
 
-### ☐ P0-2 · Register the umbrella domain (+ optional conflicts.io rescue ⏰) [HUMAN]
-- **Goal:** One `.io` domain that all sites in the repo share as subdomains; this site at
-  `conflicts.<umbrella>.io`.
+### ☑ P0-2 · Register the umbrella domain — DONE 2026-08-08 (conflicts.io rescue still open ⏰)
+- **Outcome:** umbrella domain **teespoon.io** registered 2026-08-08 via Cloudflare
+  Registrar ($50/yr, expires 2027-08-08, **auto-renew ON**). This site deploys to
+  `conflicts.teespoon.io`.
 - **Changes:** [HUMAN]
-  1. Pick the umbrella name, check availability, register at Cloudflare Registrar
-     (~$50–60/yr, at cost), **enable auto-renew** — this name lapsing would take every
-     site down at once.
+  1. ~~Pick the umbrella name, check availability, register at Cloudflare Registrar~~
+     ✓ done — see outcome above.
   2. Optional vanity rescue of `conflicts.io`: RDAP 2026-08-07 — registrar Cloudflare,
      expired 2026-06-22, in `redemption period`, drops ≈ early September 2026. If the
      lapsed registration is in our own Cloudflare account, restore costs renewal +
@@ -80,7 +80,7 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
      `CLOUDFLARE_PROJECT_CONFLICTS`, default `conflicts-atlas`).
   4. Actions tab → "conflicts" → Run workflow. The deploy job creates the Pages project
      and publishes to `https://<project>.pages.dev`.
-  5. When P0-2 resolves: Pages project → Custom domains → `conflicts.<umbrella>.io`;
+  5. When P0-2 resolves: Pages project → Custom domains → `conflicts.teespoon.io`;
      Always-Use-HTTPS now, HSTS a few days later. Enable Cloudflare Web Analytics
      readiness (token used in P1-6).
 - **Depends:** P0-1, P0-3 (both done). Custom-domain step depends on P0-2.
@@ -121,7 +121,7 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
   paragraph.
 - **Changes:**
   1. `index.html`: add `og:title`, `og:description`, `og:type=website`,
-     `og:url=https://conflicts.<umbrella>.io/` (final hostname from P0-2), `og:image` +
+     `og:url=https://conflicts.teespoon.io/` (final hostname from P0-2), `og:image` +
      `twitter:card=summary_large_image` pointing at `/og.png`; `theme-color` (`#0b0e13` —
      confirm against the app background in `src/styles.css`); `<link rel="canonical">`;
      favicon links; `<noscript>` with the one-paragraph site description (reuse the meta
@@ -141,7 +141,7 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 - **Goal:** Crawlability signals; nothing to hide.
 - **Changes:** `public/robots.txt` (`User-agent: *` / `Allow: /` / `Sitemap:` line);
   `public/sitemap.xml` with the single root URL (add legal pages from P1-4 when they exist).
-  Use the final hostname from P0-2 (`conflicts.<umbrella>.io`); placeholder until then.
+  Use the final hostname from P0-2 (`conflicts.teespoon.io`); placeholder until then.
 - **Depends:** P1-4 ideally done first (to include its URLs) — or update after.
 - **Accept:** both files served with 200 on the deployed URL; sitemap parses (any validator).
 
@@ -244,7 +244,7 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 ### ☐ P1-10 · Align product name with the chosen hostname — Priority: medium
 - **Goal:** The app stops claiming a domain it may not live on. It is currently titled
   "conflicts.io" (`index.html:6`, About panel lede, README heading) but will serve from
-  `conflicts.<umbrella>.io`.
+  `conflicts.teespoon.io`.
 - **Changes:** per the P0-2 decision — **if umbrella-only** (conflicts.io not rescued):
   rename user-facing strings to a hostname-neutral name (e.g. "Conflicts — An Atlas of
   Human Conflict") in `index.html` title/meta/OG, `src/i18n/locales/en.ts` + `de.ts`

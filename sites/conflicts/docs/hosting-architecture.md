@@ -8,7 +8,7 @@ safe. Launch steps and sequencing live in `publication-plan.md`; the task breakd
 can execute lives in `implementation-roadmap.md`.
 
 **Monorepo context (added 2026-08-07):** the repo is a multi-site monorepo — each site
-self-contained under `sites/<name>/`, each deployed to `<name>.<umbrella>.io`, one shared
+self-contained under `sites/<name>/`, each deployed to `<name>.teespoon.io`, one shared
 umbrella domain for everything (rationale in `publication-plan.md` § The domain). This doc
 is written from `sites/conflicts/` but the account/zone/CI model it describes **is the
 umbrella model for every site in the repo**. Paths are relative to `sites/conflicts/`
@@ -57,7 +57,7 @@ Derived from the codebase, not aspiration:
    subdomains, free Universal SSL for all first-level subdomains, and up to 100 Pages
    projects per account — registrar + DNS + hosting + analytics for *every* site in the
    repo collapse into one free account. (Constraint to respect: only **first-level**
-   subdomains get free SSL — `conflicts.<umbrella>.io` yes, `a.b.<umbrella>.io` no.)
+   subdomains get free SSL — `conflicts.teespoon.io` yes, `a.b.teespoon.io` no.)
 
 Free-plan limits that matter (verified 2026-08 against the live pricing page): 500
 builds/month (1 concurrent), 20,000 files/deploy, 25 MiB/file, 100 custom domains/project,
@@ -80,10 +80,10 @@ GitHub monorepo (source of truth, incl. each site's committed data)
    Cloudflare Pages — one project PER SITE, no Git integration, no Pages builds
             main push → production deployment · PR branch → preview URL
               │
-   <umbrella>.io zone (Cloudflare Registrar + DNS, one registration for all sites)
-     ├─ conflicts.<umbrella>.io  → Pages project "conflicts-atlas" (Universal SSL, HSTS)
-     ├─ <next>.<umbrella>.io     → Pages project "<next-site>"
-     └─ apex <umbrella>.io       → optional tiny index page listing the sites (later)
+   teespoon.io zone (Cloudflare Registrar + DNS, one registration for all sites)
+     ├─ conflicts.teespoon.io  → Pages project "conflicts-atlas" (Universal SSL, HSTS)
+     ├─ <next>.teespoon.io     → Pages project "<next-site>"
+     └─ apex teespoon.io       → optional tiny index page listing the sites (later)
               │
    Cloudflare Web Analytics (beacon per site, cookie-less)
 ```
@@ -116,7 +116,7 @@ appears at `https://<project>.pages.dev`. Node version is pinned in the workflow
 in `engines` in package.json — no dashboard build settings exist at all.
 
 After roadmap P0-2 (umbrella domain): Pages project → Custom domains → add
-`conflicts.<umbrella>.io` (the DNS record is created automatically in the shared zone),
+`conflicts.teespoon.io` (the DNS record is created automatically in the shared zone),
 then enable Always-Use-HTTPS, HSTS a few days later. Every future site repeats only this
 paragraph plus a sibling workflow file — the two secrets are shared account-wide.
 

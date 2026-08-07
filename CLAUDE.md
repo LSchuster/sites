@@ -2,7 +2,7 @@
 
 This repo holds multiple independent static websites, one per folder under `sites/`. Each
 site is fully self-contained (own `package.json`, lockfile, docs, `CLAUDE.md`) and deploys
-to its own subdomain of one shared umbrella domain. Root `README.md` carries the site
+to its own subdomain of the shared umbrella domain `teespoon.io`. Root `README.md` carries the site
 table, the structure rules, and the add-a-site checklist.
 
 **Working on a site? `cd` into its folder and follow its own `CLAUDE.md` — that file is

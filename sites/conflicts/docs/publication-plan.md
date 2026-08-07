@@ -32,7 +32,7 @@ a maintained perf harness (`tools/perf.mjs`, `tools/shot.mjs`). What is missing 
 |---|---|
 | Git remote / off-site copy | ☑ Done 2026-08-07 — public repo github.com/LSchuster/sites, branch `main` |
 | CI, deploy config | None (`.github/workflows/`, `_headers`, `netlify.toml` etc. all absent) |
-| Domain | Strategy: subdomain of a shared umbrella `.io` domain, not yet registered. The name conflicts.io itself: **registered June 2025 via Cloudflare, expired 2026-06-22, now in redemption** (RDAP, 2026-08-07) — rescuing it is optional, see below |
+| Domain | **Umbrella registered: teespoon.io** (2026-08-08, Cloudflare Registrar, auto-renew on) — this site deploys to `conflicts.teespoon.io`. The name conflicts.io itself: **registered June 2025 via Cloudflare, expired 2026-06-22, now in redemption** (RDAP, 2026-08-07) — rescuing it is optional, see below |
 | Favicon | None — every visit 404s on `/favicon.ico` |
 | Social/SEO tags | None (no OG, no Twitter card, no canonical, no robots.txt, no sitemap) |
 | Impressum / privacy page | None (grep: no match in `src/`) |
@@ -47,11 +47,13 @@ DNS decision, ~10 small tasks, and two legal pages.
 
 ## The domain — umbrella strategy, one human decision
 
-**Decision (owner, 2026-08-07): many small sites will share ONE umbrella `.io` domain,
+**Decision (owner, 2026-08-07): many small sites share ONE umbrella `.io` domain —
+registered as `teespoon.io` on 2026-08-08.** Original rationale:
+many small sites will share one umbrella domain,
 each site on its own first-level subdomain.** This site will live at
-`conflicts.<umbrella>.io`. Why it works: subdomains are free and unlimited in a DNS zone
+`conflicts.teespoon.io`. Why it works: subdomains are free and unlimited in a DNS zone
 you own; Cloudflare's free Universal SSL automatically covers first-level subdomains
-(never nest deeper — `a.b.<umbrella>.io` needs a paid certificate); each site is its own
+(never nest deeper — `a.b.teespoon.io` needs a paid certificate); each site is its own
 Cloudflare Pages project bound to its subdomain. Total domain cost for *all* sites:
 one .io registration, ~$50–60/yr.
 

@@ -1,14 +1,15 @@
 # sites monorepo
 
 A collection of small, fully static websites, each self-contained in its own folder under
-`sites/` and deployed to its own subdomain of one shared `.io` umbrella domain (one domain
-registration covers every site — subdomains are free).
+`sites/` and deployed to its own subdomain of the shared umbrella domain **teespoon.io**
+(registered 2026-08-08 via Cloudflare Registrar; one registration covers every site —
+subdomains are free).
 
 | Site | Folder | Hostname (planned) | Status |
 |---|---|---|---|
-| conflicts.io — an atlas of human conflict | `sites/conflicts/` | `conflicts.<umbrella>.io` | pre-launch |
-| invoice — German invoice generator with e-invoice (ZUGFeRD) output | `sites/invoice/` | `invoice.<umbrella>.io` | in development |
-| dataplant — turn data into a procedurally generated 3D planet | `sites/dataplant/` | `dataplant.<umbrella>.io` | in development |
+| conflicts.io — an atlas of human conflict | `sites/conflicts/` | `conflicts.teespoon.io` | pre-launch |
+| invoice — German invoice generator with e-invoice (ZUGFeRD) output | `sites/invoice/` | `invoice.teespoon.io` | in development |
+| dataplant — turn data into a procedurally generated 3D planet | `sites/dataplant/` | `dataplant.teespoon.io` | in development |
 
 ## Structure rules
 
@@ -21,8 +22,8 @@ registration covers every site — subdomains are free).
 - **Hosting model** (details in `sites/conflicts/docs/hosting-architecture.md`, which
   doubles as the umbrella-level hosting doc until a second site exists): one Cloudflare
   account, one DNS zone for the umbrella domain, one Cloudflare Pages project per site,
-  each bound to `<site>.<umbrella>.io`. Cloudflare's free Universal SSL covers first-level
-  subdomains automatically — never nest deeper (`a.b.<umbrella>.io` would need a paid cert).
+  each bound to `<site>.teespoon.io`. Cloudflare's free Universal SSL covers first-level
+  subdomains automatically — never nest deeper (`a.b.teespoon.io` would need a paid cert).
 
 ## Adding a new site
 
@@ -33,7 +34,7 @@ registration covers every site — subdomains are free).
 3. Create a Cloudflare Pages project: root directory `sites/<name>`, build command
    `npm run build`, output `dist`, and a build-watch path of `sites/<name>/*` so pushes to
    other sites don't trigger rebuilds.
-4. Add the custom domain `<name>.<umbrella>.io` to the project (DNS record is created
+4. Add the custom domain `<name>.teespoon.io` to the project (DNS record is created
    automatically in the shared zone).
 5. Extend the CI workflow with a job for the new folder (path-filtered).
 
