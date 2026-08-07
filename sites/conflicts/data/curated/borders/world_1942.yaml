@@ -1,0 +1,54 @@
+# End of 1942 — peak Axis extent. Europe as 1941 (Case Anton has made the whole of
+# France German-held, which the geometry already showed); Japan has swept the Pacific:
+# Philippines, Malaya, Hong Kong, Dutch East Indies. Burma is inside the 1938 India
+# feature and cannot be split out. Occupied eastern China likewise cannot be split
+# from the China feature.
+base: 1938
+merge:
+  Germany: [Czechoslovakia, Luxembourg, Poland]
+occupy:
+  - feature: Denmark
+    subjectTo: Germany
+  - feature: Norway
+    subjectTo: Germany
+  - feature: Netherlands
+    subjectTo: Germany
+  - feature: Belgium
+    subjectTo: Germany
+  - feature: France
+    subjectTo: Germany
+  - feature: Yugoslavia
+    subjectTo: Germany
+  - feature: Greece
+    subjectTo: Germany
+  - feature: Estonia
+    subjectTo: Germany
+  - feature: Latvia
+    subjectTo: Germany
+  - feature: Lithuania
+    subjectTo: Germany
+  - feature: Albania
+    subjectTo: Italy
+  - feature: French Indo-China
+    subjectTo: Empire of Japan
+    name: French Indo-China (Japan)
+  - feature: Philippines
+    subjectTo: Empire of Japan
+    name: Philippines (Japan)
+  - feature: Malaysia
+    subjectTo: Empire of Japan
+    name: Malaya (Japan)
+  - feature: Hong Kong
+    subjectTo: Empire of Japan
+    name: Hong Kong (Japan)
+  - feature: Dutch East Indies
+    subjectTo: Empire of Japan
+    name: Dutch East Indies (Japan)
+  - feature: Eritrea (Italy)
+    subjectTo: United Kingdom
+    name: Eritrea (United Kingdom)
+  - feature: Italian Somaliland
+    subjectTo: United Kingdom
+    name: Somaliland (United Kingdom)
+release:
+  - Ethiopia (Italy)

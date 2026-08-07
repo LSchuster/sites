@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.vite/
+tsconfig.tsbuildinfo
+
+# Raw source downloads — large, re-fetchable, never committed.
+# The *processed* output in public/data/ IS committed.
+data/raw/

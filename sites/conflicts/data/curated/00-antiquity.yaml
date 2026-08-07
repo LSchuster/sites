@@ -1,0 +1,354 @@
+# Antiquity — year 0 to 500 CE
+#
+# A warning that applies to this whole file: ancient casualty figures come to us
+# almost entirely from literary sources with every reason to exaggerate. Josephus,
+# Cassius Dio and the Chinese dynastic censuses are the backbone of the numbers
+# below, and none of them is a body count in the modern sense. Ranges here are
+# deliberately wide and most entries are marked `disputed`. The site renders that
+# uncertainty rather than hiding it.
+#
+# Chinese census drops are the sharpest case. A registered-population fall of
+# 40 million does not mean 40 million funerals — it also means tax registers
+# collapsing, families fleeing registration, and territory leaving central control.
+# Where a figure rests on a census drop, the summary says so.
+
+- id: boudica-revolt
+  name: Boudica's Revolt
+  startYear: 60
+  endYear: 61
+  centroid: [-0.9, 52.2]
+  extent: 3
+  type: rebellion
+  region: Britain
+  summary: >
+    A revolt of the Iceni and allied tribes against Roman rule in Britain that
+    sacked Camulodunum, Londinium and Verulamium before being crushed at the
+    Battle of Watling Street. Tacitus reports 70,000–80,000 Romans and allies
+    killed in the sacked cities and some 80,000 Britons at the final battle —
+    figures far larger than the plausible populations involved.
+  total: { low: 70000, best: 150000, high: 230000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      members: [Roman Britain]
+      military: { low: 1000, best: 2000, high: 5000, confidence: disputed }
+      civilian: { low: 30000, best: 70000, high: 80000, confidence: disputed }
+    - name: Iceni and allied tribes
+      members: [Iceni, Trinovantes]
+      military: { low: 30000, best: 70000, high: 80000, confidence: disputed }
+  sources:
+    - title: Tacitus, Annals XIV
+    - title: Wikipedia — Boudican revolt
+      url: https://en.wikipedia.org/wiki/Boudican_revolt
+
+- id: first-jewish-roman-war
+  name: First Jewish–Roman War
+  startYear: 66
+  endYear: 73
+  centroid: [35.2, 31.8]
+  extent: 3
+  type: rebellion
+  region: Levant
+  summary: >
+    The Judean revolt against Rome, ending with the destruction of the Second
+    Temple in 70 CE and the fall of Masada. Josephus — an eyewitness who defected
+    to the Romans — claims 1.1 million died in the siege of Jerusalem alone.
+    Modern historians regard that as an order of magnitude too high for the city's
+    capacity, but the war was undeniably catastrophic for Judean society.
+  total: { low: 100000, best: 350000, high: 1300000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      military: { low: 10000, best: 20000, high: 30000, confidence: disputed }
+    - name: Judean rebels
+      members: [Zealots, Sicarii, Idumeans]
+      military: { low: 50000, best: 100000, high: 200000, confidence: disputed }
+      civilian: { low: 50000, best: 230000, high: 1100000, confidence: disputed }
+  sources:
+    - title: Josephus, The Jewish War
+    - title: Wikipedia — First Jewish–Roman War
+      url: https://en.wikipedia.org/wiki/First_Jewish%E2%80%93Roman_War
+
+- id: dacian-wars
+  name: Trajan's Dacian Wars
+  startYear: 101
+  endYear: 106
+  centroid: [23.6, 45.8]
+  extent: 4
+  type: invasion
+  region: Europe
+  summary: >
+    Two campaigns by which Trajan annexed Dacia, commemorated on Trajan's Column.
+    The conquest ended with the suicide of King Decebalus and large-scale
+    enslavement and resettlement; the Dacian gold funded a triumph said to have
+    lasted 123 days.
+  total: { low: 100000, best: 300000, high: 500000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      military: { low: 25000, best: 50000, high: 80000, confidence: disputed }
+    - name: Dacian Kingdom
+      members: [Dacians, Roxolani, Bastarnae]
+      military: { low: 50000, best: 150000, high: 250000, confidence: disputed }
+      civilian: { low: 25000, best: 100000, high: 200000, confidence: disputed }
+  sources:
+    - title: Cassius Dio, Roman History LXVIII
+    - title: Wikipedia — Trajan's Dacian Wars
+      url: https://en.wikipedia.org/wiki/Trajan%27s_Dacian_Wars
+
+- id: kitos-war
+  name: Kitos War
+  startYear: 115
+  endYear: 117
+  centroid: [25.0, 32.0]
+  extent: 12
+  type: rebellion
+  region: Mediterranean
+  summary: >
+    Diaspora Jewish revolts across Cyrenaica, Cyprus, Egypt and Mesopotamia while
+    Trajan campaigned in Parthia. Cassius Dio's figures — 220,000 killed in
+    Cyrenaica, 240,000 in Cyprus — would have meant near-total depopulation and are
+    generally treated as literary rather than statistical.
+  total: { low: 50000, best: 200000, high: 500000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      military: { low: 5000, best: 15000, high: 40000, confidence: disputed }
+      civilian: { low: 20000, best: 100000, high: 460000, confidence: disputed }
+    - name: Jewish diaspora rebels
+      military: { low: 20000, best: 60000, high: 150000, confidence: disputed }
+  sources:
+    - title: Cassius Dio, Roman History LXVIII
+    - title: Wikipedia — Kitos War
+      url: https://en.wikipedia.org/wiki/Kitos_War
+
+- id: bar-kokhba-revolt
+  name: Bar Kokhba Revolt
+  startYear: 132
+  endYear: 136
+  centroid: [35.2, 31.6]
+  extent: 2
+  type: rebellion
+  region: Levant
+  summary: >
+    The final Jewish revolt against Rome. Cassius Dio reports 580,000 Jewish dead
+    and 985 villages destroyed, alongside Roman losses heavy enough that Hadrian
+    reportedly omitted the customary "I and the army are well" from his report to
+    the Senate. The defeat ended Jewish political presence in Judea for centuries.
+  total: { low: 200000, best: 600000, high: 850000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      military: { low: 20000, best: 50000, high: 100000, confidence: disputed }
+    - name: Judean rebels
+      members: [Bar Kokhba's forces]
+      military: { low: 100000, best: 200000, high: 300000, confidence: disputed }
+      civilian: { low: 80000, best: 350000, high: 500000, confidence: disputed }
+  sources:
+    - title: Cassius Dio, Roman History LXIX
+    - title: Wikipedia — Bar Kokhba revolt
+      url: https://en.wikipedia.org/wiki/Bar_Kokhba_revolt
+
+- id: marcomannic-wars
+  name: Marcomannic Wars
+  startYear: 166
+  endYear: 180
+  centroid: [16.5, 48.2]
+  extent: 6
+  type: interstate
+  region: Europe
+  summary: >
+    Germanic and Sarmatian incursions across the Danube that Marcus Aurelius spent
+    the last fourteen years of his life fighting. The war ran concurrently with the
+    Antonine Plague, and the two causes of death are impossible to separate in the
+    sources — the plague alone may have killed 5–10 million across the empire.
+  total: { low: 200000, best: 600000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Roman Empire
+      military: { low: 60000, best: 150000, high: 250000, confidence: disputed }
+      civilian: { low: 50000, best: 200000, high: 400000, confidence: disputed }
+    - name: Germanic and Sarmatian coalition
+      members: [Marcomanni, Quadi, Iazyges, Vandals]
+      military: { low: 80000, best: 200000, high: 350000, confidence: disputed }
+  sources:
+    - title: Cassius Dio, Roman History LXXI–LXXII
+    - title: Wikipedia — Marcomannic Wars
+      url: https://en.wikipedia.org/wiki/Marcomannic_Wars
+
+- id: yellow-turban-rebellion
+  name: Yellow Turban Rebellion
+  startYear: 184
+  endYear: 205
+  centroid: [114.5, 35.5]
+  extent: 8
+  type: rebellion
+  region: East Asia
+  summary: >
+    A millenarian Daoist peasant uprising against the Han dynasty that the court
+    could suppress only by empowering regional warlords — the step that destroyed
+    Han central authority and opened the Three Kingdoms period. The rebellion and
+    its suppression together devastated the North China Plain.
+  total: { low: 3000000, best: 5000000, high: 7000000, confidence: disputed }
+  sides:
+    - name: Han dynasty
+      military: { low: 200000, best: 500000, high: 900000, confidence: disputed }
+    - name: Yellow Turban rebels
+      military: { low: 500000, best: 1500000, high: 2500000, confidence: disputed }
+      civilian: { low: 2000000, best: 3000000, high: 4000000, confidence: disputed }
+  sources:
+    - title: Records of the Three Kingdoms (Chen Shou)
+    - title: Wikipedia — Yellow Turban Rebellion
+      url: https://en.wikipedia.org/wiki/Yellow_Turban_Rebellion
+
+- id: three-kingdoms-war
+  name: Wars of the Three Kingdoms (China)
+  startYear: 220
+  endYear: 280
+  centroid: [112.0, 32.0]
+  extent: 12
+  type: civil
+  region: East Asia
+  summary: >
+    Six decades of war between Wei, Shu and Wu following the collapse of the Han.
+    The registered population of China fell from roughly 56 million in 156 CE to
+    about 16 million by 280 CE. That 40-million gap is often quoted as a death
+    toll, but much of it reflects the disintegration of the tax registers
+    themselves — households fleeing registration, and territory passing out of
+    central control. The true toll is enormous and genuinely unknown.
+  total: { low: 10000000, best: 20000000, high: 40000000, confidence: disputed }
+  sides:
+    - name: Cao Wei
+      military: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+    - name: Shu Han
+      military: { low: 300000, best: 800000, high: 1500000, confidence: disputed }
+    - name: Eastern Wu
+      military: { low: 300000, best: 900000, high: 1800000, confidence: disputed }
+  sources:
+    - title: Records of the Three Kingdoms (Chen Shou)
+    - title: Wikipedia — Three Kingdoms
+      url: https://en.wikipedia.org/wiki/Three_Kingdoms
+
+- id: crisis-third-century
+  name: Crisis of the Third Century
+  startYear: 235
+  endYear: 284
+  centroid: [14.0, 42.0]
+  extent: 18
+  type: civil
+  region: Mediterranean
+  summary: >
+    Fifty years in which the Roman Empire nearly disintegrated: some twenty-six
+    claimants to the throne, the secession of the Gallic and Palmyrene empires,
+    Sasanian invasion from the east — a Roman emperor, Valerian, was captured
+    alive — Germanic incursions from the north, currency collapse and the Plague
+    of Cyprian.
+  total: { low: 1000000, best: 2500000, high: 5000000, confidence: disputed }
+  sides:
+    - name: Roman Empire and rival claimants
+      military: { low: 300000, best: 800000, high: 1500000, confidence: disputed }
+      civilian: { low: 500000, best: 1200000, high: 2500000, confidence: disputed }
+    - name: External invaders
+      members: [Sasanian Empire, Goths, Alemanni, Franks]
+      military: { low: 200000, best: 500000, high: 1000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Crisis of the Third Century
+      url: https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century
+
+- id: sixteen-kingdoms
+  name: Wars of the Sixteen Kingdoms
+  startYear: 304
+  endYear: 439
+  centroid: [110.0, 36.0]
+  extent: 10
+  type: civil
+  region: East Asia
+  summary: >
+    The fragmentation of northern China into short-lived states founded largely by
+    non-Han peoples after the Western Jin collapsed. The period included the
+    Disaster of Yongjia (311), the sack of Luoyang, and mass migration of the
+    northern Chinese elite south of the Yangtze.
+  total: { low: 3000000, best: 8000000, high: 15000000, confidence: disputed }
+  sides:
+    - name: Jin dynasty and Han Chinese states
+      military: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+      civilian: { low: 1500000, best: 4000000, high: 8000000, confidence: disputed }
+    - name: Northern steppe and frontier states
+      members: [Xiongnu, Xianbei, Jie, Di, Qiang]
+      military: { low: 500000, best: 2000000, high: 4000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Sixteen Kingdoms
+      url: https://en.wikipedia.org/wiki/Sixteen_Kingdoms
+
+- id: gothic-war-376
+  name: Gothic War and the Battle of Adrianople
+  startYear: 376
+  endYear: 382
+  centroid: [26.6, 41.8]
+  extent: 5
+  type: interstate
+  region: Balkans
+  summary: >
+    Gothic groups fleeing the Huns were admitted across the Danube, then driven to
+    revolt by Roman mistreatment. At Adrianople in 378 the eastern field army was
+    destroyed and the emperor Valens killed — Ammianus called it the worst Roman
+    defeat since Cannae. Rome's inability to expel the Goths afterwards marked a
+    permanent shift in the empire's relationship with the peoples beyond its frontier.
+  total: { low: 40000, best: 90000, high: 200000, confidence: disputed }
+  sides:
+    - name: Eastern Roman Empire
+      military: { low: 15000, best: 25000, high: 40000, confidence: estimated }
+    - name: Gothic confederation
+      members: [Thervingi, Greuthungi, Alans]
+      military: { low: 10000, best: 25000, high: 50000, confidence: disputed }
+      civilian: { low: 10000, best: 40000, high: 110000, confidence: disputed }
+  sources:
+    - title: Ammianus Marcellinus, Res Gestae XXXI
+    - title: Wikipedia — Battle of Adrianople
+      url: https://en.wikipedia.org/wiki/Battle_of_Adrianople
+
+- id: hunnic-invasions
+  name: Hunnic Invasions of Europe
+  startYear: 434
+  endYear: 453
+  centroid: [20.0, 47.0]
+  extent: 14
+  type: invasion
+  region: Europe
+  summary: >
+    Attila's campaigns across the Balkans, Gaul and Italy, checked at the Catalaunian
+    Plains in 451 and ended by his death in 453. The Hunnic empire dissolved within
+    a generation, but the displacement it caused pushed Gothic, Vandal and Alan
+    peoples into Roman territory permanently.
+  total: { low: 100000, best: 300000, high: 700000, confidence: disputed }
+  sides:
+    - name: Hunnic Empire
+      military: { low: 30000, best: 80000, high: 150000, confidence: disputed }
+    - name: Roman Empire and allies
+      members: [Western Roman Empire, Eastern Roman Empire, Visigoths, Alans]
+      military: { low: 40000, best: 100000, high: 200000, confidence: disputed }
+      civilian: { low: 30000, best: 120000, high: 350000, confidence: disputed }
+  sources:
+    - title: Jordanes, Getica
+    - title: Wikipedia — Attila
+      url: https://en.wikipedia.org/wiki/Attila
+
+- id: fall-western-rome
+  name: Fall of the Western Roman Empire
+  startYear: 406
+  endYear: 476
+  centroid: [10.0, 43.0]
+  extent: 16
+  type: interstate
+  region: Western Europe
+  summary: >
+    The seventy years from the Rhine crossing of 406 to the deposition of Romulus
+    Augustulus: Visigothic and Vandal settlement inside the empire, the sacks of
+    Rome in 410 and 455, the loss of Africa's grain, and the empire's replacement in
+    the west by successor kingdoms. Deaths from war are inseparable here from famine
+    and the collapse of urban food supply.
+  total: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+  sides:
+    - name: Western Roman Empire
+      military: { low: 100000, best: 300000, high: 600000, confidence: disputed }
+      civilian: { low: 300000, best: 900000, high: 1800000, confidence: disputed }
+    - name: Migrating peoples
+      members: [Visigoths, Vandals, Suebi, Alans, Ostrogoths]
+      military: { low: 100000, best: 300000, high: 600000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Fall of the Western Roman Empire
+      url: https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire

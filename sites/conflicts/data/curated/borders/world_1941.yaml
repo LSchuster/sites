@@ -1,0 +1,43 @@
+# End of 1941. The Balkans have fallen, Barbarossa has run to the gates of Moscow —
+# but the front line through the Soviet interior cannot be drawn from 1938 geometry,
+# so the Reich extends only to the 1938 Soviet border and the Baltic states
+# (Reichskommissariat Ostland). All pre-war Poland is German-held and directly
+# administered, so it is drawn as part of the Reich. In East Africa the British have
+# taken Italy's empire and restored Ethiopia.
+base: 1938
+merge:
+  Germany: [Czechoslovakia, Luxembourg, Poland]
+occupy:
+  - feature: Denmark
+    subjectTo: Germany
+  - feature: Norway
+    subjectTo: Germany
+  - feature: Netherlands
+    subjectTo: Germany
+  - feature: Belgium
+    subjectTo: Germany
+  - feature: France
+    subjectTo: Germany
+  - feature: Yugoslavia
+    subjectTo: Germany
+  - feature: Greece
+    subjectTo: Germany
+  - feature: Estonia
+    subjectTo: Germany
+  - feature: Latvia
+    subjectTo: Germany
+  - feature: Lithuania
+    subjectTo: Germany
+  - feature: Albania
+    subjectTo: Italy
+  - feature: French Indo-China
+    subjectTo: Empire of Japan
+    name: French Indo-China (Japan)
+  - feature: Eritrea (Italy)
+    subjectTo: United Kingdom
+    name: Eritrea (United Kingdom)
+  - feature: Italian Somaliland
+    subjectTo: United Kingdom
+    name: Somaliland (United Kingdom)
+release:
+  - Ethiopia (Italy)

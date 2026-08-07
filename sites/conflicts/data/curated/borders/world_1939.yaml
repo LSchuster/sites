@@ -1,0 +1,12 @@
+# End of 1939. Bohemia-Moravia annexed (drawn as part of the Reich — Slovakia was a
+# puppet but cannot be split out of the Czechoslovakia feature), Poland conquered
+# (the German–Soviet partition line does not exist in the 1938 geometry, so the whole
+# feature is marked German-held), Albania annexed by Italy in April.
+base: 1938
+merge:
+  Germany: [Czechoslovakia]
+occupy:
+  - feature: Poland
+    subjectTo: Germany
+  - feature: Albania
+    subjectTo: Italy

@@ -1,0 +1,1217 @@
+# Deutsche Übersetzungen der Konfliktdaten.
+#
+# Schlüssel ist die Konflikt-ID aus data/curated/*.yaml. Jedes Feld ist optional —
+# was fehlt, fällt zur Laufzeit auf das englische Original zurück. Die Reihenfolge
+# von `sides` muss der Reihenfolge im Originaldatensatz entsprechen.
+#
+# Historische Eigennamen folgen dem im Deutschen üblichen Gebrauch
+# (z. B. „Dreißigjähriger Krieg“, nicht einer wörtlichen Übersetzung).
+
+boudica-revolt:
+  name: Boudicca-Aufstand
+  region: Britannien
+  sides: [Römisches Reich, Icener und verbündete Stämme]
+  summary: >
+    Ein Aufstand der Icener und verbündeter Stämme gegen die römische Herrschaft in
+    Britannien, der Camulodunum, Londinium und Verulamium plünderte, bevor er in der
+    Schlacht an der Watling Street niedergeschlagen wurde. Tacitus nennt 70.000 bis
+    80.000 getötete Römer und Verbündete sowie etwa 80.000 Britannier in der
+    Entscheidungsschlacht — Zahlen, die weit über den plausiblen Bevölkerungsgrößen liegen.
+
+first-jewish-roman-war:
+  name: Erster Jüdisch-Römischer Krieg
+  region: Levante
+  sides: [Römisches Reich, Judäische Aufständische]
+  summary: >
+    Der judäische Aufstand gegen Rom, der mit der Zerstörung des Zweiten Tempels im
+    Jahr 70 n. Chr. und dem Fall von Masada endete. Josephus — ein Augenzeuge, der zu
+    den Römern überlief — nennt allein für die Belagerung Jerusalems 1,1 Millionen
+    Tote. Die moderne Forschung hält das für eine Größenordnung zu hoch, doch für die
+    judäische Gesellschaft war der Krieg zweifellos katastrophal.
+
+dacian-wars:
+  name: Trajans Dakerkriege
+  region: Europa
+  sides: [Römisches Reich, Dakisches Königreich]
+  summary: >
+    Zwei Feldzüge, mit denen Trajan Dakien annektierte, verewigt auf der Trajanssäule.
+    Die Eroberung endete mit dem Selbstmord König Decebalus' sowie Versklavung und
+    Umsiedlung großen Ausmaßes; das dakische Gold finanzierte einen Triumphzug, der
+    123 Tage gedauert haben soll.
+
+kitos-war:
+  name: Kitos-Krieg
+  region: Mittelmeerraum
+  sides: [Römisches Reich, Jüdische Aufständische der Diaspora]
+  summary: >
+    Aufstände der jüdischen Diaspora in der Kyrenaika, auf Zypern, in Ägypten und
+    Mesopotamien, während Trajan in Parthien Krieg führte. Cassius Dios Zahlen —
+    220.000 Tote in der Kyrenaika, 240.000 auf Zypern — hätten nahezu vollständige
+    Entvölkerung bedeutet und gelten als literarisch, nicht als statistisch.
+
+bar-kokhba-revolt:
+  name: Bar-Kochba-Aufstand
+  region: Levante
+  sides: [Römisches Reich, Judäische Aufständische]
+  summary: >
+    Der letzte jüdische Aufstand gegen Rom. Cassius Dio berichtet von 580.000 jüdischen
+    Toten und 985 zerstörten Dörfern sowie von römischen Verlusten, die so schwer
+    waren, dass Hadrian in seinem Bericht an den Senat die übliche Formel „Mir und dem
+    Heer geht es gut“ weggelassen haben soll. Die Niederlage beendete die jüdische
+    politische Präsenz in Judäa für Jahrhunderte.
+
+marcomannic-wars:
+  name: Markomannenkriege
+  region: Europa
+  sides: [Römisches Reich, Germanisch-sarmatische Koalition]
+  summary: >
+    Germanische und sarmatische Einfälle über die Donau, gegen die Mark Aurel die
+    letzten vierzehn Jahre seines Lebens kämpfte. Der Krieg fiel mit der Antoninischen
+    Pest zusammen, und beide Todesursachen sind in den Quellen nicht zu trennen — die
+    Seuche allein könnte reichsweit 5 bis 10 Millionen Menschen getötet haben.
+
+yellow-turban-rebellion:
+  name: Aufstand der Gelben Turbane
+  region: Ostasien
+  sides: [Han-Dynastie, Aufständische der Gelben Turbane]
+  summary: >
+    Ein daoistisch-messianischer Bauernaufstand gegen die Han-Dynastie, den der Hof nur
+    niederschlagen konnte, indem er regionale Militärführer stärkte — der Schritt, der
+    die Zentralgewalt der Han zerstörte und die Zeit der Drei Reiche einleitete. Der
+    Aufstand und seine Niederschlagung verwüsteten gemeinsam die Nordchinesische Ebene.
+
+three-kingdoms-war:
+  name: Kriege der Drei Reiche (China)
+  region: Ostasien
+  sides: [Cao Wei, Shu Han, Östliches Wu]
+  summary: >
+    Sechs Jahrzehnte Krieg zwischen Wei, Shu und Wu nach dem Zusammenbruch der Han. Die
+    registrierte Bevölkerung Chinas fiel von rund 56 Millionen im Jahr 156 auf etwa 16
+    Millionen um 280. Diese Lücke von 40 Millionen wird oft als Totenzahl zitiert, doch
+    ein großer Teil davon spiegelt den Zerfall der Steuerregister selbst wider —
+    Haushalte, die sich der Registrierung entzogen, und Gebiete, die der Zentralgewalt
+    entglitten. Die tatsächliche Zahl ist enorm und wirklich unbekannt.
+
+crisis-third-century:
+  name: Reichskrise des 3. Jahrhunderts
+  region: Mittelmeerraum
+  sides: [Römisches Reich und Gegenkaiser, Äußere Angreifer]
+  summary: >
+    Fünfzig Jahre, in denen das Römische Reich beinahe zerfiel: etwa sechsundzwanzig
+    Thronprätendenten, die Abspaltung des Gallischen und des Palmyrenischen Reiches, die
+    sassanidische Invasion im Osten — ein römischer Kaiser, Valerian, geriet lebend in
+    Gefangenschaft —, germanische Einfälle im Norden, der Zusammenbruch der Währung und
+    die Cyprianische Pest.
+
+sixteen-kingdoms:
+  name: Zeit der Sechzehn Reiche
+  region: Ostasien
+  sides: [Jin-Dynastie und chinesische Staaten, Nördliche Steppen- und Grenzstaaten]
+  summary: >
+    Die Zersplitterung Nordchinas in kurzlebige Staaten, die überwiegend von nicht-Han-
+    Völkern gegründet wurden, nach dem Zusammenbruch der Westlichen Jin. Zur Epoche
+    gehören die Katastrophe von Yongjia (311), die Plünderung Luoyangs und die
+    Massenflucht der nordchinesischen Oberschicht südlich des Jangtse.
+
+gothic-war-376:
+  name: Gotenkrieg und die Schlacht von Adrianopel
+  region: Balkan
+  sides: [Oströmisches Reich, Gotische Stammesverbände]
+  summary: >
+    Gotische Gruppen, die vor den Hunnen flohen, wurden über die Donau eingelassen und
+    dann durch römische Misshandlung zum Aufstand getrieben. Bei Adrianopel wurde 378
+    das oströmische Feldheer vernichtet und Kaiser Valens getötet — für Ammianus die
+    schwerste römische Niederlage seit Cannae. Roms Unfähigkeit, die Goten danach zu
+    vertreiben, markierte einen dauerhaften Wandel im Verhältnis des Reiches zu den
+    Völkern jenseits seiner Grenze.
+
+fall-western-rome:
+  name: Untergang des Weströmischen Reiches
+  region: Westeuropa
+  sides: [Weströmisches Reich, Wandernde Völker]
+  summary: >
+    Die siebzig Jahre vom Rheinübergang 406 bis zur Absetzung des Romulus Augustulus:
+    westgotische und vandalische Ansiedlung im Reichsinneren, die Plünderungen Roms 410
+    und 455, der Verlust des afrikanischen Getreides und die Ablösung des Reiches im
+    Westen durch Nachfolgekönigreiche. Kriegstote sind hier von Hunger und dem
+    Zusammenbruch der städtischen Versorgung nicht zu trennen.
+
+gothic-war-535:
+  name: Gotenkrieg (Justinians Rückeroberung)
+  region: Italien
+  sides: [Oströmisches Reich, Ostgotenreich, Italienische Zivilbevölkerung]
+  summary: >
+    Justinians Feldzug zur Rückgewinnung Italiens von den Ostgoten. Er gelang — und
+    zerstörte dabei, was er zurückgewann: zwei Jahrzehnte Belagerungskrieg, Hunger und
+    die Justinianische Pest ließen Italien entvölkert und Rom, das fünfmal den Besitzer
+    wechselte, auf einen Bruchteil seiner antiken Größe schrumpfen.
+
+byzantine-sasanian-602:
+  name: Byzantinisch-Sasanidischer Krieg von 602–628
+  region: Naher Osten
+  sides: [Byzantinisches Reich, Sasanidenreich]
+  summary: >
+    Der letzte und zerstörerischste der römisch-persischen Kriege. Die Sasaniden nahmen
+    Ägypten, Syrien und Jerusalem, bevor Herakleios ins persische Kernland
+    gegenangriff. Beide Reiche blieben finanziell und militärisch erschöpft zurück — und
+    verloren binnen eines Jahrzehnts nach Kriegsende ihre südlichen Provinzen an die
+    arabische Expansion.
+
+early-muslim-conquests:
+  name: Islamische Expansion
+  region: Naher Osten und Nordafrika
+  sides: [Kalifate der Raschidun und Umayyaden, "Byzantinische, sasanidische und westgotische Staaten"]
+  summary: >
+    In wenig mehr als einem Jahrhundert eroberten arabische Heere das gesamte
+    Sasanidenreich und die südliche Hälfte des byzantinischen, bis zum Indus im Osten
+    und zu den Pyrenäen im Westen. Opferzahlen für einen so langen und geografisch
+    ausgedehnten Prozess sind Schätzungen; die demografische und kulturelle Umwälzung
+    steht außer Frage.
+
+reconquista:
+  name: Reconquista
+  region: Iberische Halbinsel
+  sides: [Christliche Königreiche, Muslimische Staaten von al-Andalus]
+  summary: >
+    Siebeneinhalb Jahrhunderte zeitweiliger Kriegführung auf der Iberischen Halbinsel
+    zwischen christlichen Königreichen und muslimischen Staaten, die 1492 mit dem Fall
+    Granadas endete. Sie als einen einzigen fortlaufenden Konflikt zu behandeln, ist
+    eine spätere historiografische Konvention — die Zeitgenossen kämpften in wechselnden
+    Bündnissen, die regelmäßig die religiöse Grenze überschritten.
+
+an-lushan-rebellion:
+  name: An-Lushan-Rebellion
+  region: Ostasien
+  sides: [Tang-Dynastie, Yan (Truppen An Lushans)]
+  summary: >
+    Ein Aufstand des Grenzgenerals An Lushan gegen die Tang-Dynastie. Der Zensus der
+    Tang verzeichnete 754 rund 52,9 Millionen Menschen und 764 noch etwa 16,9 Millionen
+    — ein Rückgang von 36 Millionen in einem Jahrzehnt. Für bare Münze genommen wäre
+    dies das tödlichste Ereignis der Menschheitsgeschichte vor dem 20. Jahrhundert und
+    hätte vielleicht jeden sechsten lebenden Menschen getötet. Die meisten modernen
+    Demografen nehmen es nicht für bare Münze: Ein großer Teil der Lücke spiegelt den
+    Zusammenbruch des Zensusapparats wider, als der Staat die Fähigkeit verlor,
+    Haushalte zu erfassen. Der untere Wert unterstellt, dass der Rückgang überwiegend
+    administrativ war, der obere, dass er überwiegend Tote waren.
+
+saxon-wars:
+  name: Sachsenkriege
+  region: Mitteleuropa
+  sides: [Fränkisches Reich, Sachsen]
+  summary: >
+    Karls des Großen zweiunddreißigjähriger Feldzug zur Unterwerfung und
+    Zwangschristianisierung der Sachsen — an die achtzehn Feldzüge über drei
+    Jahrzehnte, beantwortet von wiederholten Aufständen unter Widukind. Das
+    Blutgericht von Verden 782, bei dem an einem einzigen Tag etwa 4.500 sächsische
+    Gefangene enthauptet worden sein sollen, und die anschließenden Massendeportationen
+    machten die Taufe zur Überlebensbedingung: Karls Sachsenkapitular setzte auf ihre
+    Verweigerung den Tod. Kein Zeitgenosse zählte die Toten. Die Spanne hier ist aus
+    Kriegsdauer und Deportationsumfang erschlossen und als Größenordnung zu lesen,
+    nicht als Zählung.
+
+viking-age:
+  name: Wikingerzeit
+  region: Nordeuropa
+  sides: [Skandinavische Plünderer und Siedler, Europäische Königreiche]
+  summary: >
+    Fast drei Jahrhunderte skandinavischer Raubzüge, Eroberungen und Ansiedlungen auf
+    den Britischen Inseln, im Frankenreich, in Irland und an den Flüssen der Rus.
+    Konventionell datiert von der Plünderung Lindisfarnes 793 bis zur Niederlage bei
+    Stamford Bridge 1066. Eine systematische Erfassung der Opfer existiert nicht.
+
+huang-chao-rebellion:
+  name: Huang-Chao-Aufstand
+  region: Ostasien
+  sides: [Tang-Dynastie, Aufständische Huang Chaos]
+  summary: >
+    Ein Aufstand unter Führung eines gescheiterten Prüfungskandidaten, der beide
+    Hauptstädte der Tang plünderte und das Massaker an der ausländischen
+    Kaufmannsgemeinde in Guangzhou einschloss. Er zerbrach, was nach An Lushan von der
+    Autorität der Tang übrig war; die Dynastie fiel binnen einer Generation.
+
+crusades:
+  name: Die Kreuzzüge
+  region: Levante und östliches Mittelmeer
+  sides: [Kreuzfahrerstaaten und lateinisches Europa, Muslimische Staaten]
+  summary: >
+    Zwei Jahrhunderte von Feldzügen aus dem lateinischen Europa in den östlichen
+    Mittelmeerraum, beginnend mit dem Aufruf Urbans II. in Clermont 1095 und endend mit
+    dem Fall von Akkon 1291. Dazu gehören das Massaker bei der Eroberung Jerusalems 1099
+    und die Plünderung Konstantinopels durch den Vierten Kreuzzug 1204 — einen Kreuzzug,
+    der das Heilige Land nie erreichte.
+
+jin-song-wars:
+  name: Jin-Song-Kriege
+  region: Ostasien
+  sides: [Song-Dynastie, Jin-Dynastie (Jurchen)]
+  summary: >
+    Ein Jahrhundert Krieg zwischen den jurchen-stämmigen Jin und den chinesischen Song,
+    eröffnet durch die Jingkang-Katastrophe von 1127, bei der die Jin die
+    Song-Hauptstadt und beide regierenden Kaiser gefangen nahmen und die Dynastie
+    südlich des Jangtse zwangen. Dazu gehört der absichtliche Dammbruch am Gelben Fluss
+    1128, der den Strom umlenkte und noch jahrelang tötete.
+
+mongol-conquests:
+  name: Mongolische Eroberungen
+  region: Eurasien
+  sides: [Mongolisches Reich, Eroberte Staaten]
+  summary: >
+    Das größte zusammenhängende Landreich der Geschichte, aufgebaut quer durch Eurasien
+    von Korea bis Ungarn. Die Eroberungen Choresmiens, der Jin und Song, Bagdads 1258
+    und der Rus-Fürstentümer gingen mit systematischen Massakern an Städten einher, die
+    Widerstand leisteten. Häufig als zweittödlichstes Ereignis der Menschheitsgeschichte
+    nach dem Zweiten Weltkrieg genannt; die Zahl ist eine Summe vieler Feldzüge über 160
+    Jahre und damit zwangsläufig ungenau.
+
+albigensian-crusade:
+  name: Albigenserkreuzzug
+  region: Südfrankreich
+  sides: [Kreuzfahrer und französische Krone, Languedoc und die Katharer]
+  summary: >
+    Ein von Innozenz III. ausgerufener Kreuzzug gegen die Katharer des Languedoc — der
+    erste Kreuzzug gegen Christen innerhalb des lateinischen Europas. In Béziers wurde
+    1209 die gesamte Bevölkerung ungeachtet ihres Glaubens getötet; die überlieferte
+    Anweisung des päpstlichen Legaten, „Tötet sie alle, Gott wird die Seinen erkennen“,
+    mag erfunden sein, das Massaker war es nicht.
+
+hundred-years-war:
+  name: Hundertjähriger Krieg
+  region: Westeuropa
+  sides: [Königreich Frankreich, Königreich England]
+  summary: >
+    Ein dynastischer Kampf zwischen den Häusern Plantagenet und Valois um die
+    französische Krone, über 116 Jahre geführt. Seine Toten forderten weniger die
+    berühmten Schlachten — Crécy, Poitiers, Azincourt — als die Chevauchée-Raubzüge, die
+    das Land planmäßig verwüsteten, und die Söldnerbanden, die auch während der
+    Waffenstillstände weiterplünderten.
+
+timur-conquests:
+  name: Eroberungen Timurs
+  region: Zentral- und Südasien
+  sides: [Timuridenreich, Eroberte Staaten]
+  summary: >
+    Timurs Feldzüge von Samarkand aus durch Persien, den Kaukasus, Indien, Anatolien und
+    Syrien. Berüchtigt für Türme aus den Schädeln massakrierter Bevölkerungen — Isfahan
+    1387, Delhi 1398, Bagdad 1401. Oft wird geschätzt, er habe etwa 5 % der
+    Weltbevölkerung getötet, doch die Zahl beruht auf Chroniken, die beeindrucken sollten.
+
+fall-of-constantinople:
+  name: Fall von Konstantinopel
+  region: Anatolien
+  sides: [Osmanisches Reich, Byzantinisches Reich und Verbündete]
+  summary: >
+    Die osmanische Eroberung der byzantinischen Hauptstadt nach 53-tägiger Belagerung,
+    die den römischen Staat 1.480 Jahre nach Augustus beendete. Militärisch eine einzelne
+    Belagerung mit mäßigen Verlusten; historisch das Ende einer Epoche und der Moment,
+    in dem Kanonen bewiesen, dass keine Stadtmauer von Dauer ist.
+
+italian-wars:
+  name: Italienische Kriege
+  region: Italien
+  sides: [Frankreich und Verbündete, Habsburger und Verbündete]
+  summary: >
+    Fünfundsechzig Jahre dynastischer Kriegführung um Italien zwischen Frankreich,
+    Spanien und den Habsburgern, die Papsttum, Venedig, die Eidgenossen und die Osmanen
+    hineinzogen. Die Kriege, die die Pulverinfanterie in Europa kriegsentscheidend
+    machten und 1527 den Sacco di Roma durch unbezahlte kaiserliche Truppen hervorbrachten.
+
+spanish-conquest-aztec:
+  name: Spanische Eroberung des Aztekenreiches
+  region: Mesoamerika
+  sides: [Spanisches Reich und indigene Verbündete, Aztekischer Dreibund]
+  summary: >
+    Cortés' Feldzug gegen Tenochtitlan, gewonnen mit einigen Hundert Spaniern und
+    Zehntausenden indigenen Verbündeten — vor allem den Tlaxcalteken —, die eigene Gründe
+    hatten, die aztekische Macht zu zerstören. Die 1520 eingeschleppten Pocken töteten
+    weit mehr Verteidiger als spanische Waffen; Epidemie und Belagerung sind in den
+    Gesamtzahlen nicht zu trennen.
+
+german-peasants-war:
+  name: Deutscher Bauernkrieg
+  region: Mitteleuropa
+  sides: [Schwäbischer Bund und Reichsfürsten, Bauernheere]
+  summary: >
+    Der größte Volksaufstand in Europa vor der Französischen Revolution: Bauern in den
+    deutschen Ländern erhoben sich gegen Leibeigenschaft und Zehnt im Gärungszustand der
+    frühen Reformation. Luther, auf dessen Ideen sie sich beriefen, rief die Fürsten zu
+    ihrer Vernichtung auf. Schlecht bewaffnete Bauernhaufen wurden in einer Reihe
+    einseitiger Massaker aufgerieben.
+
+spanish-conquest-inca:
+  name: Spanische Eroberung des Inkareiches
+  region: Südamerika
+  sides: [Spanisches Reich und indigene Verbündete, Inkareich]
+  summary: >
+    Pizarros Gefangennahme Atahualpas in Cajamarca 1532 traf die Inka bereits geschwächt
+    durch eine Pockenepidemie und einen Thronfolgekrieg. Organisierter Widerstand hielt
+    sich von Vilcabamba aus bis 1572. Wie in Mexiko verursachten Seuchen die große
+    Mehrheit der Toten.
+
+french-wars-of-religion:
+  name: Hugenottenkriege
+  region: Frankreich
+  sides: [Katholische Liga und Krone, Hugenotten]
+  summary: >
+    Acht Bürgerkriege in sechsunddreißig Jahren zwischen Katholiken und Hugenotten,
+    verflochten mit Thronfolge und Adelsrivalität. Die Bartholomäusnacht von 1572
+    tötete binnen Wochen Tausende Protestanten in Paris und den Provinzen. Die
+    Opferzahl — zwei bis vier Millionen — wird nicht von Schlachten bestimmt, sondern
+    von Hunger und Seuchen eines über eine Generation umkämpften Landes, und beruht
+    auf demografischer Rekonstruktion, nicht auf einer Zählung. Beendet durch
+    Heinrichs IV. Übertritt zum Katholizismus und das Edikt von Nantes 1598 — Europas
+    ersten dauerhaften Versuch, zwei Konfessionen rechtlich nebeneinander bestehen zu
+    lassen.
+
+eighty-years-war:
+  name: Achtzigjähriger Krieg (Niederländischer Aufstand)
+  region: Spanische Niederlande
+  sides: [Republik der Vereinigten Niederlande und Verbündete, Spanisches Reich]
+  summary: >
+    Der Aufstand der Siebzehn Provinzen gegen das habsburgische Spanien, aus dem die
+    unabhängige niederländische Republik hervorging. Weitgehend als Belagerungskrieg
+    geführt; seine späteren Jahrzehnte verliefen parallel zum Dreißigjährigen Krieg und
+    endeten im selben Friedensschluss von Westfalen.
+
+ming-qing-transition:
+  name: Übergang von Ming zu Qing
+  region: Ostasien
+  sides: [Qing-Dynastie (Mandschu), Ming-Dynastie und Loyalisten, Bäuerliche Rebellenstaaten]
+  summary: >
+    Der Zusammenbruch der Ming-Dynastie und die mandschurische Eroberung Chinas, mit dem
+    Aufstand Li Zichengs, dem Fall Pekings 1644, dem Massaker von Yangzhou und
+    jahrzehntelangem Widerstand im Süden. Verschärft durch die Hungersnöte und
+    Missernten der Kleinen Eiszeit. Nach absoluten Zahlen einer der tödlichsten Kriege
+    der Geschichte.
+
+wars-three-kingdoms-britain:
+  name: Kriege der Drei Königreiche
+  region: Britische Inseln
+  sides: [Parlamentarier und Covenanters, Royalisten und irische Konföderierte, Zivilbevölkerung]
+  summary: >
+    Die ineinandergreifenden Bürgerkriege in England, Schottland und Irland, die mit der
+    Hinrichtung Karls I. und Cromwells Eroberung Irlands endeten. Die Verluste trafen
+    Irland weit schwerer, wo Krieg, Hunger und Pest womöglich ein Fünftel oder mehr der
+    Bevölkerung töteten.
+
+the-deluge:
+  name: Die Sintflut (Zweiter Nordischer Krieg)
+  region: Osteuropa
+  sides: [Polen-Litauen, "Schweden, Russland und Verbündete"]
+  summary: >
+    Die schwedische und russische Invasion Polen-Litauens, das vielleicht ein Drittel
+    seiner Bevölkerung verlor — anteilig schlimmer als im Zweiten Weltkrieg. Warschau,
+    Krakau und die meisten polnischen Städte wurden geplündert; die Adelsrepublik erlangte
+    ihre Stellung in Europa nie vollständig zurück.
+
+great-turkish-war:
+  name: Großer Türkenkrieg
+  region: Balkan
+  sides: [Heilige Liga, Osmanisches Reich]
+  summary: >
+    Der Krieg der Heiligen Liga gegen das Osmanische Reich, beginnend mit der
+    gescheiterten osmanischen Belagerung Wiens 1683 und endend 1699 in Karlowitz mit der
+    Abtretung Ungarns und Siebenbürgens — der erste große Gebietsverlust in der
+    Geschichte des Reiches und die Wende in Südosteuropa.
+
+great-northern-war:
+  name: Großer Nordischer Krieg
+  region: Nordeuropa
+  sides: [Schwedisches Reich, Antischwedische Koalition]
+  summary: >
+    Russland, Dänemark und Sachsen-Polen griffen das Schwedische Reich in Koalition
+    an; einundzwanzig Jahre später war Schwedens Ostseeherrschaft dahin, und Russland
+    hatte eine Flotte, eine Ostseeküste und eine neue Hauptstadt — das 1703 auf
+    erobertem Marschland gegründete Sankt Petersburg. Karls XII. Russlandfeldzug wurde
+    1709 bei Poltawa vernichtet, eine Niederlage, die in ihrer Logik aus Entfernung,
+    Winter und verbrannter Erde 1812 und 1941 vorwegnahm. Wie in jedem
+    frühneuzeitlichen Krieg töteten Krankheit und Kälte weit mehr Soldaten als die
+    Schlachten, und die Pest, die 1710 den Ostseeraum durchzog, traf Soldaten wie
+    Zivilisten — deren Opfer sind hier nicht mitgezählt.
+
+war-spanish-succession:
+  name: Spanischer Erbfolgekrieg
+  region: Europa
+  sides: [Große Allianz, Bourbonische Allianz]
+  summary: >
+    Ein in ganz Europa und den Kolonien geführter Krieg um das spanische Erbe, der damit
+    endete, dass der bourbonische Thronanwärter blieb, die spanische und die französische
+    Krone aber dauerhaft getrennt wurden. Er brachte Blenheim, Ramillies und Malplaquet
+    hervor — Letzteres so blutig, dass Marlboroughs Sieg dessen politische Laufbahn
+    mit beendete.
+
+dzungar-genocide:
+  name: Dsungaren-Völkermord
+  region: Zentralasien
+  sides: [Qing-Dynastie, Dsungarisches Khanat]
+  summary: >
+    Die Vernichtung des Dsungarischen Khanats durch die Qing unter dem Qianlong-Kaiser,
+    dessen Befehle ausdrücklich die Ausrottung der Dsungaren anordneten. Historiker
+    schätzen, dass 70 bis 80 % einer Bevölkerung von rund 600.000 durch Massaker,
+    Pocken und Flucht starben. Das Dsungarische Becken wurde anschließend mit Han, Hui,
+    Uiguren und Mandschu besiedelt.
+
+seven-years-war:
+  name: Siebenjähriger Krieg
+  region: Weltweit
+  sides: ["Großbritannien, Preußen und Verbündete", "Frankreich, Österreich, Russland und Verbündete", Zivilbevölkerung]
+  summary: >
+    Geführt in Europa, Nordamerika, der Karibik, Westafrika, Indien und auf den
+    Philippinen — mit Recht der erste wirklich globale Krieg genannt. Er machte
+    Großbritannien in Nordamerika und Indien vorherrschend, ruinierte Frankreichs
+    Finanzen auf eine Weise, die zu 1789 führte, und bestätigte Preußen als Großmacht.
+
+american-revolutionary-war:
+  name: Amerikanischer Unabhängigkeitskrieg
+  region: Nordamerika
+  sides: [Vereinigte Staaten und Verbündete, Großbritannien und Verbündete]
+  summary: >
+    Der Unabhängigkeitskrieg der dreizehn Kolonien, den der Eintritt Frankreichs,
+    Spaniens und der Niederlande zu einem globalen Konflikt machte — gekämpft wurde
+    bis Gibraltar, in die Karibik und nach Indien. Die Schlachten waren nur ein
+    kleiner Teil der Opfer: Mehr amerikanische Soldaten starben an Krankheiten und auf
+    den britischen Gefängnisschiffen vor New York als im Gefecht, und die Toten der
+    Gefängnisschiffe allein übertrafen wohl alle Schlachtfelder zusammen. Die Verluste
+    der Loyalisten und der amerikanischen Ureinwohner sind am schlechtesten erfasst.
+    Die Pockenepidemie, die in denselben Jahren über Nordamerika lief, tötete ein
+    Mehrfaches des Krieges und ist hier nicht mitgezählt.
+
+haitian-revolution:
+  name: Haitianische Revolution
+  region: Karibik
+  sides: [Haitianische Revolutionäre, "Frankreich, Großbritannien und Spanien"]
+  summary: >
+    Der einzige Sklavenaufstand der Geschichte, aus dem ein unabhängiger Staat hervorging.
+    Versklavte Haitianer besiegten die Pflanzer, eine britische Expedition, eine spanische
+    und schließlich Napoleons Armee, die Zehntausende Mann verlor, die meisten an Gelbfieber.
+    Die Niederlage trug unmittelbar dazu bei, dass Frankreich Louisiana verkaufte.
+
+napoleonic-wars:
+  name: Napoleonische Kriege
+  region: Europa
+  sides: [Französisches Kaiserreich und Verbündete, Koalitionsmächte, Zivilbevölkerung]
+  summary: >
+    Ein Dutzend Jahre Krieg zwischen dem napoleonischen Frankreich und wechselnden
+    Koalitionen, geführt von Portugal bis Moskau und von Ägypten bis in die Karibik. Der
+    Russlandfeldzug von 1812 vernichtete ein Heer von rund 600.000 Mann; weniger als ein
+    Zehntel kehrte zurück. Die Kriege brachten die allgemeine Wehrpflicht und die Levée
+    en masse — und mit ihnen die moderne Größenordnung europäischer Kriegführung.
+
+latin-american-independence:
+  name: Spanisch-amerikanische Unabhängigkeitskriege
+  region: Lateinamerika
+  sides: [Unabhängigkeitsbewegungen, Spanisches Reich und Royalisten, Zivilbevölkerung]
+  summary: >
+    Die Kriege, die Spaniens amerikanisches Kolonialreich zerlegten, von Mexiko bis
+    zum Río de la Plata, ausgelöst durch Napoleons Usurpation der spanischen Krone
+    1808. Bolívar, San Martín, Hidalgo und Morelos kämpften gegen royalistische
+    Armeen, die selbst überwiegend in Amerika geboren waren — ebenso sehr eine Reihe
+    von Bürgerkriegen wie eine Befreiung. In Venezuela und Neugranada wurde der
+    „Krieg bis zum Tod“ ausgerufen; allein Mexikos Aufstand dürfte ein Drittel oder
+    mehr der Gesamtzahl ausmachen. Die Zahlen sind demografische Schätzungen: Keine
+    Armee führte verlässliche Listen, und zivile Opfer durch Krankheit, Requisition
+    und Vergeltung wurden nie gezählt.
+
+taiping-rebellion:
+  name: Taiping-Aufstand
+  region: Ostasien
+  sides: [Qing-Dynastie, Himmlisches Reich des Großen Friedens, Zivilbevölkerung]
+  summary: >
+    Ein Bürgerkrieg gegen die Qing-Dynastie unter Hong Xiuquan, der sich für den jüngeren
+    Bruder Jesu Christi hielt. Das Himmlische Reich beherrschte ein Jahrzehnt lang weite
+    Teile Südchinas mit der Hauptstadt Nanjing. Der tödlichste Bürgerkrieg der Geschichte
+    und nach den meisten Zählungen der tödlichste Konflikt des gesamten 19. Jahrhunderts
+    — um den Faktor dreißig größer als der Amerikanische Bürgerkrieg.
+
+nian-rebellion:
+  name: Nian-Aufstand
+  region: Ostasien
+  sides: [Qing-Dynastie, Nian-Aufständische]
+  summary: >
+    Ein von Reiterei getragener Bauernaufstand in der Nordchinesischen Ebene,
+    zeitgleich mit dem Taiping-Aufstand und nie ganz von ihm zu trennen — die Qing
+    bekämpften beide zugleich, oft mit denselben Armeen. Die katastrophale
+    Laufveränderung des Gelben Flusses 1855 überflutete die Region, vertrieb Millionen
+    und ließ die Rebellenbanden anschwellen; Banditentum, Vergeltung und Hunger
+    töteten die meisten. Die Opferzahl ist die unsicherste der chinesischen Konflikte
+    dieser Ära, und die Spanne hier zählt die unmittelbaren Flutopfer nicht mit.
+    Niedergeschlagen 1868 von den Provinzarmeen Zeng Guofans und Li Hongzhangs —
+    denselben Truppen, die die Taiping gebrochen hatten.
+
+crimean-war:
+  name: Krimkrieg
+  region: Schwarzes Meer
+  sides: [Alliierte Mächte, Russisches Reich]
+  summary: >
+    Großbritannien, Frankreich und die Osmanen gegen Russland, vor allem auf der Halbinsel
+    Krim geführt. Rund drei Viertel der Toten gingen auf Krankheiten und nicht auf
+    Kampfhandlungen zurück — die Zustände, die Florence Nightingale berühmt machten und
+    eine Reform der Militärmedizin erzwangen. Der erste per Telegraf berichtete und
+    fotografierte Krieg.
+
+panthay-rebellion:
+  name: Panthay-Aufstand
+  region: Ostasien
+  sides: [Qing-Dynastie, Pingnan Guo (Panthay-Aufständische)]
+  summary: >
+    Ein Aufstand muslimischer Hui in Yunnan gegen die Qing-Herrschaft, entzündet an
+    behördlich geduldeten Massakern an Hui-Bergleuten, der unter Du Wenxiu ein
+    Sultanat in Dali errichtete, bevor er niedergeschlagen wurde. Die Rückeroberung
+    endete stellenweise in Vernichtung: Auf den Fall von Dali 1872 folgte ein
+    allgemeines Massaker, das auch Du Wenxius Kapitulation nicht aufhielt.
+    Provinzchroniken deuten auf einen Bevölkerungsrückgang Yunnans um mehrere
+    Millionen — wie viel davon Tod und wie viel Flucht war, ist ungeklärt, weshalb die
+    Gesamtzahl hier am unteren Rand dessen bleibt, was der demografische Einbruch
+    zuließe.
+
+indian-rebellion-1857:
+  name: Indischer Aufstand von 1857
+  region: Südasien
+  sides: [Britische Ostindien-Kompanie, Indische Aufständische]
+  summary: >
+    Eine Meuterei von Sepoys der bengalischen Armee, die zu einem weit verbreiteten
+    Aufstand in Nordindien wurde. Seine Niederschlagung ging mit Massenvergeltung an
+    Zivilisten einher. Der Aufstand beendete die Herrschaft der Kompanie: 1858 übernahm
+    die britische Krone die direkte Regierung Indiens.
+
+american-civil-war:
+  name: Amerikanischer Bürgerkrieg
+  region: Nordamerika
+  sides: [Vereinigte Staaten (Union), Konföderierte Staaten, Zivilbevölkerung]
+  summary: >
+    Der Krieg um Sklaverei und Sezession, der mehr Amerikaner tötete als alle übrigen
+    amerikanischen Kriege zusammen bis Vietnam. Die lange gültige Zahl von 620.000 Toten
+    wurde 2011 vom Demografen J. David Hacker anhand von Zensusmethoden auf etwa 750.000
+    nach oben korrigiert. Zwei Drittel der Toten gingen auf Krankheiten zurück.
+
+dungan-revolt:
+  name: Dunganenaufstand
+  region: Ostasien
+  sides: [Qing-Dynastie, Hui und verbündete muslimische Aufständische]
+  summary: >
+    Ein Aufstand muslimischer Hui in Shaanxi, Gansu und Xinjiang, von Zuo Zongtang unter
+    ungeheuren Verlusten niedergeschlagen. Die Bevölkerung von Shaanxi und Gansu brach
+    durch Massaker, Hunger und Flucht ein; Überlebende wanderten nach Russisch-Zentralasien
+    aus, wo ihre Nachfahren bis heute Dunganen heißen.
+
+paraguayan-war:
+  name: Tripel-Allianz-Krieg
+  region: Südamerika
+  sides: [Tripel-Allianz, Paraguay]
+  summary: >
+    Paraguay gegen Brasilien, Argentinien und Uruguay zugleich — anteilig der
+    zerstörerischste Krieg der neueren Geschichte für die unterlegene Seite. Paraguay
+    verlor womöglich über die Hälfte seiner Bevölkerung und die große Mehrheit seiner
+    erwachsenen Männer. Die Schätzungen gehen weit auseinander, weil schon die
+    Vorkriegsbevölkerung unsicher ist.
+
+franco-prussian-war:
+  name: Deutsch-Französischer Krieg
+  region: Westeuropa
+  sides: [Norddeutscher Bund und Verbündete, Frankreich]
+  summary: >
+    Preußens rascher Sieg über Frankreich, besiegelt durch die Gefangennahme
+    Napoleons III. bei Sedan und die Belagerung von Paris. Im Januar 1871 wurde im
+    Spiegelsaal von Versailles das Deutsche Kaiserreich ausgerufen, und die Annexion
+    Elsass-Lothringens legte den Groll an, der 1914 mit hervorbrachte. Frankreichs
+    Verluste gehen überwiegend auf Krankheit zurück — in den Gefangenenlagern und den
+    improvisierten Armeen der jungen Republik —, und die Pockenepidemie, die der Krieg
+    über Europa verbreitete, tötete mehr Zivilisten als die Kämpfe, jenseits der hier
+    gezählten Spanne. Auf den Frieden folgten binnen Wochen die Pariser Kommune und
+    ihre blutige Niederschlagung.
+
+congo-free-state:
+  name: Gräueltaten im Kongo-Freistaat
+  region: Zentralafrika
+  sides: [Kongo-Freistaat, Kongolesische Bevölkerung]
+  summary: >
+    Leopold II. von Belgien hielt den Kongo als Privatbesitz und ließ Kautschuk durch
+    Zwangsarbeit gewinnen, durchgesetzt mit Geiselnahme, Verstümmelung und Massakern. Die
+    oft genannte Zahl von 10 Millionen Toten stammt von Adam Hochschild und steht für
+    eine geschätzte Halbierung der Bevölkerung — eine demografische Schätzung aus
+    Tötungen, Hunger, Krankheit und eingebrochenen Geburtenraten, keine Totenzählung.
+    Manche Historiker halten sie für zu hoch, andere für zu niedrig. Einen Zensus gab es nie.
+
+boxer-rebellion:
+  name: Boxeraufstand
+  region: Ostasien
+  sides: [Vereinigte acht Staaten, Qing-Dynastie und Boxer]
+  summary: >
+    Ein fremden- und christenfeindlicher Aufstand in Nordchina, der in der Belagerung der
+    Gesandtschaften in Peking und einer Intervention von acht Nationen gipfelte, die die
+    Hauptstadt plünderte. Die daraus folgende Entschädigung zerrüttete die Finanzen der
+    Qing und beschleunigte den Sturz der Dynastie ein Jahrzehnt später.
+
+second-boer-war:
+  name: Zweiter Burenkrieg
+  region: Südliches Afrika
+  sides: [Britisches Weltreich, Burenrepubliken]
+  summary: >
+    Großbritannien gegen Transvaal und den Oranje-Freistaat. Als die Buren zum
+    Guerillakrieg übergingen, antwortete Kitchener mit dem Niederbrennen von Farmen und
+    mit Konzentrationslagern, in denen rund 28.000 burische Zivilisten — überwiegend
+    Kinder — und mindestens 20.000 schwarze Afrikaner an Krankheit und Unterernährung starben.
+
+herero-namaqua-genocide:
+  name: Völkermord an den Herero und Nama
+  region: Südliches Afrika
+  sides: [Deutsches Kaiserreich, Herero und Nama]
+  summary: >
+    Deutsche Kolonialtruppen trieben die Herero in die Omaheke-Wüste und riegelten die
+    Wasserstellen ab, danach wurden Überlebende in Lagern interniert. Weithin als erster
+    Völkermord des 20. Jahrhunderts bezeichnet; etwa 80 % der Herero und die Hälfte der
+    Nama kamen um. Deutschland erkannte den Vorgang 2021 offiziell als Völkermord an.
+
+russo-japanese-war:
+  name: Russisch-Japanischer Krieg
+  region: Ostasien
+  sides: [Kaiserreich Japan, Russisches Reich, Zivilbevölkerung]
+  summary: >
+    Japans Sieg über Russland um die Mandschurei und Korea — der erste moderne Sieg einer
+    asiatischen Macht über ein europäisches Reich. Die Vernichtung der Baltischen Flotte
+    bei Tsushima und die folgende Demütigung trugen unmittelbar zur Russischen Revolution
+    von 1905 bei.
+
+mexican-revolution:
+  name: Mexikanische Revolution
+  region: Nordamerika
+  sides: [Revolutionäre Fraktionen, Truppen der Bundesregierung, Zivilbevölkerung]
+  summary: >
+    Ein Jahrzehnt Bürgerkrieg, das Porfirio Díaz stürzte und dann die eigenen Anführer
+    verschlang — Madero, Zapata, Carranza und Villa starben alle gewaltsam. Die
+    Schätzungen reichen von einer bis zwei Millionen Toten, wobei ein erheblicher Teil auf
+    die Grippepandemie von 1918 und auf Auswanderung statt auf Kämpfe zurückgeht.
+
+world-war-i:
+  name: Erster Weltkrieg
+  region: Europa und Naher Osten
+  sides: [Entente-Mächte, Mittelmächte]
+  summary: >
+    Vier Jahre industrialisierter Materialschlacht, die rund 10 Millionen Soldaten und
+    etwa ebenso viele Zivilisten töteten. Die Westfront bewegte sich zwischen 1914 und
+    1918 kaum, während sie eine Generation verzehrte. Die Grippepandemie von 1918, durch
+    Truppenbewegungen verbreitet, tötete weltweit mehr Menschen als die Kämpfe und ist in
+    den folgenden Zahlen nicht enthalten.
+
+armenian-genocide:
+  name: Völkermord an den Armeniern
+  region: Anatolien
+  sides: [Osmanisches Reich, Armenische Bevölkerung]
+  summary: >
+    Die systematische Deportation und Ermordung der osmanischen Armenier, begleitet von
+    parallelen Feldzügen gegen Assyrer und Griechen. Die meisten Toten kamen auf
+    Todesmärschen in die syrische Wüste um. Von den meisten Historikern und einer
+    Mehrheit der Staaten als Völkermord anerkannt; von der Türkei bis heute offiziell bestritten.
+
+russian-civil-war:
+  name: Russischer Bürgerkrieg
+  region: Russland und Zentralasien
+  sides: [Rote Armee (Bolschewiki), Weiße Bewegung und Interventionstruppen, Zivilbevölkerung]
+  summary: >
+    Der Krieg zwischen der bolschewistischen Roten Armee und der Weißen Bewegung, mit
+    alliierter Intervention sowie ukrainischen, polnischen und zentralasiatischen
+    Fronten. Die große Mehrheit der Toten war zivil und ging auf die Hungersnot von
+    1921/22, Typhus und den Roten wie den Weißen Terror zurück, nicht auf Gefechte.
+
+chinese-civil-war:
+  name: Chinesischer Bürgerkrieg
+  region: Ostasien
+  sides: [Kommunistische Partei Chinas, Kuomintang (Nationalisten), Zivilbevölkerung]
+  summary: >
+    Der Machtkampf zwischen Kuomintang und Kommunistischer Partei, unterbrochen von der
+    Einheitsfront gegen Japan zwischen 1937 und 1945 und unmittelbar danach wieder
+    aufgenommen. Er endete mit dem kommunistischen Sieg auf dem Festland und dem Rückzug
+    der Nationalisten nach Taiwan.
+
+spanish-civil-war:
+  name: Spanischer Bürgerkrieg
+  region: Iberische Halbinsel
+  sides: [Republikaner, Nationalisten]
+  summary: >
+    Die Republik gegen Francos Nationalisten, mit deutscher und italienischer
+    Unterstützung für Letztere und sowjetischer Hilfe samt Internationalen Brigaden für
+    Erstere. Ein Erprobungsfeld für die Taktiken des kommenden Weltkriegs — Gernika wurde
+    1937 von der Legion Condor bombardiert. Zehntausende wurden von beiden Seiten hinter
+    der Front erschossen, und die franquistische Vergeltung dauerte noch Jahre nach 1939 an.
+
+second-sino-japanese-war:
+  name: Zweiter Japanisch-Chinesischer Krieg
+  region: Ostasien
+  sides: [Republik China, Kaiserreich Japan]
+  summary: >
+    Japans Invasion Chinas, die zwei Jahre vor dem Krieg in Europa begann und zu dessen
+    pazifischem Kriegsschauplatz wurde. Dazu gehören das Massaker von Nanjing, der
+    absichtliche Dammbruch am Gelben Fluss 1938, der Hunderttausende chinesische
+    Zivilisten ertränkte, um den japanischen Vormarsch zu bremsen, und das
+    Biowaffenprogramm der Einheit 731. Die chinesischen Toten stellen die zweitgrößte
+    nationale Opferzahl des gesamten Zweiten Weltkriegs.
+
+world-war-ii:
+  name: Zweiter Weltkrieg
+  region: Weltweit
+  sides: [Alliierte, Achsenmächte]
+  summary: >
+    Der tödlichste Konflikt der Menschheitsgeschichte, der schätzungsweise 70 bis 85
+    Millionen Menschen tötete — etwa 3 % der Weltbevölkerung. Zivile Tote übertrafen die
+    militärischen im Verhältnis von etwa zwei zu eins, durch strategische
+    Bombardierungen, Belagerung, Hunger, Massaker und industrialisierten Völkermord. Die
+    Sowjetunion verlor rund 27 Millionen Menschen, China etwa 20 Millionen; zusammen mehr
+    als die Hälfte aller Toten.
+
+the-holocaust:
+  name: Der Holocaust
+  region: Europa
+  sides: [NS-Deutschland und Kollaborateure, Jüdische Bevölkerung Europas]
+  summary: >
+    Die systematische Ermordung von etwa sechs Millionen europäischen Juden durch das
+    nationalsozialistische Deutschland und seine Kollaborateure — zwei Drittel der
+    jüdischen Bevölkerung Europas — durch Massenerschießungen der Einsatzgruppen, Ghettos
+    und die Vernichtungslager. Daneben ermordete der NS-Staat Roma, sowjetische
+    Kriegsgefangene, Menschen mit Behinderungen, Polen und weitere Gruppen, womit die
+    Gesamtzahl auf rund elf Millionen steigt.
+
+first-indochina-war:
+  name: Indochinakrieg
+  region: Südostasien
+  sides: [Frankreich und der Staat Vietnam, Việt Minh, Zivilbevölkerung]
+  summary: >
+    Frankreichs Versuch, die koloniale Herrschaft über Indochina gegen die Việt Minh
+    wiederherzustellen — vom Hinterhalt und Dschungelposten bis zur entscheidenden
+    Niederlage bei Điện Biên Phủ 1954, einem befestigten Luftstützpunkt, belagert von
+    Artillerie, die die Việt Minh von Hand auf die umliegenden Berge geschafft hatten.
+    Die Genfer Konferenz teilte Vietnam dann am 17. Breitengrad — die Regelung, die
+    unmittelbar zum nächsten Krieg führte. Die Asymmetrie der Überlieferung prägt die
+    Spanne: Die Verluste der Union française sind fast auf den Mann bekannt, während
+    die Toten der Việt Minh und der Zivilbevölkerung von Dritten geschätzt wurden und
+    die Unsicherheit bestimmen.
+
+partition-of-india:
+  name: Teilung Indiens
+  region: Südasien
+  sides: [Gewalt gegen hinduistische und Sikh-Gemeinschaften, Gewalt gegen muslimische Gemeinschaften]
+  summary: >
+    Die Teilung Britisch-Indiens in Indien und Pakistan löste die größte Massenwanderung
+    der Menschheitsgeschichte aus — etwa 15 Millionen Menschen —, begleitet von
+    Massakern, Entführungen und Vergeltungsmorden entlang der neuen Grenzen im Punjab und
+    in Bengalen. Keine Seite führte Buch.
+
+korean-war:
+  name: Koreakrieg
+  region: Ostasien
+  sides: [Kommando der Vereinten Nationen, Nordkorea und China, Zivilbevölkerung]
+  summary: >
+    Nordkoreas Invasion des Südens zog ein von den USA geführtes UN-Bündnis und dann
+    China hinein. Die Front kehrte fast genau dorthin zurück, wo sie begonnen hatte; der
+    Waffenstillstand von 1953 wurde bis heute nie durch einen Friedensvertrag ersetzt.
+    Amerikanische Bombardierungen zerstörten den größten Teil der bebauten Umwelt Nordkoreas.
+
+algerian-war:
+  name: Algerienkrieg
+  region: Nordafrika
+  sides: [Frankreich, Nationale Befreiungsfront (FLN), Algerische Zivilbevölkerung]
+  summary: >
+    Der Krieg der FLN gegen die französische Herrschaft, geführt mit Guerillataktik,
+    systematischer Folter und Masseninternierung. Algerien wurde 1962 unabhängig; der
+    Krieg stürzte die Vierte Französische Republik. Die französischen und algerischen
+    offiziellen Opferzahlen unterscheiden sich um den Faktor fünf und bleiben politisch umstritten.
+
+vietnam-war:
+  name: Vietnamkrieg
+  region: Südostasien
+  sides: [Nordvietnam und der Vietcong, Südvietnam und Verbündete, Zivilbevölkerung]
+  summary: >
+    Zwanzig Jahre Krieg zwischen Nord- und Südvietnam, mit über einer halben Million
+    US-Soldaten auf dem Höhepunkt. Auf Indochina fielen mehr Bomben als von allen Seiten
+    im Zweiten Weltkrieg zusammen, und der Krieg griff auf Laos und Kambodscha über. Er
+    endete 1975 mit dem Fall Saigons.
+
+cultural-revolution:
+  name: Kulturrevolution
+  region: Ostasien
+  sides: [Maoistische Fraktionen und Staatsorgane, Verfolgte Bevölkerung]
+  summary: >
+    Maos politische Massenkampagne gegen vermeintliche Klassenfeinde in Partei und
+    Gesellschaft, überwiegend von Roten Garden getragen. Die Toten gingen auf
+    Kampfsitzungen, Fraktionskämpfe, die in manchen Provinzen Bürgerkriegsausmaß
+    erreichten, Massaker auf dem Land und Suizide zurück. Die Schätzungen unterscheiden
+    sich um mehr als eine Größenordnung — offizielle chinesische Zahlen liegen weit unter
+    westlichen wissenschaftlichen.
+
+nigerian-civil-war:
+  name: Biafra-Krieg
+  region: Westafrika
+  sides: [Nigeria, Republik Biafra, Biafranische Zivilbevölkerung]
+  summary: >
+    Die Sezession Biafras und ihre Niederschlagung durch die nigerianische
+    Bundesregierung. Die meisten Toten verhungerten infolge der Blockade des
+    Igbo-Kernlands; die Hungerbilder, die das westliche Fernsehen erreichten, veränderten
+    die Praxis humanitärer Intervention und führten zur Gründung von Ärzte ohne Grenzen.
+
+bangladesh-liberation-war:
+  name: Bangladesch-Krieg
+  region: Südasien
+  sides: [Bangladesch und Indien, Pakistan, Bengalische Zivilbevölkerung]
+  summary: >
+    Ostpakistans Unabhängigkeitskrieg, in dem die Operation Searchlight der pakistanischen
+    Armee und der folgende Feldzug ungeheure Zahlen bengalischer Zivilisten töteten und
+    zehn Millionen nach Indien vertrieben. Die indische Intervention beendete den Krieg in
+    zwölf Tagen. Offizielle bangladeschische Angaben nennen drei Millionen Tote,
+    unabhängige Schätzungen liegen weit darunter. Das Ausmaß der Massenvergewaltigungen
+    ist unbestritten.
+
+cambodian-genocide:
+  name: Völkermord in Kambodscha
+  region: Südostasien
+  sides: [Rote Khmer (Demokratisches Kampuchea), Kambodschanische Bevölkerung]
+  summary: >
+    Die Roten Khmer räumten die Städte binnen Tagen nach der Einnahme Phnom Penhs,
+    schafften Geld, Märkte und Schulen ab und töteten in weniger als vier Jahren
+    zwischen einem Fünftel und einem Viertel der kambodschanischen Bevölkerung durch
+    Hinrichtung, Zwangsarbeit und Hunger. Die muslimischen Cham und die vietnamesische
+    Minderheit wurden gezielt zur Vernichtung bestimmt. Die Opferzahl gehört zu den am
+    besten belegten aller Völkermorde: Massengrab-Erhebungen mit rund 20.000
+    kartierten Grabstätten und demografische Rekonstruktion laufen bei etwa 1,8
+    Millionen zusammen. Beendet durch die vietnamesische Invasion im Januar 1979; das
+    Tribunal über die überlebende Führung sprach sein erstes Urteil dreißig Jahre
+    später.
+
+soviet-afghan-war:
+  name: Sowjetisch-Afghanischer Krieg
+  region: Zentralasien
+  sides: [Sowjetunion und afghanische Regierung, Mudschaheddin, Afghanische Zivilbevölkerung]
+  summary: >
+    Die sowjetische Intervention zugunsten der kommunistischen afghanischen Regierung
+    gegen die Mudschaheddin, die von den USA, Pakistan und Saudi-Arabien bewaffnet wurden.
+    Ein Drittel der afghanischen Bevölkerung floh außer Landes. Der Abzug 1989 hinterließ
+    einen Bürgerkrieg, der unmittelbar in den Aufstieg der Taliban überging.
+
+iran-iraq-war:
+  name: Erster Golfkrieg (Iran-Irak)
+  region: Naher Osten
+  sides: [Iran, Irak]
+  summary: >
+    Acht Jahre Krieg nach dem irakischen Angriff auf den Iran, geführt mit
+    Grabensystemen, Menschenwellenangriffen und Chemiewaffen — dem größten
+    Giftgaseinsatz seit 1918, gegen Soldaten an der Front wie gegen kurdische
+    Zivilisten in Halabdscha. Der Iran schickte jugendliche Freiwillige über
+    Minenfelder; der Irak borgte sich in den Bankrott — eine Ursache seines Überfalls
+    auf Kuwait zwei Jahre später. Der Krieg endete fast genau dort, wo er begonnen
+    hatte, ohne Gebietsveränderung. Die verbreitete Zahl von einer Million Toten hält
+    dem Nachkriegszensus beider Länder nicht stand: Irans eigenes Märtyrerregister
+    zählt etwa 190.000, und wissenschaftliche Datensätze setzen die Gesamtzahl
+    zwischen rund 400.000 und 700.000 an. Die Spanne hier umfasst diesen Streit.
+
+second-sudanese-civil-war:
+  name: Zweiter Sudanesischer Bürgerkrieg
+  region: Ostafrika
+  sides: [Regierung des Sudan, Sudanesische Volksbefreiungsarmee, Zivilbevölkerung]
+  summary: >
+    Zweiundzwanzig Jahre Krieg zwischen der sudanesischen Regierung und der SPLA im Süden,
+    um Religion, Ressourcen und Autonomie. Etwa zwei Millionen Menschen starben, die
+    überwiegende Mehrheit an kriegsbedingtem Hunger und Krankheit. Beendet durch das
+    Abkommen, das 2011 zur Unabhängigkeit des Südsudan führte.
+
+gulf-war:
+  name: Zweiter Golfkrieg
+  region: Naher Osten
+  sides: [Koalitionsstreitkräfte, Irak]
+  summary: >
+    Eine von den USA geführte Koalition aus 35 Staaten vertrieb den Irak in einem
+    Feldzug aus sechs Wochen Bombardierung und 100 Stunden Bodenkampf aus Kuwait.
+    Außerordentlich einseitig: Die Koalition zählte ihre Toten in Hunderten, der Irak
+    in Zehntausenden — und selbst diese sind umstritten; frühe Angaben von 100.000
+    getöteten irakischen Soldaten wurden von Nachkriegsstudien auf 20.000 bis 35.000
+    korrigiert. Die Zerstörung von Strom-, Wasser- und Abwassersystemen tötete im Jahr
+    nach dem Waffenstillstand mehr Iraker als der Krieg selbst — eine Zahl, die dieser
+    Eintrag ebenso wenig enthält wie die Niederschlagung der Aufstände vom März 1991.
+
+yugoslav-wars:
+  name: Jugoslawienkriege
+  region: Balkan
+  sides: [Serbien und bosnisch-serbische Kräfte, "Bosnien, Kroatien, Kosovo und NATO", Zivilbevölkerung]
+  summary: >
+    Der gewaltsame Zerfall Jugoslawiens in Kroatien, Bosnien und im Kosovo, der ethnische
+    Säuberungen und Völkermord fünfzig Jahre nach 1945 nach Europa zurückbrachte. Das
+    Massaker an über 8.000 bosniakischen Männern und Jungen in Srebrenica 1995 wurde vom
+    ICTY und vom Internationalen Gerichtshof als Völkermord eingestuft.
+
+rwandan-genocide:
+  name: Völkermord in Ruanda
+  region: Ostafrika
+  sides: [Hutu-Power (Interahamwe und Regierungstruppen), Tutsi-Bevölkerung und die RPF]
+  summary: >
+    In etwa hundert Tagen töteten extremistische Hutu-Milizen und Regierungstruppen
+    zwischen 500.000 und 800.000 Tutsi und gemäßigte Hutu — eine Tötungsrate, die schneller
+    war als jede andere im 20. Jahrhundert, weitgehend mit Macheten ausgeführt. Die
+    anwesenden UN-Truppen hatten kein Mandat einzugreifen.
+
+second-congo-war:
+  name: Zweiter Kongokrieg
+  region: Zentralafrika
+  sides: [DR Kongo und Verbündete, "Ruanda, Uganda und Rebellengruppen", Zivilbevölkerung]
+  summary: >
+    Neun afrikanische Staaten und etwa fünfundzwanzig bewaffnete Gruppen kämpften in der
+    Demokratischen Republik Kongo — der tödlichste Konflikt seit dem Zweiten Weltkrieg und
+    einer der am wenigsten beachteten. Die viel zitierte Zahl von 5,4 Millionen stammt aus
+    Mortalitätserhebungen des IRC und zählt Übersterblichkeit durch Krankheit und Hunger
+    infolge zusammengebrochener Gesundheitssysteme; die Methodik ist umstritten, Kritiker
+    argumentieren für eine deutlich niedrigere Zahl.
+
+war-in-afghanistan-2001:
+  name: Krieg in Afghanistan (2001–2021)
+  region: Zentralasien
+  sides: [NATO und afghanische Regierung, Taliban und verbündete Gruppen, Afghanische Zivilbevölkerung]
+  summary: >
+    Die von den USA geführte Invasion nach den Anschlägen vom 11. September stürzte
+    die Taliban binnen Wochen; aus dem zwanzigjährigen Aufstand danach wurde der
+    längste Krieg der Geschichte der Vereinigten Staaten. Die Zahlen hier folgen der
+    ereignisbasierten Zählung des Costs-of-War-Projekts — eine der bestdokumentierten
+    Bilanzen eines modernen Krieges —, wobei Tote durch zusammengebrochene
+    Gesundheitsversorgung und Infrastruktur erheblich hinzukämen. Er endete, wie er
+    begann, mit den Taliban in Kabul: Die amerikanischen Truppen zogen im August 2021
+    ab, und die von ihnen aufgebaute Republik überlebte sie um elf Tage.
+
+iraq-war:
+  name: Irakkrieg
+  region: Naher Osten
+  sides: [Koalition und irakische Regierung, Aufständische Gruppen, Irakische Zivilbevölkerung]
+  summary: >
+    Die von den USA geführte Invasion, die Saddam Hussein stürzte, und der Aufstand samt
+    konfessionellem Bürgerkrieg, der folgte. Die Opferschätzungen gehen je nach Methode
+    weit auseinander: Die Zählung dokumentierter Toter durch Iraq Body Count liegt bei
+    etwa 200.000, während Haushaltsbefragungen Zahlen nahe oder über einer Million ergaben.
+
+darfur-conflict:
+  name: Darfur-Konflikt
+  region: Ostafrika
+  sides: [Sudanesische Regierung und Dschandschawid, Rebellenbewegungen Darfurs, Zivilbevölkerung Darfurs]
+  summary: >
+    Sudanesische Regierungstruppen und Dschandschawid-Milizen gegen Rebellenbewegungen in
+    Darfur, mit Massentötungen und Vertreibung der nichtarabischen Bevölkerung der Region.
+    Der Internationale Strafgerichtshof erließ Haftbefehl gegen Präsident Omar al-Baschir
+    unter anderem wegen Völkermordes — der erste je gegen ein amtierendes Staatsoberhaupt.
+
+syrian-civil-war:
+  name: Bürgerkrieg in Syrien
+  region: Naher Osten
+  sides: [Syrische Regierung und Verbündete, "Opposition, kurdische und dschihadistische Kräfte", Zivilbevölkerung]
+  summary: >
+    Begonnen als Proteste im Arabischen Frühling, eskaliert zu einem vielseitigen Krieg
+    unter Beteiligung der Assad-Regierung, oppositioneller Gruppen, kurdischer Kräfte, des
+    IS sowie Russlands, Irans, der Türkei und der Vereinigten Staaten. Die Hälfte der
+    Bevölkerung wurde vertrieben. Die Assad-Regierung fiel im Dezember 2024.
+
+russo-ukrainian-war:
+  name: Russisch-Ukrainischer Krieg
+  region: Osteuropa
+  sides: [Ukraine, Russland, Ukrainische Zivilbevölkerung]
+  summary: >
+    Beginnend mit der russischen Annexion der Krim und dem Krieg im Donbass 2014, eskaliert
+    zur Vollinvasion im Februar 2022 — dem größten Krieg in Europa seit 1945. Die
+    Opferzahlen sind umstritten und werden von beiden Regierungen als Staatsgeheimnis
+    behandelt; die Spannen sind entsprechend weit, und der Konflikt dauert an.
+
+yemeni-civil-war:
+  name: Bürgerkrieg im Jemen
+  region: Naher Osten
+  sides: [Huthi-Bewegung (Ansar Allah), Jemenitische Regierung und die saudi-geführte Koalition, Zivilbevölkerung]
+  summary: >
+    Die Machtübernahme der Huthi in Sanaa und die folgende saudi-geführte Intervention,
+    die die UN wiederholt als schwerste humanitäre Krise der Welt bezeichnete. Die große
+    Mehrheit der Toten ist indirekt — durch Hunger, Cholera und den Zusammenbruch der
+    Gesundheitsversorgung unter Blockade — und nicht durch Kampfhandlungen verursacht.
+
+tigray-war:
+  name: Tigray-Krieg
+  region: Ostafrika
+  sides: [Äthiopische Zentralregierung und Eritrea, Volksbefreiungsfront von Tigray, Zivilbevölkerung]
+  summary: >
+    Krieg zwischen der äthiopischen Zentralregierung, unterstützt von Eritrea, und der
+    Volksbefreiungsfront von Tigray. Geführt unter einer nahezu vollständigen
+    Kommunikationssperre und Blockade; die Schätzungen der Toten — durch Kampf, Massaker
+    und herbeigeführten Hunger — reichen von 300.000 bis über 600.000, was ihn zu einem
+    der tödlichsten Kriege des 21. Jahrhunderts machen würde.
+
+gaza-war-2023:
+  name: Gaza-Krieg
+  region: Levante
+  sides: [Israel, Hamas und verbündete Fraktionen, Palästinensische Zivilbevölkerung]
+  summary: >
+    Beginnend mit dem von der Hamas geführten Angriff auf Südisrael am 7. Oktober 2023, bei
+    dem etwa 1.200 Menschen getötet wurden, und der darauf folgenden israelischen
+    Militäroperation in Gaza. Die Opferzahlen stammen überwiegend vom Gesundheitsministerium
+    in Gaza; Studien in The Lancet und anderswo argumentieren, die tatsächliche Zahl liege
+    deutlich höher, sobald indirekte Tote mitgezählt werden. Andauernd und umstritten.
+
+sudan-civil-war-2023:
+  name: Bürgerkrieg im Sudan
+  region: Ostafrika
+  sides: [Sudanesische Streitkräfte, Rapid Support Forces, Zivilbevölkerung]
+  summary: >
+    Krieg zwischen den sudanesischen Streitkräften und den Rapid Support Forces, der im
+    April 2023 in Khartum ausbrach und sich über das Land ausbreitete. Er hat die größte
+    Vertreibungskrise der Welt und Hungersnotbedingungen in mehreren Bundesstaaten
+    hervorgebracht, mit Berichten über ethnische Massentötungen in Darfur. Andauernd.
+
+hunnic-invasions:
+  name: Hunneneinfälle in Europa
+  region: Europa
+  sides: [Hunnenreich, Römisches Reich und Verbündete]
+  summary: >
+    Attilas Feldzüge über den Balkan, Gallien und Italien, 451 auf den Katalaunischen
+    Feldern aufgehalten und durch seinen Tod 453 beendet. Das Hunnenreich zerfiel binnen
+    einer Generation, doch die von ihm ausgelöste Verdrängung trieb gotische,
+    vandalische und alanische Völker dauerhaft auf römisches Gebiet.
+
+thirty-years-war:
+  name: Dreißigjähriger Krieg
+  region: Mitteleuropa
+  sides: [Katholische Liga und die Habsburger, Protestantische Union und Verbündete, Zivilbevölkerung des Reiches]
+  summary: >
+    Der zerstörerischste Krieg der europäischen Geschichte vor dem 20. Jahrhundert,
+    ausgetragen im Heiligen Römischen Reich unter Beteiligung nahezu jeder europäischen
+    Macht. Die Toten gingen überwiegend auf Hunger und Seuchen zurück, verbreitet von
+    Heeren, die sich aus dem Land ernährten: Die Bevölkerung der deutschen Länder sank um
+    geschätzte 20 %, in Teilen Brandenburgs, Pommerns und Württembergs um mehr als die Hälfte.
+
+# ── Neuzugänge: 6. bis 12. Jahrhundert ──────────────────────────────────────
+
+byzantine-sasanian-572:
+  name: Byzantinisch-Sasanidischer Krieg von 572–591
+  region: Naher Osten
+  sides: [Byzantinisches Reich, Sasanidenreich]
+  summary: >
+    Zwanzig Jahre Krieg um Armenien und Mesopotamien, eröffnet durch Justins II.
+    Tributverweigerung und einen armenischen Aufstand gegen Persien. Es war ein
+    Krieg der Belagerungen und Deportationen — Dara fiel 573, seine Bevölkerung
+    wurde nach Osten verschleppt — und endete nicht durch Sieg, sondern durch einen
+    persischen Bürgerkrieg: Der gestürzte Chosrau II. floh zu seinen Feinden, wurde
+    von byzantinischen Waffen wieder eingesetzt und trat zum Dank den Großteil
+    Armeniens ab. Keine Quelle zählt die Toten; die Spanne hier ist aus Heeresgrößen,
+    Kriegsdauer und den geplünderten Grenzstädten erschlossen — alles umstritten.
+
+zanj-rebellion:
+  name: Zandsch-Aufstand
+  region: Mesopotamien
+  sides: [Abbasiden-Kalifat, Zandsch-Rebellen, Zivilbevölkerung]
+  summary: >
+    Ein vierzehnjähriger Aufstand ostafrikanischer Sklaven, die die Salzsümpfe
+    Südiraks trockenlegen mussten, verstärkt durch Bauern und Deserteure — mit
+    eigenem Rebellenstaat samt Hauptstadt und der Plünderung Basras 871. Die
+    Abbasiden eroberten die Sümpfe Kanal für Kanal zurück. Die Opferzahl ist ein
+    Lehrbuchfall von Chronik-Inflation: Aus al-Tabari und späteren Kompilatoren
+    abgeleitete Zahlen reichen von einer halben bis zweieinhalb Millionen, während
+    die moderne Forschung um Popović die niedrigen Hunderttausender für die
+    vertretbare Größenordnung hält. Die Spanne umfasst beide Lesarten.
+
+byzantine-bulgarian-wars:
+  name: Byzantinisch-Bulgarische Kriege
+  region: Balkan
+  sides: [Byzantinisches Reich, Bulgarisches Reich]
+  summary: >
+    Eineinviertel Jahrhunderte immer wieder aufflammender Krieg zwischen Byzanz und
+    dem Bulgarischen Reich — von Simeon I., der Konstantinopel belagerte und sich
+    „Kaiser der Bulgaren und Römer“ nannte, bis zu Basileios II., der Bulgarien 1018
+    vollständig annektierte. Die Chronik-Behauptung, Basileios habe nach Kleidion
+    1014 15.000 Gefangene blenden lassen und je Hundertschaft einem Mann ein Auge
+    gelassen, damit er die anderen heimführe, trug ihm den Beinamen „Bulgarentöter“
+    ein; der Zahl glaubt man nicht, der Praxis schon. Keine Schlacht hinterließ eine
+    Verlustliste — die Spanne beruht auf Heeresgrößen und Kriegsdauer.
+
+five-dynasties-ten-kingdoms:
+  name: Kriege der Fünf Dynastien und Zehn Reiche
+  region: Ostasien
+  sides: [Nördliche Dynastien, Südliche Königreiche und Rivalen, Zivilbevölkerung]
+  summary: >
+    Die siebzigjährige Zersplitterung Chinas nach dem Zusammenbruch der Tang: fünf
+    Dynastien, die im Norden durch Putsch und Eroberung aufeinander folgten, zehn
+    Königreiche im Süden, und der bei Kaifeng erneut absichtlich gebrochene Gelbe
+    Fluss. Die Song einten bis 979 alles außer dem hohen Norden wieder. Die
+    registrierte Bevölkerung sank über die Epoche um Millionen, doch wie nach jedem
+    chinesischen Zusammenbruch zerfielen die Register schneller als die Menschen —
+    die Spanne hier ist eine demografische Ableitung aus der Zensuslücke, nur zum
+    Teil als Tote verbucht.
+
+fatimid-conquests:
+  name: Fatimidische Eroberungen
+  region: Nordafrika
+  sides: [Fatimiden-Kalifat, "Aghlabidische, ichschididische und abbasidische Kräfte"]
+  summary: >
+    Der Aufstieg des ismailitischen Fatimiden-Kalifats aus einer revolutionären
+    Bewegung unter den Kutama-Berbern: der Sturz der Aghlabiden 909, Jahrzehnte
+    des Krieges quer durch den Maghreb, drei gescheiterte Invasionen Ägyptens und
+    eine vierte 969, die fast kampflos gelang. Kairo wurde als neue Hauptstadt
+    gegründet, und das Kalifat zog 973 dorthin um — mit dem Anspruch auf die
+    Führung der islamischen Welt gegen Bagdad. Opferzahlen dieser Feldzüge wurden
+    nie festgehalten; die Spanne ist aus sechs Jahrzehnten immer wieder
+    aufflammender Kämpfe erschlossen.
+
+song-liao-war:
+  name: Song-Liao-Krieg
+  region: Ostasien
+  sides: [Song-Dynastie, Liao-Dynastie]
+  summary: >
+    Der Versuch der jungen Song-Dynastie, die Sechzehn Präfekturen um das heutige
+    Peking von den Khitan-Liao zurückzuerobern — abgewiesen am Gaoliang-Fluss 979
+    und katastrophal im dreigliedrigen Feldzug von 986 —, gefolgt von zwei
+    Jahrzehnten Grenzkrieg und einer großen Liao-Invasion nach Süden 1004. Der
+    Vertrag von Chanyuan von 1005 beendete ihn mit einer Fiktion, mit der beide
+    Seiten leben konnten: Friede unter Gleichen, bezahlt mit jährlichem
+    Song-Tribut in Silber und Seide. Er hielt über ein Jahrhundert. Die Chroniken
+    verzeichnen Heere in Hunderttausenderstärke, aber keine glaubwürdigen
+    Verlustzahlen.
+
+goryeo-khitan-wars:
+  name: Goryeo-Khitan-Kriege
+  region: Ostasien
+  sides: [Goryeo, Liao-Dynastie]
+  summary: >
+    Drei Invasionen der Khitan-Liao in Korea. Die erste endete am Verhandlungstisch,
+    die zweite plünderte 1011 die Hauptstadt Kaesŏng, die dritte wurde 1019 bei
+    Kuju vernichtet — die Chronik behauptet, von 100.000 Liao-Soldaten seien nur
+    wenige Tausend über den Yalu zurückgekehrt. Goryeo behielt seine Unabhängigkeit
+    und seine Verbindungen zu den Song; die drei Staaten fanden zu einem Jahrhundert
+    des Gleichgewichts. Die Zahlen sind Chronikzahlen: Behauptet werden Heere in
+    Hunderttausenderstärke, überprüfbar ist keine — die Spanne hier zinst sie
+    entsprechend ab.
+
+ghaznavid-invasions:
+  name: Ghaznawidische Invasionen Indiens
+  region: Südasien
+  sides: [Ghaznawiden-Reich, Indische Königreiche]
+  summary: >
+    Mahmuds von Ghazni siebzehn Feldzüge aus Afghanistan in die indische Ebene —
+    vom Sieg über die Hindu-Shahis bis zur Plünderung der Tempelstadt Somnath 1025,
+    wo seine eigenen Chronisten 50.000 gefallene Verteidiger behaupten: eine Zahl,
+    geschrieben zum Ruhm, nicht zum Zählen. Die Raubzüge finanzierten ein Reich und
+    leerten die Tempelschätze Nordindiens; die persischen Hofchroniken, die sie
+    festhalten, sind Siegesliteratur, und jede Zahl darin ist verdächtig. Die
+    Spanne hier behandelt die Chroniksummen als Obergrenze, nicht als Zählung.
+
+seljuk-conquests:
+  name: Seldschukische Eroberungen
+  region: Naher Osten
+  sides: [Seldschukenreich, "Byzantinische, ghaznawidische und buyidische Staaten"]
+  summary: >
+    Der halbe Jahrhundertsturm der Seldschuken aus der zentralasiatischen Steppe:
+    Chorasan 1040 bei Dandanaqan den Ghaznawiden entrissen, Bagdad 1055 betreten
+    und der Kalif zur Galionsfigur gemacht, Armeniens Ani 1064 geplündert und das
+    byzantinische Feldheer 1071 bei Manzikert zerschlagen — die Niederlage, die
+    Anatolien der türkischen Besiedlung öffnete und eine Generation später die
+    Kreuzzüge provozierte. Der Eintrag endet mit Malik-Schahs Tod 1092, als das
+    Reich zerfiel. Wie bei jeder Steppeneroberung blieben die Toten ungezählt; die
+    Spanne ist aus Umfang und Dauer der Feldzüge erschlossen.
+
+genpei-war:
+  name: Genpei-Krieg
+  region: Japan
+  sides: [Minamoto-Klan, Taira-Klan, Zivilbevölkerung]
+  summary: >
+    Der Krieg der Klans Minamoto und Taira um die Herrschaft über Japan, beendet
+    mit der Vernichtung der Taira-Flotte bei Dan-no-ura, wo der Kindkaiser mit dem
+    Reichsschwert ertrank. Seine Folge überdauerte jede Schlacht: Minamoto no
+    Yoritomos neue Militärregierung in Kamakura eröffnete sieben Jahrhunderte
+    Shogunatsherrschaft. Die Gefallenen zählten nach Tausenden, doch die
+    Yōwa-Hungersnot von 1181 — verflochten mit den Requisitionen des Krieges und
+    vom Chronisten Kamo no Chōmei mit unzählbaren Toten in den Straßen der
+    Hauptstadt beschrieben — tötete weit mehr, und die Spanne hängt daran, wie viel
+    davon dem Krieg zugerechnet wird.

@@ -1,0 +1,55 @@
+# End of 1943. North Africa is lost (Libya under British military administration);
+# Italy has surrendered in the south and Germany has seized the Italian occupation
+# zones — Albania flips to German control. Italy itself cannot be split into the
+# Social Republic and the Allied south from 1938 geometry.
+base: 1938
+merge:
+  Germany: [Czechoslovakia, Luxembourg, Poland]
+occupy:
+  - feature: Denmark
+    subjectTo: Germany
+  - feature: Norway
+    subjectTo: Germany
+  - feature: Netherlands
+    subjectTo: Germany
+  - feature: Belgium
+    subjectTo: Germany
+  - feature: France
+    subjectTo: Germany
+  - feature: Yugoslavia
+    subjectTo: Germany
+  - feature: Greece
+    subjectTo: Germany
+  - feature: Estonia
+    subjectTo: Germany
+  - feature: Latvia
+    subjectTo: Germany
+  - feature: Lithuania
+    subjectTo: Germany
+  - feature: Albania
+    subjectTo: Germany
+  - feature: Libya
+    subjectTo: United Kingdom
+  - feature: French Indo-China
+    subjectTo: Empire of Japan
+    name: French Indo-China (Japan)
+  - feature: Philippines
+    subjectTo: Empire of Japan
+    name: Philippines (Japan)
+  - feature: Malaysia
+    subjectTo: Empire of Japan
+    name: Malaya (Japan)
+  - feature: Hong Kong
+    subjectTo: Empire of Japan
+    name: Hong Kong (Japan)
+  - feature: Dutch East Indies
+    subjectTo: Empire of Japan
+    name: Dutch East Indies (Japan)
+  - feature: Eritrea (Italy)
+    subjectTo: United Kingdom
+    name: Eritrea (United Kingdom)
+  - feature: Italian Somaliland
+    subjectTo: United Kingdom
+    name: Somaliland (United Kingdom)
+release:
+  - Ethiopia (Italy)

@@ -1,0 +1,461 @@
+# Industrial era — 1800 to 1914
+#
+# The century in which the deadliest war in human history to that point was fought
+# not in Europe but in China. The Taiping Rebellion killed an order of magnitude
+# more people than the American Civil War running at almost the same time, and is
+# far less known in the West — a good illustration of why this atlas weights by
+# deaths rather than by familiarity.
+
+- id: napoleonic-wars
+  name: Napoleonic Wars
+  startYear: 1803
+  endYear: 1815
+  centroid: [12.0, 48.0]
+  extent: 20
+  type: interstate
+  region: Europe
+  summary: >
+    A dozen years of war between Napoleonic France and shifting coalitions, fought
+    from Portugal to Moscow and from Egypt to the Caribbean. The invasion of Russia
+    in 1812 destroyed an army of around 600,000; fewer than a tenth returned. The
+    wars introduced mass conscription and the levée en masse, and with them the
+    modern scale of European warfare.
+  total: { low: 3500000, best: 5000000, high: 7000000, confidence: estimated }
+  sides:
+    - name: French Empire and allies
+      members: [France, Confederation of the Rhine, Italy, Poland, Spain (to 1808)]
+      military: { low: 1200000, best: 1800000, high: 2400000, confidence: estimated }
+    - name: Coalition powers
+      members: [Russia, Austria, Prussia, United Kingdom, Spain (from 1808), Sweden, Portugal]
+      military: { low: 1300000, best: 1900000, high: 2600000, confidence: estimated }
+    - name: Civilian population
+      civilian: { low: 1000000, best: 1300000, high: 2000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Napoleonic Wars
+      url: https://en.wikipedia.org/wiki/Napoleonic_Wars
+
+- id: latin-american-independence
+  name: Spanish American Wars of Independence
+  startYear: 1808
+  endYear: 1833
+  centroid: [-70.0, -10.0]
+  extent: 25
+  type: rebellion
+  region: Latin America
+  summary: >
+    The wars that dismantled Spain's American empire, from Mexico to the Río de la
+    Plata, opened by Napoleon's usurpation of the Spanish crown in 1808. Bolívar, San
+    Martín, Hidalgo and Morelos fought royalist armies that were themselves largely
+    American-born — as much a set of civil wars as a liberation. Venezuela and New
+    Granada saw declarations of "war to the death"; Mexico's insurgency alone may
+    account for a third or more of the total. The figures are demographic estimates:
+    no army on either side kept reliable rolls, and civilian deaths from disease,
+    requisition and reprisal were never counted at all.
+  total: { low: 400000, best: 600000, high: 900000, confidence: disputed }
+  sides:
+    - name: Independence movements
+      members: [Gran Colombia, United Provinces, Chile, Mexico, Peru]
+      military: { low: 150000, best: 250000, high: 380000, confidence: disputed }
+    - name: Spanish Empire and royalists
+      military: { low: 150000, best: 230000, high: 350000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 100000, best: 120000, high: 170000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Spanish American wars of independence
+      url: https://en.wikipedia.org/wiki/Spanish_American_wars_of_independence
+
+- id: taiping-rebellion
+  name: Taiping Rebellion
+  startYear: 1850
+  endYear: 1864
+  centroid: [118.8, 31.0]
+  extent: 9
+  type: civil
+  region: East Asia
+  summary: >
+    A civil war against the Qing dynasty led by Hong Xiuquan, who believed himself
+    the younger brother of Jesus Christ. The Taiping Heavenly Kingdom controlled
+    much of southern China and its capital at Nanjing for a decade. The deadliest
+    civil war in history and, by most counts, the deadliest conflict of the entire
+    19th century — larger than the American Civil War by a factor of thirty.
+  total: { low: 20000000, best: 25000000, high: 30000000, confidence: disputed }
+  sides:
+    - name: Qing dynasty
+      members: [Qing dynasty, Xiang Army, Ever Victorious Army, Britain, France]
+      military: { low: 2000000, best: 3500000, high: 5000000, confidence: disputed }
+    - name: Taiping Heavenly Kingdom
+      military: { low: 2000000, best: 3500000, high: 5000000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 16000000, best: 18000000, high: 20000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Taiping Rebellion
+      url: https://en.wikipedia.org/wiki/Taiping_Rebellion
+
+- id: nian-rebellion
+  name: Nian Rebellion
+  startYear: 1851
+  endYear: 1868
+  centroid: [116.0, 33.5]
+  extent: 5
+  type: rebellion
+  region: East Asia
+  summary: >
+    A cavalry-based peasant insurgency across the North China Plain, concurrent with
+    the Taiping Rebellion and never fully separable from it — the Qing fought both at
+    once, often with the same armies. The Yellow River's catastrophic change of course
+    in 1855 flooded the region, displaced millions and swelled the rebel bands;
+    banditry, reprisal and famine did most of the killing. The toll is the least
+    certain of the era's Chinese conflicts, and the range here excludes the flood's
+    direct victims. Suppressed in 1868 by the provincial armies of Zeng Guofan and Li
+    Hongzhang — the same forces that had broken the Taiping.
+  total: { low: 100000, best: 500000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Qing dynasty
+      members: [Qing dynasty, Xiang Army, Huai Army]
+      military: { low: 50000, best: 150000, high: 300000, confidence: disputed }
+    - name: Nian rebels
+      military: { low: 50000, best: 150000, high: 300000, confidence: disputed }
+      civilian: { low: 50000, best: 200000, high: 400000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Nian Rebellion
+      url: https://en.wikipedia.org/wiki/Nian_Rebellion
+
+- id: crimean-war
+  name: Crimean War
+  startYear: 1853
+  endYear: 1856
+  centroid: [34.0, 45.0]
+  extent: 5
+  type: interstate
+  region: Black Sea
+  summary: >
+    Britain, France and the Ottomans against Russia, fought mainly on the Crimean
+    peninsula. Roughly three-quarters of the deaths were from disease rather than
+    combat — the conditions that made Florence Nightingale's name and forced the
+    reform of military medicine. The first war reported by telegraph and photographed.
+  total: { low: 500000, best: 650000, high: 750000, confidence: estimated }
+  sides:
+    - name: Allied powers
+      members: [France, United Kingdom, Ottoman Empire, Sardinia]
+      military: { low: 220000, best: 300000, high: 350000, confidence: estimated }
+    - name: Russian Empire
+      military: { low: 250000, best: 350000, high: 400000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Crimean War
+      url: https://en.wikipedia.org/wiki/Crimean_War
+
+- id: panthay-rebellion
+  name: Panthay Rebellion
+  startYear: 1856
+  endYear: 1873
+  centroid: [100.5, 25.0]
+  extent: 4
+  type: rebellion
+  region: East Asia
+  summary: >
+    A Hui Muslim rebellion in Yunnan against Qing rule, sparked by officially
+    tolerated massacres of Hui miners, which established a sultanate at Dali under Du
+    Wenxiu before being crushed. The reconquest ended in extermination: Dali's fall in
+    1872 was followed by a general massacre, and Du Wenxiu's surrender did not stop
+    it. Provincial gazetteers suggest Yunnan's population fell by several million
+    across the rebellion — how much of that was death and how much flight is
+    unresolved, which is why the total here stays near the low end of what the
+    demographic collapse would allow.
+  total: { low: 890000, best: 1000000, high: 1100000, confidence: disputed }
+  sides:
+    - name: Qing dynasty
+      military: { low: 100000, best: 200000, high: 300000, confidence: disputed }
+    - name: Pingnan Guo (Panthay rebels)
+      military: { low: 150000, best: 300000, high: 400000, confidence: disputed }
+      civilian: { low: 400000, best: 500000, high: 600000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Panthay Rebellion
+      url: https://en.wikipedia.org/wiki/Panthay_Rebellion
+
+- id: indian-rebellion-1857
+  name: Indian Rebellion of 1857
+  startYear: 1857
+  endYear: 1858
+  centroid: [80.9, 26.8]
+  extent: 6
+  type: rebellion
+  region: South Asia
+  summary: >
+    A mutiny of sepoys in the Bengal Army that became a widespread revolt across
+    northern India. Its suppression was accompanied by mass reprisals against
+    civilians. The rebellion ended Company rule: the British Crown assumed direct
+    government of India in 1858.
+  total: { low: 800000, best: 800000, high: 10000000, confidence: disputed }
+  sides:
+    - name: British East India Company
+      members: [East India Company, loyal princely states, Nepal]
+      military: { low: 6000, best: 11000, high: 20000, confidence: estimated }
+    - name: Indian rebels
+      members: [Mughal Empire, Awadh, Jhansi, Gwalior contingent]
+      military: { low: 100000, best: 150000, high: 300000, confidence: disputed }
+      civilian: { low: 600000, best: 639000, high: 9600000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Indian Rebellion of 1857
+      url: https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857
+
+- id: american-civil-war
+  name: American Civil War
+  startYear: 1861
+  endYear: 1865
+  centroid: [-79.0, 36.5]
+  extent: 8
+  type: civil
+  region: North America
+  summary: >
+    The war over slavery and secession that killed more Americans than every other
+    American war combined until Vietnam. The long-standing figure of 620,000 dead
+    was revised upward by demographer J. David Hacker in 2011 to around 750,000
+    using census-based methods. Two-thirds of deaths were from disease.
+  total: { low: 620000, best: 700000, high: 850000, confidence: estimated }
+  sides:
+    - name: United States (Union)
+      military: { low: 360000, best: 365000, high: 400000, confidence: documented }
+    - name: Confederate States
+      military: { low: 258000, best: 290000, high: 350000, confidence: estimated }
+    - name: Civilian population
+      civilian: { low: 50000, best: 50000, high: 80000, confidence: disputed }
+  sources:
+    - title: J. David Hacker, "A Census-Based Count of the Civil War Dead" (2011)
+    - title: Wikipedia — American Civil War
+      url: https://en.wikipedia.org/wiki/American_Civil_War
+
+- id: dungan-revolt
+  name: Dungan Revolt
+  startYear: 1862
+  endYear: 1877
+  centroid: [104.0, 36.0]
+  extent: 8
+  type: rebellion
+  region: East Asia
+  summary: >
+    A Hui Muslim uprising across Shaanxi, Gansu and Xinjiang, suppressed by Zuo
+    Zongtang with enormous loss of life. The population of Shaanxi and Gansu fell
+    catastrophically through massacre, famine and flight; survivors emigrated to
+    Russian Central Asia, where their descendants are still called Dungans.
+  total: { low: 8000000, best: 10000000, high: 12000000, confidence: disputed }
+  sides:
+    - name: Qing dynasty
+      military: { low: 200000, best: 400000, high: 700000, confidence: disputed }
+    - name: Hui and allied Muslim rebels
+      members: [Hui militias, Kashgaria (Yaqub Beg)]
+      military: { low: 500000, best: 1000000, high: 1500000, confidence: disputed }
+      civilian: { low: 7000000, best: 8600000, high: 9800000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Dungan Revolt (1862–1877)
+      url: https://en.wikipedia.org/wiki/Dungan_Revolt_(1862%E2%80%931877)
+
+- id: paraguayan-war
+  name: Paraguayan War (War of the Triple Alliance)
+  startYear: 1864
+  endYear: 1870
+  centroid: [-57.5, -25.3]
+  extent: 6
+  type: interstate
+  region: South America
+  summary: >
+    Paraguay against Brazil, Argentina and Uruguay simultaneously — proportionally
+    the most destructive war in modern history for the losing side. Paraguay may
+    have lost over half its population and the great majority of its adult men.
+    Estimates vary enormously because the pre-war population itself is uncertain.
+  total: { low: 300000, best: 500000, high: 1200000, confidence: disputed }
+  sides:
+    - name: Triple Alliance
+      members: [Brazil, Argentina, Uruguay]
+      military: { low: 90000, best: 130000, high: 200000, confidence: disputed }
+    - name: Paraguay
+      military: { low: 60000, best: 100000, high: 300000, confidence: disputed }
+      civilian: { low: 150000, best: 270000, high: 700000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Paraguayan War
+      url: https://en.wikipedia.org/wiki/Paraguayan_War
+
+- id: franco-prussian-war
+  name: Franco-Prussian War
+  startYear: 1870
+  endYear: 1871
+  centroid: [5.5, 48.8]
+  extent: 4
+  type: interstate
+  region: Western Europe
+  summary: >
+    Prussia's rapid defeat of France, sealed by the capture of Napoleon III at Sedan
+    and the siege of Paris. The German Empire was proclaimed in the Hall of Mirrors at
+    Versailles in January 1871, and the annexation of Alsace-Lorraine set the
+    grievance that helped produce 1914. French losses are dominated by disease — in
+    prison camps and in the improvised armies of the young Republic — and the smallpox
+    epidemic the war spread across Europe killed more civilians than the fighting did,
+    beyond the range counted here. The Paris Commune and its bloody suppression
+    followed within weeks of the peace.
+  total: { low: 180000, best: 250000, high: 300000, confidence: estimated }
+  sides:
+    - name: North German Confederation and allies
+      members: [Prussia, Bavaria, Baden, Württemberg]
+      military: { low: 44000, best: 52000, high: 60000, confidence: documented }
+    - name: France
+      military: { low: 138000, best: 160000, high: 200000, confidence: estimated }
+      civilian: { low: 20000, best: 38000, high: 60000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Franco-Prussian War
+      url: https://en.wikipedia.org/wiki/Franco-Prussian_War
+
+- id: congo-free-state
+  name: Congo Free State Atrocities
+  startYear: 1885
+  endYear: 1908
+  centroid: [23.0, -2.0]
+  extent: 10
+  type: colonial
+  region: Central Africa
+  summary: >
+    Leopold II of Belgium held the Congo as personal property and extracted rubber
+    through forced labour enforced by hostage-taking, mutilation and massacre. The
+    often-quoted figure of 10 million deaths originates with Adam Hochschild and
+    represents an estimated halving of the population — a demographic estimate
+    combining killings, famine, disease and collapsed birth rates, not a body count.
+    Some historians consider it too high; others too low. There was never a census.
+  total: { low: 1500000, best: 8000000, high: 15000000, confidence: disputed }
+  sides:
+    - name: Congo Free State
+      members: [Belgium, Force Publique]
+      military: { low: 2000, best: 5000, high: 10000, confidence: disputed }
+    - name: Congolese population
+      military: { low: 100000, best: 300000, high: 800000, confidence: disputed }
+      civilian: { low: 1400000, best: 7500000, high: 14000000, confidence: disputed }
+  sources:
+    - title: Adam Hochschild, King Leopold's Ghost (1998)
+    - title: Wikipedia — Atrocities in the Congo Free State
+      url: https://en.wikipedia.org/wiki/Atrocities_in_the_Congo_Free_State
+
+- id: second-boer-war
+  name: Second Boer War
+  startYear: 1899
+  endYear: 1902
+  centroid: [26.0, -28.5]
+  extent: 5
+  type: colonial
+  region: Southern Africa
+  summary: >
+    Britain against the Transvaal and Orange Free State. When the Boers turned to
+    guerrilla warfare, Kitchener responded with farm burning and concentration
+    camps in which some 28,000 Boer civilians — mostly children — and at least
+    20,000 Black Africans died of disease and malnutrition.
+  total: { low: 75000, best: 100000, high: 120000, confidence: estimated }
+  sides:
+    - name: British Empire
+      members: [United Kingdom, Australia, Canada, New Zealand]
+      military: { low: 20000, best: 22000, high: 26000, confidence: documented }
+    - name: Boer republics
+      members: [South African Republic, Orange Free State]
+      military: { low: 6000, best: 7000, high: 9000, confidence: estimated }
+      civilian: { low: 46000, best: 48000, high: 60000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Second Boer War
+      url: https://en.wikipedia.org/wiki/Second_Boer_War
+
+- id: boxer-rebellion
+  name: Boxer Rebellion
+  startYear: 1899
+  endYear: 1901
+  centroid: [116.4, 39.9]
+  extent: 4
+  type: rebellion
+  region: East Asia
+  summary: >
+    An anti-foreign, anti-Christian uprising in northern China, culminating in the
+    siege of the legations at Beijing and an eight-nation intervention that looted
+    the capital. The resulting indemnity crippled Qing finances and hastened the
+    dynasty's fall a decade later.
+  total: { low: 100000, best: 115000, high: 140000, confidence: disputed }
+  sides:
+    - name: Eight-Nation Alliance
+      members: [Japan, Russia, United Kingdom, France, United States, Germany, Italy, Austria-Hungary]
+      military: { low: 2000, best: 2500, high: 3500, confidence: estimated }
+    - name: Qing dynasty and Boxers
+      military: { low: 30000, best: 40000, high: 60000, confidence: disputed }
+      civilian: { low: 68000, best: 72500, high: 76500, confidence: disputed }
+  sources:
+    - title: Wikipedia — Boxer Rebellion
+      url: https://en.wikipedia.org/wiki/Boxer_Rebellion
+
+- id: herero-namaqua-genocide
+  name: Herero and Namaqua Genocide
+  startYear: 1904
+  endYear: 1908
+  centroid: [17.0, -22.0]
+  extent: 5
+  type: genocide
+  region: Southern Africa
+  summary: >
+    German colonial forces in South West Africa drove the Herero into the Omaheke
+    desert and sealed the waterholes, then interned survivors in camps. Widely
+    described as the first genocide of the 20th century; roughly 80% of the Herero
+    and half the Nama population died. Germany formally acknowledged it as genocide
+    in 2021.
+  total: { low: 34000, best: 80000, high: 110000, confidence: estimated }
+  sides:
+    - name: German Empire
+      members: [German South West Africa, Schutztruppe]
+      military: { low: 1500, best: 2000, high: 2500, confidence: documented }
+    - name: Herero and Nama peoples
+      military: { low: 5000, best: 8000, high: 12000, confidence: disputed }
+      civilian: { low: 27000, best: 70000, high: 95000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Herero and Nama genocide
+      url: https://en.wikipedia.org/wiki/Herero_and_Nama_genocide
+
+- id: russo-japanese-war
+  name: Russo-Japanese War
+  startYear: 1904
+  endYear: 1905
+  centroid: [125.0, 41.0]
+  extent: 6
+  type: interstate
+  region: East Asia
+  summary: >
+    Japan's defeat of Russia over Manchuria and Korea — the first modern victory of
+    an Asian power over a European empire. The annihilation of the Baltic Fleet at
+    Tsushima and the humiliation that followed contributed directly to the Russian
+    Revolution of 1905.
+  total: { low: 130000, best: 160000, high: 200000, confidence: estimated }
+  sides:
+    - name: Empire of Japan
+      military: { low: 58000, best: 80000, high: 90000, confidence: estimated }
+    - name: Russian Empire
+      military: { low: 43000, best: 71000, high: 90000, confidence: estimated }
+    - name: Civilian population
+      civilian: { low: 10000, best: 20000, high: 30000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Russo-Japanese War
+      url: https://en.wikipedia.org/wiki/Russo-Japanese_War
+
+- id: mexican-revolution
+  name: Mexican Revolution
+  startYear: 1910
+  endYear: 1920
+  centroid: [-102.0, 23.0]
+  extent: 8
+  type: civil
+  region: North America
+  summary: >
+    A decade of civil war that overthrew Porfirio Díaz and then consumed its own
+    leaders — Madero, Zapata, Carranza and Villa all died violently. Death estimates
+    range from one to two million, though a substantial share is attributable to the
+    1918 influenza pandemic and to emigration rather than fighting.
+  total: { low: 1000000, best: 1500000, high: 2000000, confidence: disputed }
+  sides:
+    - name: Revolutionary factions
+      members: [Constitutionalists, Villistas, Zapatistas]
+      military: { low: 200000, best: 350000, high: 500000, confidence: disputed }
+    - name: Federal government forces
+      members: [Federal Army, Huerta regime]
+      military: { low: 150000, best: 250000, high: 400000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 650000, best: 900000, high: 1100000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Mexican Revolution
+      url: https://en.wikipedia.org/wiki/Mexican_Revolution

@@ -1,0 +1,45 @@
+# Cross-snapshot entity aliases — names that are the SAME polity through time.
+#
+# Names appear as in the border snapshots' NAME property (wartime " (X)"
+# suffixes are stripped automatically). Grouping affects only visual
+# continuity — territory tint, label fades, selection persistence — never
+# borders, names, or any historical claim. When in doubt, leave names apart:
+# a wrong split costs a colour change on a snapshot boundary; a wrong merge
+# claims two polities are one.
+#
+# The build warns (and refuses the merge) if two grouped names ever appear in
+# the same snapshot, since co-occurrence proves they are distinct polities.
+# `never` pairs block fuzzy merges between token look-alikes that are
+# genuinely unrelated. Inspect data/cache/entities-report.json after a build.
+
+groups:
+  # Successor states whose names share no token, so the fuzzy tier cannot
+  # connect them. Uncontroversial successions only — mirrors the reasoning in
+  # pipeline/5-flags.ts HISTORICAL.
+  - [Siam, Thailand]
+  - [Persia, Iran]
+  - [Ottoman Empire, Turkey]
+  - [Eastern Roman Empire, Byzantine Empire]
+  - [China, Qing Empire]
+  # Refused by the build (the two names co-occur in at least one snapshot),
+  # kept to document the intent — the warning is expected.
+  - [United Kingdom, United Kingdom of Great Britain and Ireland]
+
+never:
+  # Brittany (the French region, spelled "Britany" upstream) is not Britain.
+  - [Britany, United Kingdom of Great Britain and Ireland]
+  - [Britany, United Kingdom]
+  - [Britany, Great Britain]
+  # Romania is not Rome, and the Holy Roman Empire is neither.
+  - [Romania, Roman Empire]
+  - [Romania, Holy Roman Empire]
+  - [Romania, Western Roman Empire]
+  - [Romania, Eastern Roman Empire]
+  - [Romania, Byzantine Empire]
+  - [Roman Empire, Holy Roman Empire]
+  - [Western Roman Empire, Holy Roman Empire]
+  # "China" in "French Indochina"/"Cochin China" is a false friend.
+  - [China, French Indochina]
+  - [China, French Indo-China]
+  - [China, Cochin China]
+  - [Qing Empire, Cochin China]

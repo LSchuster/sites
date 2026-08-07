@@ -1,0 +1,31 @@
+# End of 1940. The West has fallen; Luxembourg is under German civil administration
+# (drawn as annexed). France is shown entirely German-held — the Vichy demarcation
+# line cannot be drawn from 1938 geometry. The Baltic states are Soviet-annexed;
+# Japan has moved into French Indo-China.
+base: 1938
+merge:
+  Germany: [Czechoslovakia, Luxembourg]
+occupy:
+  - feature: Poland
+    subjectTo: Germany
+  - feature: Denmark
+    subjectTo: Germany
+  - feature: Norway
+    subjectTo: Germany
+  - feature: Netherlands
+    subjectTo: Germany
+  - feature: Belgium
+    subjectTo: Germany
+  - feature: France
+    subjectTo: Germany
+  - feature: Estonia
+    subjectTo: Soviet Union
+  - feature: Latvia
+    subjectTo: Soviet Union
+  - feature: Lithuania
+    subjectTo: Soviet Union
+  - feature: Albania
+    subjectTo: Italy
+  - feature: French Indo-China
+    subjectTo: Empire of Japan
+    name: French Indo-China (Japan)

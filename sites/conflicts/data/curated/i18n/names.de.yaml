@@ -1,0 +1,1020 @@
+# Deutsche Übersetzungen von Namen der Kriegsparteien (Side.members).
+#
+# Ein flaches Wörterbuch „englischer Name: deutscher Name“, angewendet von
+# pipeline/6-compile-conflicts.ts auf jede members-Liste. Nur Namen aufnehmen,
+# die sich vom Englischen unterscheiden — identische Namen fallen zur Laufzeit
+# ohnehin auf das Original zurück. Für moderne Staaten, die hier fehlen,
+# springt Intl.DisplayNames ein (pipeline/name-dictionary.ts); historische
+# Namen brauchen einen Eintrag. Der Compile-Schritt meldet jeden Namen ohne
+# Übersetzung.
+#
+# Die englischen Originale bleiben der Schlüssel überall im Code (Flaggen,
+# Involvement-Matching); diese Übersetzungen erscheinen nur in der Oberfläche.
+
+Abbasid Caliphate: Abbasiden-Kalifat
+Abbasid contingents: Abbasidische Kontingente
+Afghan mujahideen: Afghanische Mudschaheddin
+Alans: Alanen
+Alemanni: Alemannen
+Almohads: Almohaden
+Almoravids: Almoraviden
+Amhara regional forces: Amharische Regionalkräfte
+Anglo-Saxon kingdoms: Angelsächsische Königreiche
+Aquitaine: Aquitanien
+Aragon: Aragonien
+Argentina: Argentinien
+Australia: Australien
+Austria: Österreich
+Austria-Hungary: Österreich-Ungarn
+Ayyubids: Ayyubiden
+Ba'athist insurgents: Baathistische Aufständische
+Bar Kokhba's forces: Bar Kochbas Truppen
+Bastarnae: Bastarnen
+Bavaria: Bayern
+Belgium: Belgien
+Berber kingdoms: Berberreiche
+Bohemia: Böhmen
+Bosnia and Herzegovina: Bosnien und Herzegowina
+Brandenburg-Prussia: Brandenburg-Preußen
+Brazil: Brasilien
+Britain: Großbritannien
+Bulgaria: Bulgarien
+Burgundy: Burgund
+Byzantine Empire: Byzantinisches Reich
+Cambodia: Kambodscha
+Canada: Kanada
+Castile: Kastilien
+Cathar communities: Katharergemeinden
+Catholic League: Katholische Liga
+Chad: Tschad
+Committee of Union and Progress: Komitee für Einheit und Fortschritt
+Communist forces: Kommunistische Kräfte
+Confederation of the Rhine: Rheinbund
+Constitutionalists: Konstitutionalisten
+Cossack Hetmanate: Kosaken-Hetmanat
+County of Toulouse: Grafschaft Toulouse
+Crimean Khanate: Krimkhanat
+Croatia: Kroatien
+Czechoslovak Legion: Tschechoslowakische Legion
+DPR and LPR forces: Kräfte der Volksrepubliken Donezk und Luhansk
+DR Congo: DR Kongo
+Dacians: Daker
+Danes: Dänen
+Delhi Sultanate: Delhi-Sultanat
+Democratic Republic of Afghanistan: Demokratische Republik Afghanistan
+Denmark-Norway: Dänemark-Norwegen
+Dutch Republic: Republik der Vereinigten Niederlande
+East India Company: Ostindien-Kompanie
+Eastern Roman Empire: Oströmisches Reich
+Egypt: Ägypten
+Emirate of Granada: Emirat von Granada
+English Parliament: Englisches Parlament
+English Royalists: Englische Royalisten
+Ethiopia: Äthiopien
+Ever Victorious Army: Immersiegreiche Armee
+FR Yugoslavia: BR Jugoslawien
+Fascist Italy: Faschistisches Italien
+Fatimid Caliphate: Fatimiden-Kalifat
+Federal Army: Föderale Armee
+Finland: Finnland
+France: Frankreich
+Franks: Franken
+Free Syrian Army: Freie Syrische Armee
+French Army: Französische Armee
+Genoa: Genua
+Genoese and Venetian contingents: Genuesische und venezianische Kontingente
+German South West Africa: Deutsch-Südwestafrika
+Germany: Deutschland
+Golden Horde: Goldene Horde
+Goths: Goten
+Gran Colombia: Großkolumbien
+Great Britain: Großbritannien
+Greuthungi: Greutungen
+Gwalior contingent: Gwalior-Kontingent
+Habsburg Monarchy: Habsburgermonarchie
+Hanover: Hannover
+Hessian states: Hessische Staaten
+Hezbollah: Hisbollah
+Holy Roman Empire: Heiliges Römisches Reich
+Huerta regime: Huerta-Regime
+Hungary: Ungarn
+ISAF contributors: ISAF-Truppensteller
+ISIS: IS
+ISIS-K: ISPK
+Iazyges: Jazygen
+Iceni: Icener
+Imperial Japanese Army: Kaiserlich Japanische Armee
+India: Indien
+International Brigades: Internationale Brigaden
+Iraqi security forces: Irakische Sicherheitskräfte
+Irish Confederation: Irische Konföderation
+Irish kingdoms: Irische Königreiche
+Iroquois Confederacy: Irokesenbund
+Italy: Italien
+Janjaweed militias: Dschandschawid-Milizen
+Jin dynasty: Jin-Dynastie
+KLA: UÇK
+Khwarezmian Empire: Choresmisches Reich
+Kievan Rus': Kiewer Rus
+Kingdom of France: Königreich Frankreich
+Kingdom of Hungary: Königreich Ungarn
+Kingdom of Jerusalem: Königreich Jerusalem
+Kingdom of Tungning: Königreich Tungning
+Knights Hospitaller: Johanniterorden
+Knights Templar: Templerorden
+Loyalist militias: Loyalistische Milizen
+Mahdi Army: Mahdi-Armee
+Mamluk Sultanate: Mamluken-Sultanat
+Marcomanni: Markomannen
+Mexico: Mexiko
+Ming dynasty: Ming-Dynastie
+Mughal Empire: Mogulreich
+National Revolutionary Army: Nationalrevolutionäre Armee
+Nationalist Spain: Nationalspanien
+Navarre: Navarra
+Nazi Germany: NS-Deutschland
+New Zealand: Neuseeland
+North Korea: Nordkorea
+North Vietnam: Nordvietnam
+Norwegians: Norweger
+Orange Free State: Oranje-Freistaat
+Ostrogoths: Ostgoten
+Ottoman Empire: Osmanisches Reich
+Papal States: Kirchenstaat
+People's Liberation Army: Volksbefreiungsarmee
+Persian states: Persische Staaten
+Poland: Polen
+Poland-Lithuania: Polen-Litauen
+Prussia: Preußen
+Qing dynasty: Qing-Dynastie
+Quadi: Quaden
+Red Army: Rote Armee
+Red Guards: Rote Garden
+Republic of China: Republik China
+Republic of Venice: Republik Venedig
+Revolutionary Committees: Revolutionskomitees
+Roman Britain: Römisches Britannien
+Romania: Rumänien
+Roxolani: Roxolanen
+Russia: Russland
+Rwanda: Ruanda
+Rwandan Armed Forces: Ruandische Streitkräfte
+Rwandan Patriotic Front: Ruandische Patriotische Front
+Sardinia: Sardinien
+Sasanian Empire: Sasanidenreich
+Saudi Arabia: Saudi-Arabien
+Savoy: Savoyen
+Saxony: Sachsen
+Scotland: Schottland
+Scottish Covenanters: Schottische Covenanters
+Scottish Royalists: Schottische Royalisten
+Seljuk Empire: Seldschukenreich
+Serbia: Serbien
+Serbian Krajina: Serbische Krajina
+Shun dynasty: Shun-Dynastie
+Song dynasty: Song-Dynastie
+South African Republic: Südafrikanische Republik
+South Korea: Südkorea
+South Vietnam: Südvietnam
+Southern Ming: Südliche Ming
+Soviet Union: Sowjetunion
+Soviet advisers: Sowjetische Berater
+Spain: Spanien
+Spain (from 1808): Spanien (ab 1808)
+Spain (to 1808): Spanien (bis 1808)
+Spanish Republic: Spanische Republik
+Special Organization: Spezialorganisation
+State of Vietnam: Staat Vietnam
+Suebi: Sueben
+Sweden: Schweden
+Swedes: Schweden
+Swedish Empire: Schwedisches Reich
+Syrian Arab Republic: Arabische Republik Syrien
+Tang dynasty: Tang-Dynastie
+Thervingi: Terwingen
+Trinovantes: Trinovanten
+Tsardom of Russia: Zarentum Russland
+Turkey: Türkei
+Umayyad Caliphate of Córdoba: Kalifat von Córdoba
+United Arab Emirates: Vereinigte Arabische Emirate
+United Kingdom: Vereinigtes Königreich
+United Provinces: Vereinigte Provinzen
+United States: Vereinigte Staaten
+Uyghur Khaganate: Uigurisches Khaganat
+Vandals: Vandalen
+Venice: Venedig
+Viet Cong: Vietcong
+Visigothic Kingdom: Westgotenreich
+Visigoths: Westgoten
+Wagner Group: Gruppe Wagner
+West Francia: Westfrankenreich
+Western Roman Empire: Weströmisches Reich
+White Army: Weiße Armee
+Xi dynasty: Xi-Dynastie
+Xiang Army: Xiang-Armee
+Yemen: Jemen
+Yugoslavia: Jugoslawien
+Zimbabwe: Simbabwe
+al-Qaeda: al-Qaida
+al-Qaeda in Iraq: al-Qaida im Irak
+allied militias: verbündete Milizen
+collaborationist Chinese regimes: chinesische Kollaborationsregime
+collaborationist regimes: Kollaborationsregime
+colonial planters: Kolonialpflanzer
+foreign volunteers: ausländische Freiwillige
+loyal princely states: loyale Fürstenstaaten
+pied-noir militias: Pied-noir-Milizen
+Zealots: Zeloten
+Sicarii: Sikarier
+Idumeans: Idumäer
+Western Turkic Khaganate: Westtürkisches Khaganat
+Avar Khaganate: Awaren-Khaganat
+Slavic allies: Slawische Verbündete
+Westphalians: Westfalen
+Eastphalians: Ostfalen
+Angrians: Engern
+Nordalbingians: Nordalbingier
+Shatuo Turks: Shatuo-Türken
+Mongol Empire (from 1233): Mongolenreich (ab 1233)
+Swabian League: Schwäbischer Bund
+Hesse: Hessen
+Duchy of Lorraine: Herzogtum Lothringen
+French Crown: Französische Krone
+Huguenots: Hugenotten
+German Protestant princes: Deutsche protestantische Fürsten
+Khalkha Mongols: Chalcha-Mongolen
+Huai Army: Huai-Armee
+Hui militias: Hui-Milizen
+Kashgaria (Yaqub Beg): Kaschgarien (Yaqub Beg)
+Hamas: Hamas
+Palestinian Islamic Jihad: Palästinensischer Islamischer Dschihad
+Buyid dynasty: Buyiden-Dynastie
+Chandelas: Chandella
+Chu: Chu
+Former Shu: Frühere Shu
+Ghaznavid Empire: Ghaznawiden-Reich
+Gurjara-Pratiharas: Gurjara-Pratihara
+Hindu Shahis: Hindu-Shahis
+Ikhshidids: Ichschididen
+Kutama Berbers: Kutama-Berber
+Later Han: Spätere Han
+Later Jin: Spätere Jin
+Later Liang: Spätere Liang
+Later Shu: Spätere Shu
+Later Tang: Spätere Tang
+Later Zhou: Spätere Zhou
+Min: Min
+Northern Han: Nördliche Han
+Southern Han: Südliche Han
+Southern Tang: Südliche Tang
+Wu: Wu
+Wuyue: Wuyue
+
+# Politien der Grenz-Schnappschüsse (public/data/borders/*.topo.json),
+# die weder von Intl.DisplayNames noch von den Einträgen oben abgedeckt
+# werden. Schlüssel sind die exakten englischen Zeichenketten der Daten —
+# einschließlich der Tippfehler der Quelle („Kingfom of Italy“, „Britany“).
+# Nicht übersetzte Namen bleiben schlicht englisch; hier stehen nur die
+# auffälligsten pro Epoche.
+
+# Antike
+Roman Empire: Römisches Reich
+Parthian Empire: Partherreich
+Dacia: Dakien
+Judea: Judäa
+Bosporian Kingdom: Bosporanisches Reich
+Odrysian Kingdom: Odrysenreich
+Nabatean Kingdom: Nabatäerreich
+Himyarite Kingdom: Himjarenreich
+Meroe: Meroë
+Axum: Aksum
+Blemmyes: Blemmyer
+Saka Kingdom: Saka-Reich
+Suren Kingdom: Suren-Reich
+Koguryo: Goguryeo
+Hindu kingdoms: Hinduistische Königreiche
+Maya chiefdoms and states: Maya-Fürstentümer und -Staaten
+Paleo-Inuit: Paläo-Inuit
+Curonians: Kuren
+Guanches: Guanchen
+Khoiasan: Khoisan
+
+# Großraum-Kulturlabels (bedecken große Flächen, daher prominent)
+Australian aboriginal hunter-gatherers: Australische Aborigines (Jäger und Sammler)
+Aboriginal Tasmanians: Tasmanische Aborigines
+Tasmanian hunter-gatherers: Tasmanische Jäger und Sammler
+Pampas cultures: Pampa-Kulturen
+Patagonian shellfish and marine mammal hunters: Patagonische Muschelsammler und Meeressäugerjäger
+Andean hunter-gatherers: Jäger und Sammler der Anden
+Savanna hunter-gatherers: Jäger und Sammler der Savanne
+Amazon hunter-gatherers: Jäger und Sammler Amazoniens
+Subarctic forest hunter-gatherers: Subarktische Waldjäger und -sammler
+Caribbean hunter-gatherers: Karibische Jäger und Sammler
+Desert hunter-gatherers: Jäger und Sammler der Wüste
+Arctic marine mammal hunters: Arktische Meeressäugerjäger
+Paleo-Siberian hunter-gatherers: Paläosibirische Jäger und Sammler
+Finno-Ugric taiga hunter-gatherers: Finno-ugrische Taiga-Jäger und -Sammler
+North American Pacifi foraging, hunting and fishing peoples: Sammler-, Jäger- und Fischervölker der nordamerikanischen Pazifikküste
+Eastern North Amercian hunter-gatherers: Jäger und Sammler des östlichen Nordamerika
+Plain bison hunters: Bisonjäger der Prärie
+Plateau fichers and hunter gatherers: Fischer, Jäger und Sammler des Plateaus
+West African cereal farmers: Westafrikanische Getreidebauern
+Shellfish gatherers: Muschelsammler
+Polynesians: Polynesier
+Bantou: Bantu
+Papou: Papua
+Papuans: Papua
+Malagasy: Madagassen
+
+# Mittelalter
+Carolingian Empire: Karolingerreich
+Tang Empire: Tang-Reich
+Tibetan Empire: Tibetisches Reich
+Emirate of Córdoba: Emirat von Córdoba
+Idrisid Caliphate: Idrisiden-Kalifat
+Aghlabid Emirate: Aghlabiden-Emirat
+Avars: Awaren
+Bulgars: Bulgaren
+Volga Bulgars: Wolgabulgaren
+Bulgar Khanate: Bulgarenkhanat
+Khazars: Chasaren
+Magyars: Magyaren
+Czechs: Tschechen
+Slavic tribes: Slawische Stämme
+Slavonic tribes: Slawische Stämme
+Baltic tribes: Baltische Stämme
+Ests: Esten
+Finns: Finnen
+Karelians: Karelier
+Veps: Wepsen
+Mordvinians: Mordwinen
+Permians: Permier
+Bashkirs: Baschkiren
+Picts: Pikten
+Scots: Schotten
+Welsh: Waliser
+Nothumbria: Northumbria
+Celtic kingdoms: Keltische Königreiche
+Britany: Bretagne
+Asturias: Asturien
+Northmen: Nordmänner
+Swedes and Goths: Svear und Gauten
+Rus' Khaganate: Rus-Khaganat
+Khmer Empire: Khmer-Reich
+Chen-La: Chenla
+Nan Chao: Nanzhao
+Parhae: Balhae
+Silia: Silla
+Srivijaya Empire: Srivijaya-Reich
+Tiahuanaco Empire: Tiwanaku-Reich
+Huari Empire: Wari-Reich
+Toltec Empire: Toltekenreich
+Maya city-states: Maya-Stadtstaaten
+Mesoamerican city-states and chiefdoms: Mesoamerikanische Stadtstaaten und Fürstentümer
+Mixtecs: Mixteken
+Arawaks: Arawak
+Taino: Taíno
+Thule: Thule-Kultur
+Dorset: Dorset-Kultur
+Athabaskan: Athabasken
+Boethuk: Beothuk
+Lombard duchies: Langobardische Herzogtümer
+Mongol Empire: Mongolenreich
+Angevin Empire: Angevinisches Reich
+Almohad Caliphate: Almohaden-Kalifat
+Kara Khitai Khaganate: Kara-Kitai-Khanat
+Kwarizm-Shah: Choresm-Schahs
+Ghaznavid Emirate: Ghaznawiden-Emirat
+Buwayhid Emirates: Buyiden-Emirate
+Buyiids: Buyiden
+Cuman Khanates: Kumanen-Khanate
+Principality of Kyiv: Fürstentum Kiew
+Principality of Novgorod: Fürstentum Nowgorod
+Principality of Vladimir-Suzdal: Fürstentum Wladimir-Susdal
+Principality of Galicia-Volhynia: Fürstentum Galizien-Wolhynien
+Other Rus Principalities: Weitere Rus-Fürstentümer
+Castilla: Kastilien
+Castille: Kastilien
+Aragón: Aragonien
+Comté de Toulouse: Grafschaft Toulouse
+Burgandy: Burgund
+Corsica: Korsika
+Sicily: Sizilien
+Dutchy of Benevento: Herzogtum Benevent
+Song Empire: Song-Reich
+Sultanate of Delhi: Sultanat von Delhi
+Chola state: Chola-Reich
+Rajput Kingdoms: Rajputen-Königreiche
+Rajput Clans and Small States: Rajputen-Clans und Kleinstaaten
+Rajputs: Rajputen
+Rajastan: Rajasthan
+Great Zimbabwe: Groß-Simbabwe
+Hausa States: Hausa-Staaten
+Mossi States: Mossi-Staaten
+Berber Tribes: Berberstämme
+Tuareg Nomadic Tribes: Tuareg-Nomadenstämme
+Islamic city-states: Islamische Stadtstaaten
+Islamic states: Islamische Staaten
+minor Hindu and Buddhist states: kleinere hinduistische und buddhistische Staaten
+minor Hindu & Buddhist states: kleinere hinduistische und buddhistische Staaten
+Hindu states: Hinduistische Staaten
+Sinhalese kingdoms: Singhalesische Königreiche
+Makkura: Makuria
+Bornu-Kanem: Kanem-Bornu
+
+# Frühe Neuzeit
+Teutonic Knights: Deutscher Orden
+Kalmar Union: Kalmarer Union
+Grand Duchy of Moscow: Großfürstentum Moskau
+Polish-Lithuanian Commonwealth: Polen-Litauen
+Imperial Hungary: Königreich Ungarn
+Timurid Emirates: Timuriden-Emirate
+White Horde: Weiße Horde
+Chagatai Khanate: Tschagatai-Khanat
+Khanate of Sibir: Khanat Sibir
+Oirat Confederation: Oiraten-Konföderation
+Mamluke Sultanate: Mamluken-Sultanat
+Emirate of the White Sheep Turks: Emirat der Aq Qoyunlu
+Hafsid Caliphate: Hafsiden-Kalifat
+Wattasid Caliphate: Wattasiden-Kalifat
+Zayyanid Caliphate: Zayyaniden-Kalifat
+Aztec Empire: Aztekenreich
+Inca Empire: Inkareich
+Mixtec Empire: Mixtekenreich
+Ming Chinese Empire: Chinesisches Ming-Reich
+Scottland: Schottland
+Iroquois: Irokesen
+Huron: Huronen
+Cherookee: Cherokee
+Ainus: Ainu
+Swiss Confederation: Schweizer Eidgenossenschaft
+Maori: Māori
+M?ori: Māori
+Expansionist Kingdom of Merina: Expandierendes Königreich Merina
+Tuʻi Tonga Empire: Tuʻi-Tonga-Reich
+
+# 1800er
+Austrian Empire: Kaisertum Österreich
+Habsburg Austria: Habsburgisches Österreich
+Austrian Netherlands: Österreichische Niederlande
+Batavian Republic: Batavische Republik
+Helvetic Republic: Helvetische Republik
+Kingdom of Ireland: Königreich Irland
+Kingdom of Sardinia: Königreich Sardinien
+Kingdom of the Two Sicilies: Königreich beider Sizilien
+Tuscany: Toskana
+Lombardy: Lombardei
+Venetia: Venetien
+Thuringia: Thüringen
+Swabia: Schwaben
+Brunswick: Braunschweig
+Russian Empire: Russisches Reich
+USSR: UdSSR
+Persia: Persien
+Qing Empire: Qing-Reich
+Manchu Empire: Mandschu-Reich
+Burma: Birma
+British Raj: Britisch-Indien
+British Empire: Britisches Weltreich
+Maratha Confederacy: Marathen-Konföderation
+Vice-Royalty of New Spain: Vizekönigreich Neuspanien
+Vice-Royalty of Peru: Vizekönigreich Peru
+Vice-Royalty of New Granada: Vizekönigreich Neugranada
+Vice-Royalty of Brazil: Vizekönigreich Brasilien
+Viceroyalty of the Río de la Plata: Vizekönigreich des Río de la Plata
+Cape Colony: Kapkolonie
+Rupert's Land: Ruperts Land
+United States of America: Vereinigte Staaten von Amerika
+UK: Vereinigtes Königreich
+Luisiana: Louisiana
+Quebec: Québec
+Dutch settlements: Niederländische Siedlungen
+Dutch East Indies: Niederländisch-Ostindien
+Portuguese East Africa: Portugiesisch-Ostafrika
+Portuguese Guinea: Portugiesisch-Guinea
+Zanzibar: Sansibar
+Tripolitania: Tripolitanien
+Cyrenaica: Kyrenaika
+Algiers: Algier
+Asante: Aschanti
+Kong Empire: Kong-Reich
+Congo: Kongo
+Hong Kong: Hongkong
+central Asian khanates: Zentralasiatische Khanate
+Nejd: Nedschd
+Muscat: Maskat
+Mascat: Maskat
+Muscat and Oman: Maskat und Oman
+Kuril Islands: Kurilen
+Sakhalin (RU): Sachalin (RU)
+Abyssinia: Abessinien
+Air: Aïr
+"(Russian and Japanese claim)": (russischer und japanischer Anspruch)
+
+# 1900er
+Austro-Hungarian Empire: Österreich-Ungarn
+German Empire: Deutsches Kaiserreich
+Empire of Japan: Japanisches Kaiserreich
+Kingfom of Italy: Königreich Italien
+United Kingdom of Great Britain and Ireland: Vereinigtes Königreich von Großbritannien und Irland
+Belgian Congo: Belgisch-Kongo
+French West Africa: Französisch-Westafrika
+French Equatorial Africa: Französisch-Äquatorialafrika
+French Indochina: Französisch-Indochina
+French Indo-China: Französisch-Indochina
+French Somaliland: Französisch-Somaliland
+French Cameroons: Französisch-Kamerun
+British East Africa: Britisch-Ostafrika
+British Somaliland: Britisch-Somaliland
+British Protectorate: Britisches Protektorat
+British Guiana: Britisch-Guayana
+Italian Somaliland: Italienisch-Somaliland
+German E. Africa (Tanganyika): Deutsch-Ostafrika (Tanganjika)
+German South-West Africa: Deutsch-Südwestafrika
+Anglo-Egyption Sudan: Anglo-Ägyptischer Sudan
+Gold Coast: Goldküste
+Rhodesia: Rhodesien
+Northern Rhodesia: Nordrhodesien
+Southern Rhodesia: Südrhodesien
+Union of South Africa: Südafrikanische Union
+Spanish Morocco: Spanisch-Marokko
+Spanish Sahara: Spanisch-Sahara
+Rio De Oro: Río de Oro
+Madagascar (France): Madagaskar (Frankreich)
+Arabia (Nejd): Arabien (Nedschd)
+Hejaz: Hedschas
+Mesopotamia (GB): Mesopotamien (GB)
+Mandatory Palestine (GB): Mandatsgebiet Palästina (GB)
+Syria (France): Syrien (Frankreich)
+Trucial Oman: Vertragsstaaten
+Dominion of Newfoundland: Dominion Neufundland
+Czechoslovakia: Tschechoslowakei
+Chinese warlords: Chinesische Warlords
+Netherlands Indies: Niederländisch-Indien
+Swaziland: Swasiland
+Gambia, The: Gambia
+Tanzania, United Republic of: Tansania
+Netherlands Antilles: Niederländische Antillen
+Saint Kitts and Nevis: St. Kitts und Nevis
+Saint Lucia: St. Lucia
+Saint Vincent and the Grenadines: St. Vincent und die Grenadinen
+Saint Martin: St. Martin
+Saint Barthelemy: Saint-Barthélemy
+Antigua and Barbuda: Antigua und Barbuda
+Turks and Caicos Islands: Turks- und Caicosinseln
+United States Virgin Islands: Amerikanische Jungferninseln
+Wallis and Futuna Islands: Wallis und Futuna
+Gilbert and Elice Islands: Gilbert- und Elliceinseln
+New Hebrides: Neue Hebriden
+Cochin China: Kotschinchina
+Walbis Bay: Walvis Bay
+Algeria (France): Algerien (Frankreich)
+Eritrea (Italy): Eritrea (Italien)
+Ethiopia (Italy): Äthiopien (Italien)
+Congo (France): Kongo (Frankreich)
+Morocco (France): Marokko (Frankreich)
+Mozambique (Portugal): Mosambik (Portugal)
+Rwanda (Belgium): Ruanda (Belgien)
+Oman (British Raj): Oman (Britisch-Indien)
+Yemen (UK): Jemen (GB)
+Acadian Peninsula (UK): Akadische Halbinsel (GB)
+
+# Systematischer Sweep über alle 37 Schnappschüsse. Schlüssel sind exakte
+# Datenstrings — einschließlich Tippfehlern der Quelle („Danemark“,
+# „Kongldom of Hawaii“) und Varianten in Groß-/Kleinschreibung. Gedanken-
+# strich vs. Bindestrich gleicht die Pipeline selbst aus. Endonyme (indigene
+# Nationen, Ortsnamen ohne deutsches Exonym) bleiben bewusst unübersetzt.
+
+# Besetzte Gebiete 1939–1944 (kuratierte Kriegsschnappschüsse,
+# siehe data/curated/borders/)
+France (Germany): Frankreich (deutsch besetzt)
+Belgium (Germany): Belgien (deutsch besetzt)
+Netherlands (Germany): Niederlande (deutsch besetzt)
+Denmark (Germany): Dänemark (deutsch besetzt)
+Norway (Germany): Norwegen (deutsch besetzt)
+Poland (Germany): Polen (deutsch besetzt)
+Yugoslavia (Germany): Jugoslawien (deutsch besetzt)
+Greece (Germany): Griechenland (deutsch besetzt)
+Estonia (Germany): Estland (deutsch besetzt)
+Latvia (Germany): Lettland (deutsch besetzt)
+Lithuania (Germany): Litauen (deutsch besetzt)
+Albania (Italy): Albanien (italienisch besetzt)
+Albania (Germany): Albanien (deutsch besetzt)
+Estonia (Soviet Union): Estland (sowjetisch besetzt)
+Latvia (Soviet Union): Lettland (sowjetisch besetzt)
+Lithuania (Soviet Union): Litauen (sowjetisch besetzt)
+Libya (United Kingdom): Libyen (britisch besetzt)
+Eritrea (United Kingdom): Eritrea (britisch besetzt)
+Somaliland (United Kingdom): Somaliland (britisch besetzt)
+French Indo-China (Japan): Französisch-Indochina (japanisch besetzt)
+Philippines (Japan): Philippinen (japanisch besetzt)
+Malaya (Japan): Malaya (japanisch besetzt)
+Hong Kong (Japan): Hongkong (japanisch besetzt)
+Dutch East Indies (Japan): Niederländisch-Ostindien (japanisch besetzt)
+
+# Besatzungszonen und deutsche Teilung
+Germany (Soviet): Deutschland (sowjetische Zone)
+Germany (UK): Deutschland (britische Zone)
+Germany (USA): Deutschland (amerikanische Zone)
+Germany (France): Deutschland (französische Zone)
+East Germany: DDR
+West Germany: Bundesrepublik Deutschland
+Saar Protectorate: Saarprotektorat
+East Prussia: Ostpreußen
+White Russia: Weißrussland
+South Russia: Südrussland
+Far Eastern SSR: Fernöstliche Republik
+Byelarus: Belarus
+Czech Republic: Tschechien
+Macedonia: Mazedonien
+Turkish Cypriot-administered area: Türkisch verwaltetes Nordzypern
+
+# Antike und Völkerwanderungszeit
+Rome: Rom
+Anglo-Saxons: Angelsachsen
+Alamans: Alemannen
+Akatziri: Akatziren
+Armorica: Aremorica
+Caucasian Alans: Kaukasische Alanen
+Burgunds: Burgunden
+Gepids: Gepiden
+Heruli: Heruler
+Huns: Hunnen
+Hunnic Empire: Hunnenreich
+Scythians: Skythen
+Sveves: Sueben
+Turingians: Thüringer
+Saxons: Sachsen
+Frisians: Friesen
+Basks: Basken
+Geats: Gauten
+Balts: Balten
+Slavs: Slawen
+Proto-Slavs: Frühe Slawen
+Frankish Kingdom: Frankenreich
+East Francia: Ostfrankenreich
+Neustria: Neustrien
+Vasconia: Vaskonien
+Duchy of Swabia: Herzogtum Schwaben
+Persi: Persien
+Kushan Empire: Kuschan-Reich
+Kushan Principalities: Kuschan-Fürstentümer
+Gupta Empire: Gupta-Reich
+Sixteen Kingdoms: Sechzehn Reiche
+Northern Liang: Nördliche Liang
+Toba Wei: Tuoba-Wei
+Jin Empire: Jin-Reich
+Sui Empire: Sui-Reich
+Ruanruan: Rouran
+Yueban: Yueban
+S. Xiongnu: Südliche Xiongnu
+Southern Xiongnu: Südliche Xiongnu
+Sasanian dependencies: Sasanidische Vasallenstaaten
+Cuacasian Albania: Kaukasisches Albanien
+Dumonii: Dumnonii
+Satavahanihara: Satavahana
+
+# Archäologische Kulturen
+Hopewell Culture: Hopewell-Kultur
+Glades Culture: Glades-Kultur
+Fourche Maline Culture: Fourche-Maline-Kultur
+Marksville Culture: Marksville-Kultur
+Mill Creek Culture: Mill-Creek-Kultur
+Swift Creek Culture: Swift-Creek-Kultur
+Poverty point culture: Poverty-Point-Kultur
+Caloosahatchee culture: Caloosahatchee-Kultur
+Caloosahatchee cultureure: Caloosahatchee-Kultur
+Laurel complex: Laurel-Komplex
+Couture Complex: Couture-Komplex
+Saugeen Complex: Saugeen-Komplex
+Point Peninsula: Point-Peninsula-Komplex
+Milograd culture: Milograder Kultur
+Brushed Pottery culture: Strichkeramische Kultur
+Bell-shaped burials culture: Glockengräber-Kultur
+Eastern Masurian culture: Ostmasurische Kultur
+Western Masurian culture: Westmasurische Kultur
+"Pomeranian culture ": Pommerellische Kultur
+Sambian-Nothangian culture: Samländisch-natangische Kultur
+Veracruz civilization: Veracruz-Kultur
+"Monte Alb?n": Monte Albán
+"Monte Albàn": Monte Albán
+Teotihuacàn: Teotihuacán
+Yayoi: Yayoi-Kultur
+
+# Mittelalterliche Steppen- und Ostvölker
+Göktürks: Göktürken
+Western Gokturk Khaganate: Westtürkisches Khaganat
+Karluks: Karluken
+Kurykans: Kurykanen
+Sabirs: Sabiren
+Pechenegs: Petschenegen
+Oghuz: Oghusen
+Oghuz Turks: Oghusen
+Uyghurs: Uiguren
+Ouighurs: Uiguren
+Khitans: Kitan
+Mongols: Mongolen
+Danube Bulgars: Donaubulgaren
+Chuds: Tschuden
+Kryvichs: Kriwitschen
+Polanes: Polanen
+Polyanians: Poljanen
+Severians: Sewerjanen
+Moravians: Mährer
+Prussians: Prußen
+Kurs: Kuren
+Baltic Tribes: Baltische Stämme
+Sami: Samen
+Samis: Samen
+Saami: Samen
+Sámi: Samen
+Suom: Finnen
+Suomi: Finnen
+Samoyèdes: Samojeden
+Tungus: Tungusen
+Tungusic Tribes: Tungusische Stämme
+Koryaks: Korjaken
+Chukchi: Tschuktschen
+Nenets: Nenzen
+Yukagir: Jukagiren
+Kimek-Kipchak khaganate: Kimek-Kiptschak-Khaganat
+Cuman-Kipchak confederation: Kumanisch-kiptschakische Konföderation
+Quazaq Khanate: Kasachisches Khanat
+Nogai Horde: Nogaier-Horde
+Blue Horde: Blaue Horde
+Khanate of the Golden Horde: Khanat der Goldenen Horde
+Kazan Khanate: Khanat Kasan
+Astrakhan Khanate: Khanat Astrachan
+Khiva Khanate: Khanat Chiwa
+Bokhara Khanate: Khanat Buchara
+Bukara Khanate: Khanat Buchara
+Great Khanate: Großkhanat
+Ilkhanate: Ilchanat
+Timurid Empire: Timuridenreich
+
+# Mittelalterliches Europa
+Kievan Rus: Kiewer Rus
+Kyivan Rus: Kiewer Rus
+Novgorod: Nowgorod
+Novgorod-Seversky: Nowgorod-Sewersk
+Pskov: Pskow
+Ryazan: Rjasan
+Principality of Polotsk: Fürstentum Polozk
+Principality of Wallachia: Fürstentum Walachei
+Tsardom of Muscovy: Zarentum Moskau
+Croatian kingdom: Kroatisches Königreich
+Great Moravia: Großmähren
+Pomerania: Pommern
+Bosnia: Bosnien
+Bosnia-Herzegovina: Bosnien-Herzegowina
+Icelandic Commonwealth: Isländischer Freistaat
+Kingdom of Norway: Königreich Norwegen
+England and Ireland: England und Irland
+English territory: Englisches Gebiet
+Scottalnd: Schottland
+Lombard principalities: Langobardische Fürstentümer
+Emirate of Sicily: Emirat von Sizilien
+Caliphate of Córdoba: Kalifat von Córdoba
+Trebizond: Trapezunt
+Kingdom of Georgia: Königreich Georgien
+Georgian Kingdom: Königreich Georgien
+Kakheti-Hereti: Kachetien-Heretien
+Emirate of Tiflis: Emirat von Tiflis
+Artsakh: Arzach
+Syunik: Sjunik
+Shirvan: Schirwan
+Republic of Kraków: Republik Krakau
+Republic of the Seven Zenden: Republik der Sieben Zenden
+Poland-Llituania: Polen-Litauen
+Sweden-Norway: Schweden-Norwegen
+Danemark: Dänemark
+Neterlands: Niederlande
+Habsburg Netherlands: Habsburgische Niederlande
+United Kingdom of Netherlands: Vereinigtes Königreich der Niederlande
+Austria Hungary: Österreich-Ungarn
+Electoral Hesse: Kurhessen
+Grand Duchy of Hesse: Großherzogtum Hessen
+Palatinate: Pfalz
+Milan: Mailand
+Naples: Neapel
+Florence: Florenz
+Geneva: Genf
+Sardinia-Piedmont: Sardinien-Piemont
+Savoy-Piedmont: Savoyen-Piemont
+Spanish Habsburg: Habsburgisches Spanien
+Ottoman Sultanate: Osmanisches Sultanat
+Beylik of Aydin: Beylik von Aydın
+
+# Islamische Welt und Afrika
+Umayyad Caliphate: Umayyaden-Kalifat
+Buyid Emirate: Buyiden-Emirat
+Saffarids: Saffariden
+Samanid Empire: Samanidenreich
+Karkhanids: Karachaniden
+Kwarezm: Choresmien
+Seljuk Caliphate: Seldschukenreich
+Safavid Empire: Safawidenreich
+Soomra Emirate: Soomra-Emirat
+Abdelouadides: Abdalwadiden
+Merinides: Meriniden
+Watassid Morocco: Wattasidisches Marokko
+Ibadites: Ibaditen
+Berbers: Berber
+Touareg: Tuareg
+Tuaregs: Tuareg
+Bedouins: Beduinen
+Arabs: Araber
+Arabia: Arabien
+Aures: Aurès
+Saharan Nomadic Tribes: Nomadenstämme der Sahara
+Empire of Ghana: Reich von Ghana
+Sokoto Caliphate: Kalifat von Sokoto
+Fulani Empire: Fulbe-Reich
+Tukular Caliphate: Tukulor-Reich
+Wassoulou Empire: Wassoulou-Reich
+First Samori Empire: Erstes Samori-Reich
+Second Samori Empire: Zweites Samori-Reich
+Wadai Empire: Wadai-Reich
+Dendi Kingdom: Dendi-Königreich
+Borgu States: Borgu-Staaten
+Sultanate of Damagaram: Sultanat Damagaram
+Sultanate of Utetera: Sultanat Utetera
+Sultinate of Zanzibar: Sultanat Sansibar
+Kushites: Kuschiten
+Cushites: Kuschiten
+Bejas: Bedscha
+Azandes: Asande
+Nobatia: Nobatien
+Ethiopian HIghland Peoples: Äthiopische Hochlandvölker
+Shoa: Schoa
+Mosquito Coast: Moskitoküste
+Griqualand West: Griqualand-West
+Nyasaland: Njassaland
+Southern Cameroon: Südkamerun
+Ivory Coast: Elfenbeinküste
+Zululand: Zululand
+
+# Süd- und Südostasien, Ostasien
+Chalukyas: Chalukya
+Chalukya Empire: Chalukya-Reich
+Western Chalukyas: Westliche Chalukya
+Western Gangas: Westliche Ganga
+Cheras: Chera
+Cholas: Chola
+Pallavas: Pallava
+Pallava state: Pallava-Reich
+Pandyas: Pandya
+Pandya state: Pandya-Reich
+Palas: Pala
+Pratiharas: Pratihara
+Rashtrakuta state: Rashtrakuta-Reich
+Chandellas: Chandella
+Chauhans: Chauhan
+Solankis: Solanki
+Maitraka Kingdom: Maitraka-Königreich
+Kingdom of Kapisa: Königreich Kapisa
+Kingdom of Kashmir: Königreich Kaschmir
+Kingdom of Sind: Königreich Sindh
+Kingdom of Zunbil: Königreich Zunbil
+Kashmir and Ladakh: Kaschmir und Ladakh
+Sind: Sindh
+Bengal: Bengalen
+Carnatic: Karnatik
+Delagoa Bay: Delagoa-Bucht
+Bahmani Kingdom: Bahmani-Sultanat
+Golconda: Golkonda
+Vijayanagara: Vijayanagar
+Mahratta states: Marathen-Staaten
+Maratha: Marathen
+Rajput kingdoms: Rajputen-Königreiche
+Nizam's Dominions: Herrschaft des Nizam
+Arakan (Indian princely state): Arakan (indischer Fürstenstaat)
+Mysore (Indian princely state): Mysore (indischer Fürstenstaat)
+Sikkim (Indian princely state): Sikkim (indischer Fürstenstaat)
+British East India Company: Britische Ostindien-Kompanie
+minor Hindu and Buddhist kingdoms: kleinere hinduistische und buddhistische Königreiche
+minor Hindu kingdoms: kleinere hinduistische Königreiche
+minor states under Indian influence: kleinere Staaten unter indischem Einfluss
+Hindu Kingdoms: Hinduistische Königreiche
+Islamic and Hindu states: Islamische und hinduistische Staaten
+Sinhalese kingdom: Singhalesisches Königreich
+Kingdom of Sukhotai: Königreich Sukhothai
+Lopburi Kingdom: Königreich Lopburi
+Kingdom of Pagan: Königreich Pagan
+Harapunchai: Haripunjaya
+Thai Kingdoms: Thai-Königreiche
+Laotian states: Laotische Staaten
+Shan states: Shan-Staaten
+Mon state: Mon-Staat
+Mon States: Mon-Staaten
+Burmese kingdoms: Birmanische Königreiche
+Rattanakosin Kingdom: Rattanakosin-Königreich
+Malacca: Malakka
+Malay: Malaien
+Malays: Malaien
+Malaysian Islamic states: Malaiische islamische Staaten
+East Java: Ostjava
+Nan-Zhao: Nanzhao
+Tufan Empire: Tibetisches Reich (Tufan)
+Ming Empire: Ming-Reich
+Post-Ming Warlords: Post-Ming-Warlords
+Chinese Warlords: Chinesische Warlords
+Manchuria: Mandschurei
+Xixia: Xixia
+Imperial Japan: Japanisches Kaiserreich
+Imperial Japan (Fujiwara): Japanisches Kaiserreich (Fujiwara)
+Japan (Warring States): Japan (Streitende Reiche)
+Shogun Japan (Kamakura): Shogunat Japan (Kamakura)
+Tokugawa shogunate: Tokugawa-Shogunat
+Tokugawa Shogunate: Tokugawa-Shogunat
+Middag Kingdom: Königreich Middag
+Taiwanese Tribes: Taiwanische Stämme
+"Korea, Democratic People's Republic of": Nordkorea
+"Korea, Republic of": Südkorea
+Siberians: Sibirische Völker
+
+# Amerika und Pazifik
+Maya states: Maya-Staaten
+Zapotec Empire: Zapoteken-Reich
+Chimú Empire: Chimú-Reich
+Aymara kingdoms: Aymara-Königreiche
+Andean states and chiefdoms: Andenstaaten und -fürstentümer
+Athabascan: Athabasken
+Maoris: Māori
+Vice Royalty of New Spain: Vizekönigreich Neuspanien
+Vice Royalty of Peru: Vizekönigreich Peru
+Viceroyalty of Brazil: Vizekönigreich Brasilien
+Portuguese Brazil: Portugiesisch-Brasilien
+Kingdom of Brazil: Königreich Brasilien
+Dutch Brazil: Niederländisch-Brasilien
+Dutch Formosa: Niederländisch-Formosa
+Dutch Guiana: Niederländisch-Guayana
+Dutch Guinea: Niederländisch-Guinea
+Spanish Guinea: Spanisch-Guinea
+New France: Neufrankreich
+New Amsterdam: Neu-Amsterdam
+British American colonies: Britisch-amerikanische Kolonien
+United Provinces of La Plata: Vereinigte Provinzen des Río de la Plata
+Surinam: Suriname
+Virgin Islands (Danemark): Jungferninseln (Dänemark)
+Kingdom of Hawaii: Königreich Hawaii
+Kongldom of Hawaii: Königreich Hawaii
+
+# Kolonialgebiete des 20. Jahrhunderts
+Cyraneica (UK Lybia): Kyrenaika (britisches Libyen)
+Tripolitana (UK Lybia): Tripolitanien (britisches Libyen)
+Fezzan (Frech Lybia): Fessan (französisches Libyen)
+
+# Geprüft und im Deutschen identisch. Die Selbsteinträge halten die
+# Fehlliste des Compile-Schritts leer, sodass sie nur bei wirklich neuen,
+# noch nicht geprüften Namen anschlägt.
+Afghanistan: Afghanistan
+Angola: Angola
+Awadh: Awadh
+Baden: Baden
+Biafra: Biafra
+Burundi: Burundi
+Cañari: Cañari
+Cempoala: Cempoala
+Chachapoya: Chachapoya
+Chile: Chile
+China: China
+Di: Di
+England: England
+Eritrea: Eritrea
+Force Publique: Force Publique
+Harkis: Harkis
+Interahamwe: Interahamwe
+Iran: Iran
+Japan: Japan
+Jhansi: Jhansi
+Jie: Jie
+Kuwait: Kuwait
+Laos: Laos
+León: León
+Mukti Bahini: Mukti Bahini
+Namibia: Namibia
+Nepal: Nepal
+Nigeria: Nigeria
+Pakistan: Pakistan
+Peru: Peru
+Portugal: Portugal
+Qiang: Qiang
+Republika Srpska: Republika Srpska
+Schutztruppe: Schutztruppe
+Sudan: Sudan
+Taliban: Taliban
+Tenochtitlan: Tenochtitlan
+Texcoco: Texcoco
+Thailand: Thailand
+Tlacopan: Tlacopan
+Tlaxcala: Tlaxcala
+Uganda: Uganda
+Ukraine: Ukraine
+Uruguay: Uruguay
+Viet Minh: Viet Minh
+Villistas: Villistas
+Württemberg: Württemberg
+Xianbei: Xianbei
+Xiongnu: Xiongnu
+Zapatistas: Zapatistas

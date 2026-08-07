@@ -1,0 +1,686 @@
+# Medieval — 500 to 1400 CE
+#
+# Two entries here (An Lushan and the Mongol conquests) are among the deadliest
+# events in human history by any measure, and both are the subject of serious
+# scholarly disagreement about magnitude. Both are marked `disputed` with wide
+# ranges. They are also the strongest argument for the population-share view:
+# measured against the world population of their day, they dwarf the 20th century.
+
+- id: gothic-war-535
+  name: Gothic War (Justinian's Reconquest)
+  startYear: 535
+  endYear: 554
+  centroid: [12.5, 42.5]
+  extent: 6
+  type: interstate
+  region: Italy
+  summary: >
+    Justinian's campaign to retake Italy from the Ostrogoths. It succeeded, and in
+    doing so destroyed what it recovered: two decades of siege warfare, famine and
+    the arrival of the Plague of Justinian left Italy depopulated and Rome — which
+    changed hands five times — reduced to a fraction of its ancient size.
+  total: { low: 300000, best: 800000, high: 2000000, confidence: disputed }
+  sides:
+    - name: Eastern Roman Empire
+      military: { low: 40000, best: 100000, high: 200000, confidence: disputed }
+    - name: Ostrogothic Kingdom
+      military: { low: 50000, best: 120000, high: 250000, confidence: disputed }
+    - name: Italian civilians
+      civilian: { low: 200000, best: 580000, high: 1550000, confidence: disputed }
+  sources:
+    - title: Procopius, History of the Wars
+    - title: Wikipedia — Gothic War (535–554)
+      url: https://en.wikipedia.org/wiki/Gothic_War_(535%E2%80%93554)
+
+- id: byzantine-sasanian-602
+  name: Byzantine–Sasanian War of 602–628
+  startYear: 602
+  endYear: 628
+  centroid: [42.0, 35.0]
+  extent: 10
+  type: interstate
+  region: Middle East
+  summary: >
+    The last and most destructive of the Roman–Persian wars. The Sasanians took
+    Egypt, Syria and Jerusalem before Heraclius counter-attacked into the Persian
+    heartland. Both empires were left financially and militarily exhausted — and
+    within a decade of its end, both lost their southern provinces to the Arab
+    conquests.
+  total: { low: 300000, best: 700000, high: 1500000, confidence: disputed }
+  sides:
+    - name: Byzantine Empire
+      members: [Byzantine Empire, Western Turkic Khaganate]
+      military: { low: 100000, best: 200000, high: 400000, confidence: disputed }
+      civilian: { low: 100000, best: 200000, high: 450000, confidence: disputed }
+    - name: Sasanian Empire
+      members: [Sasanian Empire, Avar Khaganate, Slavic allies]
+      military: { low: 100000, best: 250000, high: 500000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Byzantine–Sasanian War of 602–628
+      url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Sasanian_War_of_602%E2%80%93628
+
+- id: early-muslim-conquests
+  name: Early Muslim Conquests
+  startYear: 622
+  endYear: 750
+  centroid: [40.0, 30.0]
+  extent: 30
+  type: religious
+  region: Middle East and North Africa
+  summary: >
+    In little over a century, Arab armies took the entire Sasanian Empire and the
+    southern half of the Byzantine one, reaching the Indus in the east and the
+    Pyrenees in the west. Casualty figures for a process this long and this
+    geographically vast are guesses; the demographic and cultural transformation is
+    not in doubt.
+  total: { low: 1000000, best: 2500000, high: 5000000, confidence: disputed }
+  sides:
+    - name: Rashidun and Umayyad Caliphates
+      military: { low: 200000, best: 500000, high: 1000000, confidence: disputed }
+    - name: Byzantine, Sasanian and Visigothic states
+      members: [Byzantine Empire, Sasanian Empire, Visigothic Kingdom, Berber kingdoms]
+      military: { low: 400000, best: 1000000, high: 2000000, confidence: disputed }
+      civilian: { low: 400000, best: 1000000, high: 2000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Early Muslim conquests
+      url: https://en.wikipedia.org/wiki/Early_Muslim_conquests
+
+- id: saxon-wars
+  name: Saxon Wars
+  startYear: 772
+  endYear: 804
+  centroid: [9.5, 52.3]
+  extent: 4
+  type: religious
+  region: Central Europe
+  summary: >
+    Charlemagne's thirty-two-year campaign to conquer and forcibly Christianise the
+    Saxons — some eighteen campaigns over three decades, answered by repeated revolt
+    under Widukind. The Massacre of Verden in 782, in which some 4,500 Saxon captives
+    were reportedly beheaded in a single day, and the mass deportations that followed
+    made baptism a condition of survival: Charlemagne's Saxon capitulary prescribed
+    death for refusing it. No contemporary counted the dead. The range here is inferred
+    from the war's length and the scale of the deportations, and should be read as an
+    order of magnitude, not a count.
+  total: { low: 50000, best: 150000, high: 300000, confidence: disputed }
+  sides:
+    - name: Frankish Empire
+      military: { low: 15000, best: 40000, high: 80000, confidence: disputed }
+    - name: Saxons
+      members: [Westphalians, Eastphalians, Angrians, Nordalbingians]
+      military: { low: 25000, best: 70000, high: 130000, confidence: disputed }
+      civilian: { low: 10000, best: 40000, high: 90000, confidence: disputed }
+  sources:
+    - title: Einhard, Life of Charlemagne
+    - title: Wikipedia — Saxon Wars
+      url: https://en.wikipedia.org/wiki/Saxon_Wars
+
+- id: an-lushan-rebellion
+  name: An Lushan Rebellion
+  startYear: 755
+  endYear: 763
+  centroid: [112.5, 34.7]
+  extent: 9
+  type: rebellion
+  region: East Asia
+  summary: >
+    A revolt by the frontier general An Lushan against the Tang dynasty. The Tang
+    census recorded 52.9 million people in 754 and 16.9 million in 764 — a fall of
+    36 million in a decade. Taken at face value that would make this the deadliest
+    event in human history before the 20th century, killing perhaps one person in
+    six alive on Earth. Most modern demographers do not take it at face value: much
+    of the gap reflects the collapse of the census apparatus itself as the state
+    lost the ability to register households. The lower bound below assumes most of
+    the drop was administrative; the upper bound assumes most of it was death.
+  total: { low: 13000000, best: 20000000, high: 36000000, confidence: disputed }
+  sides:
+    - name: Tang dynasty
+      members: [Tang dynasty, Uyghur Khaganate, Abbasid contingents]
+      military: { low: 1000000, best: 2000000, high: 4000000, confidence: disputed }
+      civilian: { low: 8000000, best: 13000000, high: 24000000, confidence: disputed }
+    - name: Yan (An Lushan's forces)
+      military: { low: 1000000, best: 2500000, high: 5000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — An Lushan Rebellion
+      url: https://en.wikipedia.org/wiki/An_Lushan_Rebellion
+    - title: Wikipedia — List of wars by death toll
+      url: https://en.wikipedia.org/wiki/List_of_wars_by_death_toll
+
+- id: huang-chao-rebellion
+  name: Huang Chao Rebellion
+  startYear: 874
+  endYear: 884
+  centroid: [116.0, 32.0]
+  extent: 8
+  type: rebellion
+  region: East Asia
+  summary: >
+    A rebellion by a failed examination candidate that sacked both Tang capitals
+    and included the massacre of the foreign merchant community at Guangzhou. It
+    broke what remained of Tang authority after An Lushan; the dynasty fell within
+    a generation.
+  total: { low: 1000000, best: 5000000, high: 13000000, confidence: disputed }
+  sides:
+    - name: Tang dynasty
+      members: [Tang dynasty, Shatuo Turks]
+      military: { low: 200000, best: 800000, high: 2000000, confidence: disputed }
+      civilian: { low: 500000, best: 3000000, high: 8000000, confidence: disputed }
+    - name: Huang Chao's rebels
+      military: { low: 300000, best: 1200000, high: 3000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Huang Chao
+      url: https://en.wikipedia.org/wiki/Huang_Chao
+
+- id: viking-age
+  name: Viking Age Raids and Invasions
+  startYear: 793
+  endYear: 1066
+  centroid: [2.0, 55.0]
+  extent: 16
+  type: invasion
+  region: Northern Europe
+  summary: >
+    Nearly three centuries of Scandinavian raiding, conquest and settlement across
+    the British Isles, Frankia, Ireland and the rivers of Rus'. Conventionally dated
+    from the sack of Lindisfarne in 793 to the defeat at Stamford Bridge in 1066.
+    No systematic casualty record exists.
+  total: { low: 100000, best: 400000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Scandinavian raiders and settlers
+      members: [Danes, Norwegians, Swedes]
+      military: { low: 30000, best: 120000, high: 300000, confidence: disputed }
+    - name: European kingdoms
+      members: [Anglo-Saxon kingdoms, West Francia, Irish kingdoms, Kievan Rus']
+      military: { low: 40000, best: 150000, high: 400000, confidence: disputed }
+      civilian: { low: 30000, best: 130000, high: 300000, confidence: disputed }
+  sources:
+    - title: Anglo-Saxon Chronicle
+    - title: Wikipedia — Viking Age
+      url: https://en.wikipedia.org/wiki/Viking_Age
+
+- id: reconquista
+  name: The Reconquista
+  startYear: 711
+  endYear: 1492
+  centroid: [-3.7, 40.0]
+  extent: 6
+  type: religious
+  region: Iberia
+  summary: >
+    Seven and a half centuries of intermittent warfare on the Iberian Peninsula
+    between Christian kingdoms and Muslim states, ending with the fall of Granada
+    in 1492. Treating it as a single continuous conflict is a later historiographical
+    convention — contemporaries fought shifting alliances that regularly crossed
+    the religious line.
+  total: { low: 3000000, best: 5000000, high: 8000000, confidence: disputed }
+  sides:
+    - name: Christian kingdoms
+      members: [Castile, Aragon, León, Portugal, Navarre]
+      military: { low: 800000, best: 1500000, high: 2500000, confidence: disputed }
+    - name: Muslim states of al-Andalus
+      members: [Umayyad Caliphate of Córdoba, Almoravids, Almohads, Emirate of Granada]
+      military: { low: 900000, best: 1700000, high: 2800000, confidence: disputed }
+      civilian: { low: 1000000, best: 1800000, high: 2700000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Reconquista
+      url: https://en.wikipedia.org/wiki/Reconquista
+
+- id: crusades
+  name: The Crusades
+  startYear: 1095
+  endYear: 1291
+  centroid: [35.5, 33.0]
+  extent: 12
+  type: religious
+  region: Levant and Eastern Mediterranean
+  summary: >
+    Two centuries of campaigns launched from Latin Europe toward the eastern
+    Mediterranean, beginning with Urban II's call at Clermont in 1095 and ending
+    with the fall of Acre in 1291. Includes the massacre at the capture of Jerusalem
+    in 1099 and the sack of Constantinople by the Fourth Crusade in 1204 — a
+    crusade that never reached the Holy Land at all.
+  total: { low: 1000000, best: 2000000, high: 3000000, confidence: disputed }
+  sides:
+    - name: Crusader states and Latin Europe
+      members: [Kingdom of Jerusalem, Knights Templar, Knights Hospitaller, Byzantine Empire]
+      military: { low: 300000, best: 700000, high: 1100000, confidence: disputed }
+    - name: Muslim states
+      members: [Seljuk Empire, Fatimid Caliphate, Ayyubids, Mamluk Sultanate]
+      military: { low: 400000, best: 800000, high: 1200000, confidence: disputed }
+      civilian: { low: 300000, best: 500000, high: 700000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Crusades
+      url: https://en.wikipedia.org/wiki/Crusades
+
+- id: jin-song-wars
+  name: Jin–Song Wars
+  startYear: 1125
+  endYear: 1234
+  centroid: [115.0, 34.0]
+  extent: 8
+  type: interstate
+  region: East Asia
+  summary: >
+    A century of war between the Jurchen Jin and the Chinese Song, opening with the
+    Jingkang Incident of 1127 in which the Jin captured the Song capital and both
+    reigning emperors, forcing the dynasty south of the Yangtze. Includes the
+    deliberate breaching of the Yellow River dikes in 1128, which redirected the
+    river and killed for years afterwards.
+  total: { low: 2000000, best: 6000000, high: 12000000, confidence: disputed }
+  sides:
+    - name: Song dynasty
+      members: [Song dynasty, Mongol Empire (from 1233)]
+      military: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+      civilian: { low: 1000000, best: 3000000, high: 6000000, confidence: disputed }
+    - name: Jin dynasty (Jurchen)
+      military: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Jin–Song Wars
+      url: https://en.wikipedia.org/wiki/Jin%E2%80%93Song_Wars
+
+- id: mongol-conquests
+  name: Mongol Conquests
+  startYear: 1206
+  endYear: 1368
+  centroid: [90.0, 42.0]
+  extent: 45
+  type: invasion
+  region: Eurasia
+  summary: >
+    The largest contiguous land empire in history, assembled across Eurasia from
+    Korea to Hungary. The conquests of Khwarezmia, the Jin and Song, Baghdad in
+    1258 and the Rus' principalities were accompanied by systematic massacres of
+    cities that resisted. Frequently cited as the second-deadliest event in human
+    history after the Second World War; the figure is an aggregate of many
+    campaigns over 160 years and is unavoidably imprecise.
+  total: { low: 20000000, best: 35000000, high: 45000000, confidence: disputed }
+  sides:
+    - name: Mongol Empire
+      military: { low: 500000, best: 1500000, high: 3000000, confidence: disputed }
+    - name: Conquered states
+      members: [Jin dynasty, Song dynasty, Khwarezmian Empire, Abbasid Caliphate, Kievan Rus', Kingdom of Hungary]
+      military: { low: 4000000, best: 8000000, high: 12000000, confidence: disputed }
+      civilian: { low: 15000000, best: 25000000, high: 30000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Mongol conquests
+      url: https://en.wikipedia.org/wiki/Mongol_conquests
+    - title: Wikipedia — List of wars by death toll
+      url: https://en.wikipedia.org/wiki/List_of_wars_by_death_toll
+
+- id: albigensian-crusade
+  name: Albigensian Crusade
+  startYear: 1209
+  endYear: 1229
+  centroid: [2.0, 43.5]
+  extent: 3
+  type: religious
+  region: Southern France
+  summary: >
+    A crusade called by Innocent III against the Cathars of Languedoc — the first
+    crusade directed at Christians within Latin Europe. At Béziers in 1209 the
+    entire population was killed regardless of faith; the papal legate's reported
+    instruction, "kill them all, God will know his own", may be apocryphal but the
+    massacre was not.
+  total: { low: 200000, best: 500000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Crusaders and the French Crown
+      military: { low: 20000, best: 50000, high: 100000, confidence: disputed }
+    - name: Languedoc and the Cathars
+      members: [County of Toulouse, Cathar communities]
+      military: { low: 30000, best: 80000, high: 150000, confidence: disputed }
+      civilian: { low: 150000, best: 370000, high: 750000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Albigensian Crusade
+      url: https://en.wikipedia.org/wiki/Albigensian_Crusade
+
+- id: hundred-years-war
+  name: Hundred Years' War
+  startYear: 1337
+  endYear: 1453
+  centroid: [1.5, 47.5]
+  extent: 6
+  type: interstate
+  region: Western Europe
+  summary: >
+    A dynastic struggle between the houses of Plantagenet and Valois for the French
+    crown, fought over 116 years. Its deaths came less from the famous battles —
+    Crécy, Poitiers, Agincourt — than from the chevauchée raids that deliberately
+    destroyed the countryside, and from the routiers who kept plundering during
+    truces.
+  total: { low: 2300000, best: 3000000, high: 3300000, confidence: estimated }
+  sides:
+    - name: Kingdom of France
+      members: [France, Scotland, Genoa, Castile]
+      military: { low: 400000, best: 600000, high: 800000, confidence: disputed }
+      civilian: { low: 1200000, best: 1700000, high: 1900000, confidence: disputed }
+    - name: Kingdom of England
+      members: [England, Burgundy, Portugal, Aquitaine]
+      military: { low: 300000, best: 500000, high: 700000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Hundred Years' War
+      url: https://en.wikipedia.org/wiki/Hundred_Years%27_War
+
+- id: timur-conquests
+  name: Conquests of Timur
+  startYear: 1370
+  endYear: 1405
+  centroid: [66.0, 39.0]
+  extent: 22
+  type: invasion
+  region: Central and South Asia
+  summary: >
+    Timur's campaigns from Samarkand across Persia, the Caucasus, India, Anatolia
+    and Syria. Notorious for towers built from the skulls of massacred populations —
+    Isfahan in 1387, Delhi in 1398, Baghdad in 1401. Often estimated to have killed
+    around 5% of the world's population, though the figure rests on chronicle
+    accounts written to impress.
+  total: { low: 8000000, best: 15000000, high: 20000000, confidence: disputed }
+  sides:
+    - name: Timurid Empire
+      military: { low: 200000, best: 500000, high: 1000000, confidence: disputed }
+    - name: Conquered states
+      members: [Delhi Sultanate, Golden Horde, Ottoman Empire, Mamluk Sultanate, Persian states]
+      military: { low: 2000000, best: 4000000, high: 6000000, confidence: disputed }
+      civilian: { low: 6000000, best: 10500000, high: 13000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Timur
+      url: https://en.wikipedia.org/wiki/Timur
+
+# ── Additions filling the 6th- to 12th-century gaps ─────────────────────────
+# The 10th century previously had zero entries and the 500s/800s/1000s/1100s one
+# each. Every entry below follows the casualty-honesty policy: chronicler-only
+# figures are `disputed`, ranges span the credible literature, and each summary
+# says what its number rests on.
+
+- id: byzantine-sasanian-572
+  name: Byzantine–Sasanian War of 572–591
+  startYear: 572
+  endYear: 591
+  centroid: [40.0, 37.5]
+  extent: 6
+  type: interstate
+  region: Middle East
+  summary: >
+    Twenty years of war over Armenia and Mesopotamia, opened by Justin II's refusal
+    of tribute and an Armenian revolt against Persia. It was a war of sieges and
+    deportations — Dara fell in 573 and its population was marched east — ended not
+    by victory but by a Persian civil war: the deposed Khosrow II fled to his
+    enemies, was restored by Byzantine arms, and ceded most of Armenia in payment.
+    No source counts the dead; the range here is inferred from army sizes, the
+    length of the war and the sacked frontier cities, all of it disputed.
+  total: { low: 80000, best: 200000, high: 500000, confidence: disputed }
+  sides:
+    - name: Byzantine Empire
+      military: { low: 30000, best: 70000, high: 170000, confidence: disputed }
+    - name: Sasanian Empire
+      military: { low: 30000, best: 80000, high: 200000, confidence: disputed }
+      civilian: { low: 20000, best: 50000, high: 130000, confidence: disputed }
+  sources:
+    - title: Greatrex & Lieu, The Roman Eastern Frontier and the Persian Wars, Part II
+    - title: Wikipedia — Byzantine–Sasanian War of 572–591
+      url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Sasanian_War_of_572%E2%80%93591
+
+- id: zanj-rebellion
+  name: Zanj Rebellion
+  startYear: 869
+  endYear: 883
+  centroid: [47.6, 30.4]
+  extent: 3
+  type: rebellion
+  region: Mesopotamia
+  summary: >
+    A fourteen-year revolt of East African slaves put to draining the salt marshes
+    of southern Iraq, joined by peasants and deserters, which built a rebel state
+    with its own capital and sacked Basra in 871. The Abbasids retook the marshes
+    canal by canal. The toll is a textbook case of chronicle inflation: figures
+    derived from al-Tabari and later compilers run from half a million to two and a
+    half million, while modern historians, led by Popović, regard the low hundreds
+    of thousands as the defensible order. The range spans both readings.
+  total: { low: 100000, best: 300000, high: 2500000, confidence: disputed }
+  sides:
+    - name: Abbasid Caliphate
+      military: { low: 20000, best: 50000, high: 150000, confidence: disputed }
+    - name: Zanj rebels
+      military: { low: 30000, best: 100000, high: 350000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 50000, best: 150000, high: 2000000, confidence: disputed }
+  sources:
+    - title: Alexandre Popović, The Revolt of African Slaves in Iraq in the 3rd/9th Century
+    - title: al-Tabari, History — The Revolt of the Zanj
+    - title: Wikipedia — Zanj Rebellion
+      url: https://en.wikipedia.org/wiki/Zanj_Rebellion
+
+- id: byzantine-bulgarian-wars
+  name: Byzantine–Bulgarian Wars
+  startYear: 893
+  endYear: 1018
+  centroid: [25.5, 42.5]
+  extent: 5
+  type: interstate
+  region: Balkans
+  summary: >
+    A century and a quarter of intermittent war between Byzantium and the Bulgarian
+    Empire, from Simeon I — who besieged Constantinople and took the title "Emperor
+    of the Bulgarians and Romans" — to Basil II, who annexed Bulgaria outright in
+    1018. The chronicle claim that Basil blinded 15,000 prisoners after Kleidion in
+    1014, leaving one man per hundred an eye to lead the rest home, earned him the
+    epithet "Bulgar-slayer"; the number is not believed, the practice is. No battle
+    left a casualty roll — the range rests on army sizes and the war's length.
+  total: { low: 150000, best: 400000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Byzantine Empire
+      military: { low: 60000, best: 150000, high: 400000, confidence: disputed }
+    - name: Bulgarian Empire
+      military: { low: 60000, best: 170000, high: 400000, confidence: disputed }
+      civilian: { low: 30000, best: 80000, high: 200000, confidence: disputed }
+  sources:
+    - title: Warren Treadgold, A History of the Byzantine State and Society
+    - title: Wikipedia — Byzantine–Bulgarian wars
+      url: https://en.wikipedia.org/wiki/Byzantine%E2%80%93Bulgarian_wars
+
+- id: five-dynasties-ten-kingdoms
+  name: Five Dynasties and Ten Kingdoms Wars
+  startYear: 907
+  endYear: 979
+  centroid: [113.0, 33.0]
+  extent: 12
+  type: civil
+  region: East Asia
+  summary: >
+    The seventy-year fragmentation of China after the Tang collapse: five dynasties
+    succeeding one another in the north by coup and conquest, ten kingdoms in the
+    south, and the Yellow River deliberately breached again at Kaifeng. The Song
+    reunified all but the far north by 979. The registered population fell by
+    millions across the period, but as after every Chinese collapse the registers
+    fell apart faster than the people — the range here is a demographic inference
+    from the census gap, credited only in part as deaths.
+  total: { low: 1000000, best: 3000000, high: 8000000, confidence: disputed }
+  sides:
+    - name: Northern dynasties
+      members: [Later Liang, Later Tang, Later Jin, Later Han, Later Zhou]
+      military: { low: 300000, best: 800000, high: 2000000, confidence: disputed }
+    - name: Southern kingdoms and rivals
+      members: [Wu, Southern Tang, Wuyue, Min, Southern Han, Former Shu, Later Shu, Chu, Northern Han]
+      military: { low: 200000, best: 700000, high: 1800000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 500000, best: 1500000, high: 4200000, confidence: disputed }
+  sources:
+    - title: F. W. Mote, Imperial China 900–1800
+    - title: Wikipedia — Five Dynasties and Ten Kingdoms period
+      url: https://en.wikipedia.org/wiki/Five_Dynasties_and_Ten_Kingdoms_period
+
+- id: fatimid-conquests
+  name: Fatimid Conquests
+  startYear: 909
+  endYear: 973
+  centroid: [20.0, 31.0]
+  extent: 12
+  type: religious
+  region: North Africa
+  summary: >
+    The rise of the Ismaili Fatimid caliphate from a revolutionary movement among
+    the Kutama Berbers: the overthrow of the Aghlabids in 909, decades of war
+    across the Maghreb, three failed invasions of Egypt and a fourth in 969 that
+    succeeded almost without a battle. Cairo was founded as the new capital and the
+    caliphate moved there in 973, claiming the leadership of the Islamic world in
+    opposition to Baghdad. Casualty figures for these campaigns were never
+    recorded; the range is an inference from six decades of intermittent warfare.
+  total: { low: 50000, best: 150000, high: 400000, confidence: disputed }
+  sides:
+    - name: Fatimid Caliphate
+      members: [Fatimid Caliphate, Kutama Berbers]
+      military: { low: 20000, best: 60000, high: 150000, confidence: disputed }
+    - name: Aghlabid, Ikhshidid and Abbasid forces
+      members: [Aghlabid Emirate, Ikhshidids, Abbasid Caliphate, Umayyad Caliphate of Córdoba]
+      military: { low: 20000, best: 60000, high: 170000, confidence: disputed }
+      civilian: { low: 10000, best: 30000, high: 80000, confidence: disputed }
+  sources:
+    - title: Hugh Kennedy, The Prophet and the Age of the Caliphates
+    - title: Wikipedia — Fatimid Caliphate
+      url: https://en.wikipedia.org/wiki/Fatimid_Caliphate
+
+- id: song-liao-war
+  name: Song–Liao War
+  startYear: 979
+  endYear: 1005
+  centroid: [116.5, 39.5]
+  extent: 5
+  type: interstate
+  region: East Asia
+  summary: >
+    The new Song dynasty's attempt to recover the Sixteen Prefectures around
+    modern Beijing from the Khitan Liao — repulsed at the Gaoliang River in 979 and
+    catastrophically in the three-pronged campaign of 986 — followed by two decades
+    of border war and a full Liao invasion southward in 1004. The Treaty of
+    Chanyuan of 1005 ended it with a fiction both sides could live with: peace
+    between equals, paid for by annual Song tribute in silver and silk. It held for
+    over a century. Chronicles record armies in the hundreds of thousands but no
+    credible casualty totals.
+  total: { low: 100000, best: 250000, high: 600000, confidence: disputed }
+  sides:
+    - name: Song dynasty
+      military: { low: 60000, best: 140000, high: 330000, confidence: disputed }
+    - name: Liao dynasty
+      military: { low: 30000, best: 80000, high: 200000, confidence: disputed }
+      civilian: { low: 10000, best: 30000, high: 70000, confidence: disputed }
+  sources:
+    - title: F. W. Mote, Imperial China 900–1800
+    - title: Wikipedia — Chanyuan Treaty
+      url: https://en.wikipedia.org/wiki/Chanyuan_Treaty
+
+- id: goryeo-khitan-wars
+  name: Goryeo–Khitan Wars
+  startYear: 993
+  endYear: 1019
+  centroid: [125.7, 39.5]
+  extent: 3
+  type: invasion
+  region: East Asia
+  summary: >
+    Three Khitan Liao invasions of Korea. The first was ended by negotiation, the
+    second sacked the capital Kaeseong in 1011, and the third was annihilated at
+    Kuju in 1019 — the chronicle claims only a few thousand of 100,000 Liao
+    soldiers returned across the Yalu. Goryeo kept its independence and its Song
+    ties; the three states settled into a century of balance. The numbers are
+    chronicle numbers: army sizes in the hundreds of thousands are claimed, none
+    are verifiable, and the range here discounts them accordingly.
+  total: { low: 50000, best: 150000, high: 400000, confidence: disputed }
+  sides:
+    - name: Goryeo
+      military: { low: 10000, best: 30000, high: 80000, confidence: disputed }
+      civilian: { low: 10000, best: 30000, high: 70000, confidence: disputed }
+    - name: Liao dynasty
+      military: { low: 30000, best: 90000, high: 250000, confidence: disputed }
+  sources:
+    - title: Cambridge History of China, Vol. 6 — Alien Regimes and Border States
+    - title: Wikipedia — Goryeo–Khitan War
+      url: https://en.wikipedia.org/wiki/Goryeo%E2%80%93Khitan_War
+
+- id: ghaznavid-invasions
+  name: Ghaznavid Invasions of India
+  startYear: 1000
+  endYear: 1027
+  centroid: [72.5, 31.0]
+  extent: 8
+  type: invasion
+  region: South Asia
+  summary: >
+    Mahmud of Ghazni's seventeen campaigns from Afghanistan into the Indian plains,
+    from the defeat of the Hindu Shahis to the sack of the temple city of Somnath
+    in 1025 — where his own chroniclers claim 50,000 defenders died, a number
+    written to glorify rather than to count. The raids financed an empire and
+    emptied northern India's temple treasuries; the Persian court histories that
+    record them are victory literature, and every figure in them is suspect. The
+    range here treats the chronicle totals as a ceiling, not a count.
+  total: { low: 100000, best: 400000, high: 2000000, confidence: disputed }
+  sides:
+    - name: Ghaznavid Empire
+      military: { low: 10000, best: 40000, high: 100000, confidence: disputed }
+    - name: Indian kingdoms
+      members: [Hindu Shahis, Gurjara-Pratiharas, Chandelas]
+      military: { low: 40000, best: 150000, high: 600000, confidence: disputed }
+      civilian: { low: 50000, best: 210000, high: 1300000, confidence: disputed }
+  sources:
+    - title: C. E. Bosworth, The Ghaznavids — Their Empire in Afghanistan and Eastern Iran
+    - title: Wikipedia — Mahmud of Ghazni
+      url: https://en.wikipedia.org/wiki/Mahmud_of_Ghazni
+
+- id: seljuk-conquests
+  name: Seljuk Conquests
+  startYear: 1037
+  endYear: 1092
+  centroid: [48.0, 35.0]
+  extent: 15
+  type: invasion
+  region: Middle East
+  summary: >
+    The Seljuk Turks' half-century sweep from the Central Asian steppe: Khorasan
+    taken from the Ghaznavids at Dandanaqan in 1040, Baghdad entered in 1055 with
+    the caliph reduced to a figurehead, Armenia's Ani sacked in 1064, and the
+    Byzantine field army broken at Manzikert in 1071 — the defeat that opened
+    Anatolia to Turkish settlement and, a generation later, provoked the Crusades.
+    The entry ends at Malik-Shah's death in 1092, when the empire fractured. As
+    with every steppe conquest, the dead went uncounted; the range is inferred
+    from the scale and duration of the campaigns.
+  total: { low: 150000, best: 400000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Seljuk Empire
+      military: { low: 30000, best: 80000, high: 200000, confidence: disputed }
+    - name: Byzantine, Ghaznavid and Buyid states
+      members: [Byzantine Empire, Ghaznavid Empire, Buyid dynasty, Armenia]
+      military: { low: 60000, best: 170000, high: 450000, confidence: disputed }
+      civilian: { low: 60000, best: 150000, high: 350000, confidence: disputed }
+  sources:
+    - title: A. C. S. Peacock, The Great Seljuk Empire
+    - title: Wikipedia — Seljuk Empire
+      url: https://en.wikipedia.org/wiki/Seljuk_Empire
+
+- id: genpei-war
+  name: Genpei War
+  startYear: 1180
+  endYear: 1185
+  centroid: [134.0, 34.5]
+  extent: 3
+  type: civil
+  region: Japan
+  summary: >
+    The war between the Minamoto and Taira clans for control of Japan, ending with
+    the Taira fleet destroyed at Dan-no-ura and the child emperor drowned with the
+    imperial sword. Its consequence outlasted every battle: Minamoto no Yoritomo's
+    new military government at Kamakura began seven centuries of shogunal rule.
+    Battle deaths were counted in the thousands, but the Yōwa famine of 1181 —
+    entangled with the war's requisitions and recorded by the chronicler Kamo no
+    Chōmei as leaving the dead uncountable in the capital's streets — killed far
+    more, and the range turns on how much of it is charged to the war.
+  total: { low: 40000, best: 100000, high: 200000, confidence: disputed }
+  sides:
+    - name: Minamoto clan
+      military: { low: 5000, best: 15000, high: 30000, confidence: disputed }
+    - name: Taira clan
+      military: { low: 8000, best: 20000, high: 40000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 27000, best: 65000, high: 130000, confidence: disputed }
+  sources:
+    - title: William Wayne Farris, Heavenly Warriors — The Evolution of Japan's Military, 500–1300
+    - title: Wikipedia — Genpei War
+      url: https://en.wikipedia.org/wiki/Genpei_War

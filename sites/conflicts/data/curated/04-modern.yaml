@@ -1,0 +1,918 @@
+# Modern — 1914 to the present
+#
+# Note on `partOf`: several entries here are conventionally counted *inside* a
+# larger conflict's total. The Holocaust and the Second Sino-Japanese War are both
+# included in the 70–85 million usually quoted for the Second World War. They are
+# listed separately because they matter separately, and marked `partOf: world-war-ii`
+# so that anything summing deaths does not count those people twice.
+
+- id: world-war-i
+  name: World War I
+  startYear: 1914
+  endYear: 1918
+  centroid: [8.0, 49.5]
+  extent: 22
+  type: interstate
+  region: Europe and Middle East
+  summary: >
+    Four years of industrialised attrition that killed around 10 million soldiers
+    and a comparable number of civilians. The Western Front barely moved between
+    1914 and 1918 while consuming a generation. The 1918 influenza pandemic, spread
+    by troop movements, killed more people worldwide than the fighting did and is
+    excluded from the figures below.
+  total: { low: 15000000, best: 20000000, high: 22000000, confidence: estimated }
+  sides:
+    - name: Allied Powers
+      members: [Russia, France, United Kingdom, Italy, United States, Serbia, Romania, Japan]
+      military: { low: 5000000, best: 5700000, high: 6500000, confidence: estimated }
+      civilian: { low: 3000000, best: 3700000, high: 4500000, confidence: disputed }
+    - name: Central Powers
+      members: [Germany, Austria-Hungary, Ottoman Empire, Bulgaria]
+      military: { low: 3800000, best: 4400000, high: 5000000, confidence: estimated }
+      civilian: { low: 3000000, best: 3800000, high: 5000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — World War I casualties
+      url: https://en.wikipedia.org/wiki/World_War_I_casualties
+
+- id: armenian-genocide
+  name: Armenian Genocide
+  startYear: 1915
+  endYear: 1923
+  centroid: [40.0, 39.0]
+  extent: 6
+  type: genocide
+  region: Anatolia
+  summary: >
+    The systematic deportation and killing of the Ottoman Armenian population,
+    alongside parallel campaigns against Assyrians and Greeks. Most deaths occurred
+    on forced marches into the Syrian desert. Recognised as genocide by most
+    historians and by a majority of states; still officially denied by Turkey.
+  total: { low: 600000, best: 1200000, high: 1500000, confidence: disputed }
+  sides:
+    - name: Ottoman Empire
+      members: [Committee of Union and Progress, Special Organization]
+      military: { low: 0, best: 0, high: 5000, confidence: disputed }
+    - name: Armenian population
+      civilian: { low: 600000, best: 1200000, high: 1500000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Armenian genocide
+      url: https://en.wikipedia.org/wiki/Armenian_genocide
+
+- id: russian-civil-war
+  name: Russian Civil War
+  startYear: 1917
+  endYear: 1922
+  centroid: [45.0, 55.0]
+  extent: 30
+  type: civil
+  region: Russia and Central Asia
+  summary: >
+    The war between the Bolshevik Red Army and the White movement, with Allied
+    intervention, Ukrainian, Polish and Central Asian fronts. The great majority of
+    deaths were civilian, from the famine of 1921–22, typhus, and the Red and White
+    terrors rather than from battle.
+  total: { low: 5000000, best: 8000000, high: 12000000, confidence: disputed }
+  sides:
+    - name: Red Army (Bolsheviks)
+      military: { low: 1000000, best: 1200000, high: 1500000, confidence: disputed }
+    - name: White movement and interventionists
+      members: [White Army, United Kingdom, France, Japan, United States, Czechoslovak Legion]
+      military: { low: 1200000, best: 1500000, high: 2000000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 2800000, best: 5300000, high: 8500000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Russian Civil War
+      url: https://en.wikipedia.org/wiki/Russian_Civil_War
+
+- id: chinese-civil-war
+  name: Chinese Civil War
+  startYear: 1927
+  endYear: 1949
+  centroid: [113.0, 33.0]
+  extent: 14
+  type: civil
+  region: East Asia
+  summary: >
+    The struggle between the Kuomintang and the Chinese Communist Party, interrupted
+    by the united front against Japan from 1937 to 1945 and resumed immediately
+    afterwards. Ended with the Communist victory on the mainland and the Nationalist
+    retreat to Taiwan.
+  total: { low: 6000000, best: 8000000, high: 11700000, confidence: disputed }
+  sides:
+    - name: Communist Party of China
+      members: [Red Army, People's Liberation Army]
+      military: { low: 1000000, best: 1500000, high: 2500000, confidence: disputed }
+    - name: Kuomintang (Nationalists)
+      members: [National Revolutionary Army, Republic of China]
+      military: { low: 1500000, best: 2000000, high: 3200000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 3500000, best: 4500000, high: 6000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Chinese Civil War
+      url: https://en.wikipedia.org/wiki/Chinese_Civil_War
+
+- id: spanish-civil-war
+  name: Spanish Civil War
+  startYear: 1936
+  endYear: 1939
+  centroid: [-3.7, 40.4]
+  extent: 5
+  type: civil
+  region: Iberia
+  summary: >
+    The Republic against Franco's Nationalists, with German and Italian support for
+    the latter and Soviet support plus the International Brigades for the former.
+    A proving ground for the tactics of the coming world war — Guernica was bombed
+    by the Condor Legion in 1937. Tens of thousands were executed behind the lines
+    by both sides, and Francoist reprisals continued for years after 1939.
+  total: { low: 500000, best: 600000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Republicans
+      members: [Spanish Republic, International Brigades, Soviet advisers]
+      military: { low: 110000, best: 175000, high: 250000, confidence: disputed }
+      civilian: { low: 130000, best: 200000, high: 350000, confidence: disputed }
+    - name: Nationalists
+      members: [Nationalist Spain, Nazi Germany, Fascist Italy, Portugal]
+      military: { low: 90000, best: 150000, high: 230000, confidence: disputed }
+      civilian: { low: 50000, best: 75000, high: 170000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Spanish Civil War
+      url: https://en.wikipedia.org/wiki/Spanish_Civil_War
+
+- id: second-sino-japanese-war
+  name: Second Sino-Japanese War
+  startYear: 1937
+  endYear: 1945
+  centroid: [114.0, 31.0]
+  extent: 12
+  type: interstate
+  region: East Asia
+  partOf: world-war-ii
+  summary: >
+    Japan's invasion of China, which began two years before the war in Europe and
+    became its Pacific theatre. Includes the Nanjing Massacre, the deliberate
+    breaching of the Yellow River dikes in 1938 which drowned hundreds of thousands
+    of Chinese civilians to slow the Japanese advance, and the biological warfare
+    programme of Unit 731. Chinese deaths make up the second-largest national toll
+    of the entire Second World War.
+  total: { low: 15000000, best: 20000000, high: 25000000, confidence: disputed }
+  sides:
+    - name: Republic of China
+      members: [National Revolutionary Army, Communist forces, United States]
+      military: { low: 3000000, best: 3800000, high: 4500000, confidence: disputed }
+      civilian: { low: 8000000, best: 16000000, high: 20000000, confidence: disputed }
+    - name: Empire of Japan
+      members: [Imperial Japanese Army, collaborationist Chinese regimes]
+      military: { low: 400000, best: 500000, high: 1100000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Second Sino-Japanese War
+      url: https://en.wikipedia.org/wiki/Second_Sino-Japanese_War
+
+- id: world-war-ii
+  name: World War II
+  startYear: 1939
+  endYear: 1945
+  centroid: [15.0, 48.0]
+  extent: 60
+  type: interstate
+  region: Global
+  summary: >
+    The deadliest conflict in human history, killing an estimated 70–85 million
+    people — around 3% of the world's population. Civilian deaths outnumbered
+    military ones roughly two to one, through strategic bombing, siege, famine,
+    massacre and industrialised genocide. The Soviet Union lost some 27 million
+    people, China around 20 million; between them, more than half of all deaths.
+  total: { low: 70000000, best: 75000000, high: 85000000, confidence: estimated }
+  sides:
+    - name: Allied Powers
+      members: [Soviet Union, China, United States, United Kingdom, France, Poland, Yugoslavia,
+        Norway, Denmark, Netherlands, Belgium, Greece, Luxembourg]
+      military: { low: 14000000, best: 16000000, high: 18000000, confidence: estimated }
+      civilian: { low: 30000000, best: 36000000, high: 45000000, confidence: disputed }
+    - name: Axis Powers
+      members: [Germany, Japan, Italy, Hungary, Romania, Bulgaria, Finland]
+      military: { low: 8000000, best: 8500000, high: 9500000, confidence: estimated }
+      civilian: { low: 4000000, best: 4500000, high: 5500000, confidence: estimated }
+  sources:
+    - title: Wikipedia — World War II casualties
+      url: https://en.wikipedia.org/wiki/World_War_II_casualties
+
+- id: the-holocaust
+  name: The Holocaust
+  startYear: 1941
+  endYear: 1945
+  centroid: [21.0, 52.0]
+  extent: 12
+  type: genocide
+  region: Europe
+  partOf: world-war-ii
+  summary: >
+    The systematic murder of approximately six million European Jews by Nazi Germany
+    and its collaborators — two-thirds of the Jewish population of Europe — through
+    mass shootings by the Einsatzgruppen, ghettos, and the extermination camps.
+    Alongside them the Nazi state killed Roma, Soviet prisoners of war, disabled
+    people, Poles and others, bringing the total to around eleven million.
+  total: { low: 5700000, best: 6000000, high: 6200000, confidence: documented }
+  sides:
+    - name: Nazi Germany and collaborators
+      members: [Nazi Germany, SS, collaborationist regimes]
+      military: { low: 0, best: 0, high: 0, confidence: documented }
+    - name: Jewish population of Europe
+      civilian: { low: 5700000, best: 6000000, high: 6200000, confidence: documented }
+  sources:
+    - title: United States Holocaust Memorial Museum
+      url: https://encyclopedia.ushmm.org/
+    - title: Wikipedia — The Holocaust
+      url: https://en.wikipedia.org/wiki/The_Holocaust
+
+- id: partition-of-india
+  name: Partition of India
+  startYear: 1947
+  endYear: 1948
+  centroid: [74.0, 31.0]
+  extent: 8
+  type: civil
+  region: South Asia
+  summary: >
+    The division of British India into India and Pakistan triggered the largest mass
+    migration in human history — some 15 million people — accompanied by massacres,
+    abductions and reprisal killings along the new borders in Punjab and Bengal.
+    No side kept a count.
+  total: { low: 200000, best: 1000000, high: 2000000, confidence: disputed }
+  sides:
+    - name: Communal violence — Hindu and Sikh communities
+      civilian: { low: 100000, best: 500000, high: 1000000, confidence: disputed }
+    - name: Communal violence — Muslim communities
+      civilian: { low: 100000, best: 500000, high: 1000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Partition of India
+      url: https://en.wikipedia.org/wiki/Partition_of_India
+
+- id: korean-war
+  name: Korean War
+  startYear: 1950
+  endYear: 1953
+  centroid: [127.5, 38.0]
+  extent: 4
+  type: interstate
+  region: East Asia
+  summary: >
+    North Korea's invasion of the South drew in a UN coalition led by the United
+    States and then China. The front returned almost exactly to where it started;
+    the armistice of 1953 has still never been replaced by a peace treaty. American
+    bombing destroyed the great majority of North Korea's built environment.
+  total: { low: 3000000, best: 3500000, high: 4500000, confidence: disputed }
+  sides:
+    - name: United Nations Command
+      members: [South Korea, United States, United Kingdom, Turkey, Australia, Canada]
+      military: { low: 400000, best: 480000, high: 600000, confidence: estimated }
+    - name: North Korea and China
+      members: [North Korea, China, Soviet Union]
+      military: { low: 600000, best: 750000, high: 1000000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 1500000, best: 2200000, high: 3000000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Korean War
+      url: https://en.wikipedia.org/wiki/Korean_War
+
+- id: first-indochina-war
+  name: First Indochina War
+  startYear: 1946
+  endYear: 1954
+  centroid: [105.8, 21.0]
+  extent: 5
+  type: colonial
+  region: Southeast Asia
+  summary: >
+    France's attempt to reassert colonial control over Indochina against the Viet
+    Minh, fought from ambush and jungle garrison to the set-piece defeat at Dien Bien
+    Phu in 1954 — a fortified airhead besieged by artillery the Viet Minh had carried
+    up the surrounding mountains by hand. The Geneva Accords then partitioned Vietnam
+    at the 17th parallel, the arrangement that led directly to the next war. The
+    asymmetry of the record shapes the range: French Union losses are known nearly to
+    the man, while Viet Minh and civilian deaths were estimated by others and dominate
+    the uncertainty.
+  total: { low: 400000, best: 500000, high: 800000, confidence: disputed }
+  sides:
+    - name: France and the State of Vietnam
+      members: [France, State of Vietnam, Laos, Cambodia]
+      military: { low: 75000, best: 95000, high: 130000, confidence: estimated }
+    - name: Viet Minh
+      members: [Viet Minh, China, Soviet Union]
+      military: { low: 175000, best: 200000, high: 300000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 150000, best: 205000, high: 400000, confidence: disputed }
+  sources:
+    - title: Wikipedia — First Indochina War
+      url: https://en.wikipedia.org/wiki/First_Indochina_War
+
+- id: algerian-war
+  name: Algerian War of Independence
+  startYear: 1954
+  endYear: 1962
+  centroid: [3.0, 34.0]
+  extent: 8
+  type: colonial
+  region: North Africa
+  summary: >
+    The FLN's war against French rule, fought with guerrilla warfare, systematic
+    torture and mass internment. Algeria became independent in 1962; the war brought
+    down the French Fourth Republic. French and Algerian official death tolls differ
+    by a factor of five and remain politically contested.
+  total: { low: 400000, best: 700000, high: 1500000, confidence: disputed }
+  sides:
+    - name: France
+      members: [French Army, pied-noir militias, Harkis]
+      military: { low: 25000, best: 30000, high: 40000, confidence: estimated }
+    - name: National Liberation Front (FLN)
+      military: { low: 150000, best: 200000, high: 300000, confidence: disputed }
+    - name: Algerian civilian population
+      civilian: { low: 225000, best: 470000, high: 1160000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Algerian War
+      url: https://en.wikipedia.org/wiki/Algerian_War
+
+- id: vietnam-war
+  name: Vietnam War
+  startYear: 1955
+  endYear: 1975
+  centroid: [107.0, 16.0]
+  extent: 6
+  type: interstate
+  region: Southeast Asia
+  summary: >
+    Twenty years of war between North and South Vietnam, with the United States
+    committing over half a million troops at its peak. More bomb tonnage was dropped
+    on Indochina than by all sides in the Second World War combined, and the war
+    spread into Laos and Cambodia. Ended with the fall of Saigon in 1975.
+  total: { low: 1300000, best: 2000000, high: 4300000, confidence: disputed }
+  sides:
+    - name: North Vietnam and the Viet Cong
+      members: [North Vietnam, Viet Cong, Soviet Union, China]
+      military: { low: 500000, best: 950000, high: 1100000, confidence: disputed }
+    - name: South Vietnam and allies
+      members: [South Vietnam, United States, South Korea, Australia, Thailand]
+      military: { low: 280000, best: 320000, high: 380000, confidence: documented }
+    - name: Civilian population
+      civilian: { low: 520000, best: 730000, high: 2800000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Vietnam War casualties
+      url: https://en.wikipedia.org/wiki/Vietnam_War_casualties
+
+- id: cultural-revolution
+  name: Cultural Revolution
+  startYear: 1966
+  endYear: 1976
+  centroid: [112.0, 33.0]
+  extent: 14
+  type: civil
+  region: East Asia
+  summary: >
+    Mao's mass political campaign against perceived class enemies within the Party
+    and society, carried out largely by Red Guards. Deaths came from struggle
+    sessions, factional fighting that reached the scale of civil war in some
+    provinces, rural massacres, and suicide. Estimates vary by more than an order
+    of magnitude — official Chinese figures are far lower than Western scholarly ones.
+  total: { low: 500000, best: 1500000, high: 8000000, confidence: disputed }
+  sides:
+    - name: Maoist factions and state organs
+      members: [Red Guards, People's Liberation Army, Revolutionary Committees]
+      military: { low: 50000, best: 200000, high: 800000, confidence: disputed }
+    - name: Targeted population
+      civilian: { low: 450000, best: 1300000, high: 7200000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Cultural Revolution
+      url: https://en.wikipedia.org/wiki/Cultural_Revolution
+
+- id: nigerian-civil-war
+  name: Nigerian Civil War (Biafra)
+  startYear: 1967
+  endYear: 1970
+  centroid: [7.5, 6.0]
+  extent: 3
+  type: civil
+  region: West Africa
+  summary: >
+    The secession of Biafra and its defeat by the Nigerian federal government. Most
+    deaths were from starvation caused by the blockade of the Igbo heartland; the
+    images of famine that reached Western television changed the practice of
+    humanitarian intervention and led to the founding of Médecins Sans Frontières.
+  total: { low: 500000, best: 2000000, high: 3000000, confidence: disputed }
+  sides:
+    - name: Nigeria
+      members: [Nigeria, United Kingdom, Soviet Union]
+      military: { low: 45000, best: 100000, high: 200000, confidence: disputed }
+    - name: Republic of Biafra
+      members: [Biafra, France, Portugal]
+      military: { low: 40000, best: 75000, high: 150000, confidence: disputed }
+    - name: Biafran civilian population
+      civilian: { low: 415000, best: 1800000, high: 2650000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Nigerian Civil War
+      url: https://en.wikipedia.org/wiki/Nigerian_Civil_War
+
+- id: bangladesh-liberation-war
+  name: Bangladesh Liberation War
+  startYear: 1971
+  endYear: 1971
+  centroid: [90.4, 23.7]
+  extent: 3
+  type: rebellion
+  region: South Asia
+  summary: >
+    East Pakistan's war of independence, in which the Pakistan Army's Operation
+    Searchlight and the campaign that followed killed vast numbers of Bengali
+    civilians and displaced ten million into India. Indian intervention ended the
+    war in twelve days. Bangladeshi official figures give three million dead;
+    independent estimates range far lower. The scale of mass rape is undisputed.
+  total: { low: 300000, best: 1000000, high: 3000000, confidence: disputed }
+  sides:
+    - name: Bangladesh and India
+      members: [Mukti Bahini, India]
+      military: { low: 30000, best: 50000, high: 100000, confidence: disputed }
+    - name: Pakistan
+      military: { low: 8000, best: 9000, high: 26000, confidence: estimated }
+    - name: Bengali civilian population
+      civilian: { low: 262000, best: 941000, high: 2874000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Bangladesh Liberation War
+      url: https://en.wikipedia.org/wiki/Bangladesh_Liberation_War
+
+- id: cambodian-genocide
+  name: Cambodian Genocide
+  startYear: 1975
+  endYear: 1979
+  centroid: [105.0, 12.5]
+  extent: 3
+  type: genocide
+  region: Southeast Asia
+  summary: >
+    The Khmer Rouge emptied the cities within days of taking Phnom Penh, abolished
+    money, markets and schools, and killed between a fifth and a quarter of Cambodia's
+    population in under four years through execution, forced labour and starvation.
+    The Cham Muslim and Vietnamese minorities were singled out for destruction. The
+    toll is among the better established of any genocide: mass-grave surveys mapping
+    some 20,000 burial sites and demographic reconstruction converge near 1.8 million.
+    Ended by the Vietnamese invasion of January 1979; the tribunal that judged the
+    surviving leadership delivered its first verdict thirty years later.
+  total: { low: 1500000, best: 1800000, high: 2200000, confidence: estimated }
+  sides:
+    - name: Khmer Rouge (Democratic Kampuchea)
+      military: { low: 10000, best: 20000, high: 40000, confidence: disputed }
+    - name: Cambodian population
+      civilian: { low: 1490000, best: 1780000, high: 2160000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Cambodian genocide
+      url: https://en.wikipedia.org/wiki/Cambodian_genocide
+
+- id: soviet-afghan-war
+  name: Soviet–Afghan War
+  startYear: 1979
+  endYear: 1989
+  centroid: [66.0, 34.0]
+  extent: 6
+  type: invasion
+  region: Central Asia
+  summary: >
+    The Soviet intervention in support of the Afghan communist government against
+    the mujahideen, who were armed by the United States, Pakistan and Saudi Arabia.
+    A third of the Afghan population fled the country. The withdrawal in 1989 left
+    a civil war that ran directly into the Taliban's rise.
+  total: { low: 1000000, best: 1500000, high: 2000000, confidence: disputed }
+  sides:
+    - name: Soviet Union and the Afghan government
+      members: [Soviet Union, Democratic Republic of Afghanistan]
+      military: { low: 32000, best: 33000, high: 60000, confidence: estimated }
+    - name: Mujahideen
+      members: [Afghan mujahideen, Pakistan, United States, Saudi Arabia]
+      military: { low: 75000, best: 90000, high: 100000, confidence: disputed }
+    - name: Afghan civilian population
+      civilian: { low: 890000, best: 1370000, high: 1840000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Soviet–Afghan War
+      url: https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War
+
+- id: iran-iraq-war
+  name: Iran–Iraq War
+  startYear: 1980
+  endYear: 1988
+  centroid: [47.0, 31.5]
+  extent: 6
+  type: interstate
+  region: Middle East
+  summary: >
+    Eight years of war after Iraq's invasion of Iran, fought with trench lines,
+    human-wave assaults and chemical weapons — the largest use of poison gas since
+    1918, against soldiers at the front and Kurdish civilians at Halabja. Iran sent
+    teenage volunteers across minefields; Iraq borrowed its way to bankruptcy, one
+    cause of its seizure of Kuwait two years later. It ended almost exactly where it
+    began, with no territorial change. The popular figure of a million dead does not
+    survive contact with either country's postwar censuses: Iran's own martyrs'
+    registry counts about 190,000, and scholarly datasets put the combined toll
+    between roughly 400,000 and 700,000. The range here spans that dispute.
+  # The traditional ~1M figure predates both countries' postwar demographic data;
+  # Iran's official count and census-based scholarship (Kurzman) point far lower.
+  total: { low: 300000, best: 500000, high: 1200000, confidence: disputed }
+  sides:
+    - name: Iran
+      military: { low: 155000, best: 220000, high: 600000, confidence: disputed }
+      civilian: { low: 11000, best: 16000, high: 40000, confidence: estimated }
+    - name: Iraq
+      military: { low: 105000, best: 250000, high: 500000, confidence: disputed }
+      civilian: { low: 5000, best: 15000, high: 40000, confidence: disputed }
+  sources:
+    - title: Charles Kurzman — Death Tolls of the Iran–Iraq War
+      url: https://kurzman.unc.edu/death-tolls-of-the-iran-iraq-war/
+    - title: Wikipedia — Iran–Iraq War
+      url: https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War
+
+- id: second-sudanese-civil-war
+  name: Second Sudanese Civil War
+  startYear: 1983
+  endYear: 2005
+  centroid: [30.0, 8.0]
+  extent: 7
+  type: civil
+  region: East Africa
+  summary: >
+    Twenty-two years of war between the Sudanese government and the SPLA in the
+    south, over religion, resources and autonomy. Roughly two million died, the
+    overwhelming majority from war-induced famine and disease. Ended with the
+    settlement that led to South Sudan's independence in 2011.
+  total: { low: 1000000, best: 2000000, high: 2500000, confidence: disputed }
+  sides:
+    - name: Government of Sudan
+      members: [Sudan, allied militias]
+      military: { low: 50000, best: 90000, high: 150000, confidence: disputed }
+    - name: Sudan People's Liberation Army
+      military: { low: 50000, best: 90000, high: 150000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 900000, best: 1820000, high: 2200000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Second Sudanese Civil War
+      url: https://en.wikipedia.org/wiki/Second_Sudanese_Civil_War
+
+- id: gulf-war
+  name: Gulf War
+  startYear: 1990
+  endYear: 1991
+  centroid: [46.5, 29.5]
+  extent: 5
+  type: interstate
+  region: Middle East
+  summary: >
+    A US-led coalition of 35 states expelled Iraq from Kuwait in a campaign of six
+    weeks' bombing and 100 hours of ground combat. Extraordinarily one-sided:
+    coalition deaths numbered in the hundreds, Iraqi deaths in the tens of thousands —
+    and even those are disputed, early claims of 100,000 Iraqi soldiers killed having
+    been revised toward 20,000–35,000 by postwar studies. The destruction of power,
+    water and sewage systems killed more Iraqis in the year after the ceasefire than
+    the war itself, a toll this entry does not include; nor does the suppression of
+    the March 1991 uprisings that followed the defeat.
+  total: { low: 25000, best: 40000, high: 100000, confidence: disputed }
+  sides:
+    - name: Coalition forces
+      members: [United States, Saudi Arabia, United Kingdom, France, Egypt, Kuwait]
+      military: { low: 292, best: 379, high: 500, confidence: documented }
+    - name: Iraq
+      military: { low: 20000, best: 25000, high: 50000, confidence: disputed }
+      civilian: { low: 3500, best: 14000, high: 49000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Gulf War
+      url: https://en.wikipedia.org/wiki/Gulf_War
+
+- id: yugoslav-wars
+  name: Yugoslav Wars
+  startYear: 1991
+  endYear: 2001
+  centroid: [18.5, 44.0]
+  extent: 4
+  type: civil
+  region: Balkans
+  summary: >
+    The violent disintegration of Yugoslavia across Croatia, Bosnia and Kosovo,
+    which returned ethnic cleansing and genocide to Europe fifty years after 1945.
+    The massacre of more than 8,000 Bosniak men and boys at Srebrenica in 1995 was
+    ruled a genocide by the ICTY and the International Court of Justice.
+  total: { low: 130000, best: 140000, high: 150000, confidence: documented }
+  sides:
+    - name: Serbia and Bosnian Serb forces
+      members: [FR Yugoslavia, Republika Srpska, Serbian Krajina]
+      military: { low: 30000, best: 35000, high: 40000, confidence: estimated }
+    - name: Bosnia, Croatia, Kosovo and NATO
+      members: [Bosnia and Herzegovina, Croatia, KLA, NATO]
+      military: { low: 35000, best: 40000, high: 45000, confidence: estimated }
+    - name: Civilian population
+      civilian: { low: 55000, best: 65000, high: 70000, confidence: documented }
+  sources:
+    - title: Wikipedia — Yugoslav Wars
+      url: https://en.wikipedia.org/wiki/Yugoslav_Wars
+
+- id: rwandan-genocide
+  name: Rwandan Genocide
+  startYear: 1994
+  endYear: 1994
+  centroid: [29.9, -1.9]
+  extent: 2
+  type: genocide
+  region: East Africa
+  summary: >
+    In roughly one hundred days, Hutu extremist militias and government forces
+    killed between 500,000 and 800,000 Tutsi and moderate Hutu — a rate of killing
+    faster than any in the 20th century, carried out largely with machetes. UN
+    forces present were not authorised to intervene.
+  total: { low: 500000, best: 800000, high: 1100000, confidence: estimated }
+  sides:
+    - name: Hutu Power (Interahamwe and government forces)
+      members: [Rwandan Armed Forces, Interahamwe]
+      military: { low: 10000, best: 25000, high: 50000, confidence: disputed }
+    - name: Tutsi population and the RPF
+      members: [Rwandan Patriotic Front]
+      military: { low: 5000, best: 10000, high: 20000, confidence: disputed }
+      civilian: { low: 485000, best: 765000, high: 1030000, confidence: estimated }
+  sources:
+    - title: Wikipedia — Rwandan genocide
+      url: https://en.wikipedia.org/wiki/Rwandan_genocide
+
+- id: second-congo-war
+  name: Second Congo War
+  startYear: 1998
+  endYear: 2003
+  centroid: [25.0, -2.0]
+  extent: 8
+  type: interstate
+  region: Central Africa
+  summary: >
+    Nine African nations and some twenty-five armed groups fought in the Democratic
+    Republic of the Congo — the deadliest conflict since the Second World War, and
+    among the least reported. The widely cited figure of 5.4 million comes from
+    IRC mortality surveys and counts excess deaths from disease and starvation
+    caused by the collapse of health systems; the methodology has been challenged,
+    with critics arguing for a substantially lower figure.
+  total: { low: 2500000, best: 4000000, high: 5400000, confidence: disputed }
+  sides:
+    - name: DR Congo and allies
+      members: [DR Congo, Angola, Zimbabwe, Namibia, Chad]
+      military: { low: 100000, best: 200000, high: 350000, confidence: disputed }
+    - name: Rwanda, Uganda and rebel groups
+      members: [Rwanda, Uganda, Burundi, RCD, MLC]
+      military: { low: 100000, best: 200000, high: 350000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 2300000, best: 3600000, high: 4700000, confidence: disputed }
+  sources:
+    - title: International Rescue Committee mortality surveys, 2000–2007
+    - title: Wikipedia — Second Congo War
+      url: https://en.wikipedia.org/wiki/Second_Congo_War
+
+- id: war-in-afghanistan-2001
+  name: War in Afghanistan (2001–2021)
+  startYear: 2001
+  endYear: 2021
+  centroid: [66.0, 34.0]
+  extent: 6
+  type: invasion
+  region: Central Asia
+  summary: >
+    The US-led invasion following the September 11 attacks toppled the Taliban within
+    weeks; the twenty-year insurgency that followed became the longest war in United
+    States history. The figures here follow the Costs of War Project's incident-level
+    counting — among the best-documented tolls of any modern conflict — though deaths
+    from collapsed health care and infrastructure would add substantially more. It
+    ended as it began, with the Taliban in Kabul: American forces withdrew in August
+    2021 and the republic they had built survived them by eleven days.
+  total: { low: 170000, best: 210000, high: 240000, confidence: estimated }
+  sides:
+    - name: NATO and the Afghan government
+      members: [United States, Afghanistan, United Kingdom, ISAF contributors]
+      military: { low: 70000, best: 82000, high: 90000, confidence: estimated }
+    - name: Taliban and allied groups
+      members: [Taliban, al-Qaeda, ISIS-K]
+      military: { low: 52000, best: 60000, high: 70000, confidence: disputed }
+    - name: Afghan civilian population
+      civilian: { low: 46000, best: 68000, high: 80000, confidence: estimated }
+  sources:
+    - title: Brown University Costs of War Project
+      url: https://watson.brown.edu/costsofwar/
+    - title: Wikipedia — War in Afghanistan (2001–2021)
+      url: https://en.wikipedia.org/wiki/War_in_Afghanistan_(2001%E2%80%932021)
+
+- id: darfur-conflict
+  name: War in Darfur
+  startYear: 2003
+  endYear: 2020
+  centroid: [24.5, 13.5]
+  extent: 5
+  type: genocide
+  region: East Africa
+  summary: >
+    Sudanese government forces and Janjaweed militias against rebel movements in
+    Darfur, with mass killing and displacement of the region's non-Arab population.
+    The ICC issued an arrest warrant for President Omar al-Bashir on charges
+    including genocide — the first ever against a sitting head of state.
+  total: { low: 100000, best: 300000, high: 400000, confidence: disputed }
+  sides:
+    - name: Sudanese government and Janjaweed
+      members: [Sudan, Janjaweed militias]
+      military: { low: 5000, best: 12000, high: 20000, confidence: disputed }
+    - name: Darfuri rebel movements
+      members: [SLM, JEM]
+      military: { low: 10000, best: 20000, high: 35000, confidence: disputed }
+    - name: Darfuri civilian population
+      civilian: { low: 85000, best: 268000, high: 345000, confidence: disputed }
+  sources:
+    - title: Wikipedia — War in Darfur
+      url: https://en.wikipedia.org/wiki/War_in_Darfur
+
+- id: iraq-war
+  name: Iraq War
+  startYear: 2003
+  endYear: 2011
+  centroid: [43.7, 33.3]
+  extent: 5
+  type: invasion
+  region: Middle East
+  summary: >
+    The US-led invasion that removed Saddam Hussein, and the insurgency and sectarian
+    civil war that followed. Casualty estimates diverge enormously by method:
+    Iraq Body Count's documented-deaths tally is around 200,000, while household
+    survey methods have produced figures approaching or exceeding one million.
+  total: { low: 150000, best: 300000, high: 1000000, confidence: disputed }
+  sides:
+    - name: Coalition and the Iraqi government
+      members: [United States, United Kingdom, Iraqi security forces]
+      military: { low: 25000, best: 32000, high: 45000, confidence: estimated }
+    - name: Insurgent groups
+      members: [Ba'athist insurgents, al-Qaeda in Iraq, Mahdi Army]
+      military: { low: 25000, best: 40000, high: 60000, confidence: disputed }
+    - name: Iraqi civilian population
+      civilian: { low: 100000, best: 228000, high: 900000, confidence: disputed }
+  sources:
+    - title: Iraq Body Count
+      url: https://www.iraqbodycount.org/
+    - title: Wikipedia — Casualties of the Iraq War
+      url: https://en.wikipedia.org/wiki/Casualties_of_the_Iraq_War
+
+- id: syrian-civil-war
+  name: Syrian Civil War
+  startYear: 2011
+  endYear: 2024
+  centroid: [38.0, 35.0]
+  extent: 4
+  type: civil
+  region: Middle East
+  summary: >
+    Begun as protests during the Arab Spring, escalating into a multi-sided war
+    involving the Assad government, opposition factions, Kurdish forces, ISIS,
+    Russia, Iran, Turkey and the United States. Half the population was displaced.
+    The Assad government fell in December 2024.
+  total: { low: 500000, best: 600000, high: 620000, confidence: estimated }
+  sides:
+    - name: Syrian government and allies
+      members: [Syrian Arab Republic, Russia, Iran, Hezbollah]
+      military: { low: 130000, best: 170000, high: 200000, confidence: estimated }
+    - name: Opposition, Kurdish and jihadist forces
+      members: [Free Syrian Army, HTS, SDF, ISIS, Turkey]
+      military: { low: 150000, best: 190000, high: 220000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 200000, best: 230000, high: 310000, confidence: estimated }
+  sources:
+    - title: Syrian Observatory for Human Rights
+    - title: Wikipedia — Syrian civil war
+      url: https://en.wikipedia.org/wiki/Syrian_civil_war
+
+- id: yemeni-civil-war
+  name: Yemeni Civil War
+  startYear: 2014
+  endYear: 2024
+  centroid: [45.0, 15.5]
+  extent: 4
+  type: civil
+  region: Middle East
+  summary: >
+    The Houthi takeover of Sanaa and the Saudi-led intervention that followed,
+    producing what the UN repeatedly called the world's worst humanitarian crisis.
+    The large majority of deaths are indirect — from famine, cholera and the
+    collapse of health care under blockade — rather than from combat.
+  total: { low: 150000, best: 380000, high: 400000, confidence: disputed }
+  sides:
+    - name: Houthi movement (Ansar Allah)
+      military: { low: 40000, best: 60000, high: 80000, confidence: disputed }
+    - name: Yemeni government and the Saudi-led coalition
+      members: [Yemen, Saudi Arabia, United Arab Emirates]
+      military: { low: 30000, best: 50000, high: 70000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 80000, best: 270000, high: 300000, confidence: disputed }
+  sources:
+    - title: UNDP, Assessing the Impact of War in Yemen (2021)
+    - title: Wikipedia — Yemeni civil war (2014–present)
+      url: https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014%E2%80%93present)
+
+- id: tigray-war
+  name: Tigray War
+  startYear: 2020
+  endYear: 2022
+  centroid: [39.0, 13.8]
+  extent: 3
+  type: civil
+  region: East Africa
+  summary: >
+    War between the Ethiopian federal government, supported by Eritrea, and the
+    Tigray People's Liberation Front. Fought under a near-total communications
+    blackout and blockade; estimates of the dead — from combat, massacre and
+    engineered famine — range from 300,000 to over 600,000, which would make it one
+    of the deadliest wars of the 21st century.
+  total: { low: 300000, best: 500000, high: 800000, confidence: disputed }
+  sides:
+    - name: Ethiopian federal government and Eritrea
+      members: [Ethiopia, Eritrea, Amhara regional forces]
+      military: { low: 50000, best: 90000, high: 150000, confidence: disputed }
+    - name: Tigray People's Liberation Front
+      military: { low: 50000, best: 90000, high: 150000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 200000, best: 320000, high: 500000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Tigray War
+      url: https://en.wikipedia.org/wiki/Tigray_War
+
+- id: russo-ukrainian-war
+  name: Russo-Ukrainian War
+  startYear: 2014
+  endYear: 2026
+  centroid: [36.0, 48.5]
+  extent: 6
+  type: interstate
+  region: Eastern Europe
+  summary: >
+    Beginning with Russia's annexation of Crimea and the war in the Donbas in 2014,
+    and escalating to full-scale invasion in February 2022 — the largest war in
+    Europe since 1945. Casualty figures are contested and treated as state secrets
+    by both governments; the ranges below are wide accordingly and this conflict
+    is ongoing.
+  total: { low: 500000, best: 900000, high: 1400000, confidence: disputed }
+  sides:
+    - name: Ukraine
+      members: [Ukraine, foreign volunteers]
+      military: { low: 100000, best: 200000, high: 400000, confidence: disputed }
+    - name: Russia
+      members: [Russia, Wagner Group, DPR and LPR forces]
+      military: { low: 200000, best: 450000, high: 700000, confidence: disputed }
+    - name: Ukrainian civilian population
+      civilian: { low: 12000, best: 45000, high: 150000, confidence: disputed }
+  sources:
+    - title: UN Office of the High Commissioner for Human Rights, Ukraine casualty updates
+    - title: Wikipedia — Russo-Ukrainian War
+      url: https://en.wikipedia.org/wiki/Russo-Ukrainian_War
+
+- id: sudan-civil-war-2023
+  name: Sudanese Civil War
+  startYear: 2023
+  endYear: 2026
+  centroid: [30.5, 15.5]
+  extent: 6
+  type: civil
+  region: East Africa
+  summary: >
+    War between the Sudanese Armed Forces and the Rapid Support Forces, which broke
+    out in Khartoum in April 2023 and spread across the country. It has produced the
+    largest displacement crisis in the world and famine conditions across multiple
+    states, with mass ethnic killings reported in Darfur. Ongoing.
+  total: { low: 60000, best: 150000, high: 400000, confidence: disputed }
+  sides:
+    - name: Sudanese Armed Forces
+      military: { low: 15000, best: 30000, high: 60000, confidence: disputed }
+    - name: Rapid Support Forces
+      military: { low: 15000, best: 35000, high: 70000, confidence: disputed }
+    - name: Civilian population
+      civilian: { low: 30000, best: 85000, high: 270000, confidence: disputed }
+  sources:
+    - title: Wikipedia — Sudanese civil war (2023–present)
+      url: https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023%E2%80%93present)
+
+- id: gaza-war-2023
+  name: Gaza War
+  startYear: 2023
+  endYear: 2026
+  centroid: [34.4, 31.4]
+  extent: 1
+  type: interstate
+  region: Levant
+  summary: >
+    Beginning with the Hamas-led attack on southern Israel on 7 October 2023, which
+    killed around 1,200 people, and the Israeli military campaign in Gaza that
+    followed. Casualty figures come principally from the Gaza Ministry of Health;
+    studies in The Lancet and elsewhere have argued the true toll is substantially
+    higher once indirect deaths are counted. Ongoing and contested.
+  total: { low: 50000, best: 70000, high: 190000, confidence: disputed }
+  sides:
+    - name: Israel
+      military: { low: 400, best: 900, high: 1500, confidence: estimated }
+      civilian: { low: 800, best: 1200, high: 1500, confidence: documented }
+    - name: Hamas and allied factions
+      members: [Hamas, Palestinian Islamic Jihad]
+      military: { low: 15000, best: 20000, high: 25000, confidence: disputed }
+    - name: Palestinian civilian population
+      civilian: { low: 35000, best: 48000, high: 162000, confidence: disputed }
+  sources:
+    - title: Gaza Ministry of Health casualty reporting
+    - title: Wikipedia — Gaza war
+      url: https://en.wikipedia.org/wiki/Gaza_war
