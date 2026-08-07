@@ -57,33 +57,36 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 - **Accept:** umbrella zone live in the Cloudflare account with auto-renew on; decision on
   conflicts.io recorded in this doc; final hostname for this site written into P1-2/P1-3.
 
-### ☐ P0-3 · CI workflow — Priority: high
-- **Goal:** Every push/PR proves the build and the data invariants.
-- **Changes:** create `.github/workflows/ci.yml` (repo root): trigger on `push` +
-  `pull_request` with `paths: ['sites/conflicts/**']`; ubuntu-latest;
-  `defaults.run.working-directory: sites/conflicts`; `actions/setup-node` with
-  `node-version: 22` and npm cache keyed on `sites/conflicts/package-lock.json`;
-  `npm ci` → `npm run build` (runs `tsc -b` first by definition) → `npm run data:validate`.
-  No deploy step (deploys are Pages' job, P0-4). No secrets. Future sites add a sibling
-  job with their own paths filter.
-- **Depends:** P0-1.
-- **Accept:** green check on GitHub for a trivial commit; a deliberately broken type and a
-  deliberately broken YAML range each fail CI (test locally with `act` or just reason it
-  through and verify the green path).
+### ☑ P0-3 · CI + deploy workflow — DONE 2026-08-07
+- **Outcome:** `.github/workflows/conflicts.yml` — path-filtered to `sites/conflicts/**`,
+  plus `workflow_dispatch`. Job 1 (build): Node 22, `npm ci` → `npm run build` →
+  `npm run data:validate`, uploads `dist/` artifact. Job 2 (deploy): wrangler Direct
+  Upload to Cloudflare Pages — **self-activating**: skips with a green notice until the
+  `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` repository secrets exist (P0-4), then
+  deploys `main` → production and PR branches → previews, creating the Pages project on
+  first run. Design change vs. original plan: deploy-from-Actions replaced Pages Git
+  integration (rationale in `hosting-architecture.md` § CI/CD).
 
-### ☐ P0-4 · Cloudflare Pages project — Priority: high [HUMAN]
-- **Goal:** The site live on the internet with previews per branch.
-- **Changes:** [HUMAN] create Cloudflare account (2FA), Pages project via Git integration
-  → repo from P0-1. Settings (full table in `hosting-architecture.md`): **root directory
-  `sites/conflicts`**, build `npm run build`, output `dist`, **build watch paths
-  `sites/conflicts/*`**, env `NODE_VERSION=22`, production branch `main`. When P0-2
-  resolves: attach custom domain `conflicts.<umbrella>.io`, then enable Always-Use-HTTPS;
-  enable HSTS a few days later. Turn on Cloudflare Web Analytics readiness (token used in
-  P1-6).
-- **Depends:** P0-1. Custom-domain step depends on P0-2.
-- **Accept:** `node tools/shot.mjs https://<project>.pages.dev out.png 6000 1500 950`
-  produces a screenshot with the map visibly rendered (not the loading rings); a PR branch
-  gets a preview URL.
+### ☐ P0-4 · Cloudflare account + secrets → first deployment — Priority: high [HUMAN]
+- **Goal:** The site live on the internet with previews per branch. The pipeline (P0-3)
+  is already waiting; this task is purely account setup + two secret values.
+- **Changes:** [HUMAN], following the exact checklist in `hosting-architecture.md`
+  § One-time Cloudflare setup:
+  1. Create Cloudflare account, enable 2FA.
+  2. Create an API token (Custom token, permission **Account · Cloudflare Pages · Edit**)
+     and copy the Account ID.
+  3. GitHub repo → Settings → Secrets and variables → Actions: add secrets
+     `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (optional Variables tab:
+     `CLOUDFLARE_PROJECT_CONFLICTS`, default `conflicts-atlas`).
+  4. Actions tab → "conflicts" → Run workflow. The deploy job creates the Pages project
+     and publishes to `https://<project>.pages.dev`.
+  5. When P0-2 resolves: Pages project → Custom domains → `conflicts.<umbrella>.io`;
+     Always-Use-HTTPS now, HSTS a few days later. Enable Cloudflare Web Analytics
+     readiness (token used in P1-6).
+- **Depends:** P0-1, P0-3 (both done). Custom-domain step depends on P0-2.
+- **Accept:** deploy job runs (no skip notice); `node tools/shot.mjs
+  https://<project>.pages.dev out.png 6000 1500 950` shows the map rendered (not the
+  loading rings); a test PR gets a preview URL in the workflow log.
 
 ### ☐ P0-5 · Archive raw pipeline inputs — Priority: medium [HUMAN]
 - **Goal:** Every shipped dataset stays reproducible even if upstream vanishes.

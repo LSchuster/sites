@@ -70,42 +70,55 @@ of headroom everywhere.
 
 ```
 GitHub monorepo (source of truth, incl. each site's committed data)
-   │  push to main
-   ├─▶ GitHub Actions — checks only, path-filtered per site
-   │        conflicts job: cd sites/conflicts → tsc -b, vite build, data:validate
-   └─▶ Cloudflare Pages — one project PER SITE, Git integration
-            project "conflicts":  root dir sites/conflicts,
-            build watch paths sites/conflicts/*  → npm ci && npm run build → dist/ → edge
-            project "<next-site>": root dir sites/<next-site>, …
+   │  push / PR, path-filtered per site
+   └─▶ GitHub Actions — .github/workflows/conflicts.yml (one workflow file PER SITE)
+            job "build":  cd sites/conflicts → npm ci → tsc -b + vite build
+                          → data:validate → upload dist/ artifact
+            job "deploy": wrangler pages deploy (Cloudflare Direct Upload)
+                          — skips with a notice until the Cloudflare secrets exist
+              │
+   Cloudflare Pages — one project PER SITE, no Git integration, no Pages builds
+            main push → production deployment · PR branch → preview URL
               │
    <umbrella>.io zone (Cloudflare Registrar + DNS, one registration for all sites)
-     ├─ conflicts.<umbrella>.io  → Pages project "conflicts"   (Universal SSL, HSTS)
+     ├─ conflicts.<umbrella>.io  → Pages project "conflicts-atlas" (Universal SSL, HSTS)
      ├─ <next>.<umbrella>.io     → Pages project "<next-site>"
      └─ apex <umbrella>.io       → optional tiny index page listing the sites (later)
               │
    Cloudflare Web Analytics (beacon per site, cookie-less)
 ```
 
-- PRs get automatic **preview deployments** (unique URL per branch) from Pages — screenshot
-  review with `tools/shot.mjs <preview-url> …` becomes possible pre-merge.
-- **Build watch paths** (`sites/conflicts/*`) stop pushes that only touch other sites from
-  burning this project's builds — relevant once a second site exists (500 builds/mo are
-  shared per account).
+- Deploys are **Direct Uploads from CI** (chosen 2026-08-07 over Pages' Git integration):
+  the whole pipeline is versioned in the repo, secrets are the only dashboard-side state,
+  and Pages' 500-builds/month quota is never consumed — builds run on GitHub Actions,
+  free for public repos. Path filters in each workflow replace Pages "build watch paths".
+- PRs get **preview deployments** (`wrangler pages deploy --branch=<pr-branch>` → unique
+  preview URL, printed in the workflow log) — screenshot review with
+  `tools/shot.mjs <preview-url> …` becomes possible pre-merge.
 - No `_redirects` needed: the app is a single page; permalinks use `location.hash`. Pages
   serves `index.html` for unknown paths when no `404.html` exists, which is the behaviour we
   want — do not add a `404.html`.
 
-### Cloudflare Pages settings (for the agent that sets it up)
+### One-time Cloudflare setup (human — do this after creating the Cloudflare account)
 
-| Setting | Value |
-|---|---|
-| Root directory | `sites/conflicts` |
-| Build command | `npm run build` |
-| Output directory | `dist` (relative to root directory) |
-| Build watch paths | include `sites/conflicts/*` |
-| Environment | `NODE_VERSION=22` (matches local v22.13; add `"engines": {"node": ">=22"}` to package.json) |
-| Production branch | `main` |
-| Custom domain | `conflicts.<umbrella>.io` (after roadmap P0-2 picks the umbrella) |
+The workflow `.github/workflows/conflicts.yml` already exists and runs CI on every push;
+its deploy job activates itself the moment these values are in place:
+
+| Where | Name | Value / how to get it |
+|---|---|---|
+| GitHub → repo → Settings → Secrets and variables → Actions → **Secrets** | `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → My Profile → API Tokens → Create Token → *Custom token* with the single permission **Account · Cloudflare Pages · Edit**, scoped to your account. Copy once, store nowhere else. |
+| same **Secrets** tab | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard → Workers & Pages overview — the Account ID in the right sidebar (also visible in the dashboard URL). |
+| same page, **Variables** tab (optional) | `CLOUDFLARE_PROJECT_CONFLICTS` | Pages project name; defaults to `conflicts-atlas` (→ conflicts-atlas.pages.dev). `*.pages.dev` names are globally unique — if the first deploy fails with a name conflict, set this variable to another name and re-run. |
+
+Then: **Actions tab → "conflicts" workflow → Run workflow** (or push anything). The deploy
+job creates the Pages project itself (production branch `main`) and publishes; the site
+appears at `https://<project>.pages.dev`. Node version is pinned in the workflow (22) and
+in `engines` in package.json — no dashboard build settings exist at all.
+
+After roadmap P0-2 (umbrella domain): Pages project → Custom domains → add
+`conflicts.<umbrella>.io` (the DNS record is created automatically in the shared zone),
+then enable Always-Use-HTTPS, HSTS a few days later. Every future site repeats only this
+paragraph plus a sibling workflow file — the two secrets are shared account-wide.
 
 ## Alternatives compared
 
@@ -140,19 +153,22 @@ that difference *is* the architecture decision, already made by keeping the site
 
 ## CI/CD and update strategy
 
-Two independent lanes, both triggered by git push:
+One workflow per site — `.github/workflows/conflicts.yml` (exists since 2026-08-07),
+triggered by push/PR path-filtered to `sites/conflicts/**` (+ the workflow file itself)
+and manually via `workflow_dispatch`:
 
-1. **Checks lane — GitHub Actions** (`.github/workflows/ci.yml`, to be created): one job
-   per site, each path-filtered (`paths: sites/conflicts/**` via `dorny/paths-filter` or
-   per-workflow `on.push.paths`) and running with
-   `defaults.run.working-directory: sites/conflicts`: `npm ci` → `npm run build` (runs
-   `tsc -b` first) → `npm run data:validate`. Node 22. Public repo ⇒ Actions minutes are
-   free. A new site = copy the job, change the folder.
-2. **Deploy lane — Cloudflare Pages Git integration**: one project per site (root
-   directory + build watch paths per the settings table), `main` → production, every
-   branch → preview URL. No secrets in the repo; the Pages↔GitHub link is configured
-   once in the dashboard. (Alternative if more control is ever needed: deploy from Actions
-   with `wrangler pages deploy` and a `CLOUDFLARE_API_TOKEN` secret — not needed at launch.)
+1. **build job**: Node 22 with npm cache → `npm ci` → `npm run build` (runs `tsc -b`
+   first) → `npm run data:validate` → uploads `dist/` as an artifact. Runs on every push
+   and PR regardless of secrets. Public repo ⇒ Actions minutes are free.
+2. **deploy job** (`cloudflare/wrangler-action`): downloads the artifact and runs
+   `wrangler pages deploy` — a production deployment when the ref is `main`, a preview
+   deployment for PR branches. **Gated on the secrets**: until `CLOUDFLARE_API_TOKEN` +
+   `CLOUDFLARE_ACCOUNT_ID` exist it emits a skip notice and the run stays green, so CI
+   works today and deployment switches on the day the secrets are added (§ One-time
+   Cloudflare setup above). It also creates the Pages project on first run.
+
+A new site = copy the workflow file; change the paths filter, folder, and project-name
+variable; the two account secrets are shared.
 
 **Content/data updates** follow the existing contract: edit `data/curated/*.yaml` → run the
 pipeline locally → commit regenerated `public/data/` → push → auto-deploy. CI never runs the

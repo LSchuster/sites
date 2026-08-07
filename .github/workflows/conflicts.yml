@@ -1,0 +1,99 @@
+# CI + deploy for sites/conflicts → Cloudflare Pages.
+#
+# Deploy activates itself once two repository secrets exist (Settings →
+# Secrets and variables → Actions): CLOUDFLARE_API_TOKEN and
+# CLOUDFLARE_ACCOUNT_ID. Until then the deploy job skips with a notice and
+# the workflow stays green. Optional repository *variable*
+# CLOUDFLARE_PROJECT_CONFLICTS overrides the Pages project name
+# (default: conflicts-atlas → https://conflicts-atlas.pages.dev).
+# Full setup checklist: sites/conflicts/docs/hosting-architecture.md
+# § One-time Cloudflare setup.
+#
+# main push → production deployment · pull request → preview deployment.
+# Future sites get their own sibling workflow file with their own paths
+# filter and project-name variable, sharing the same two secrets.
+
+name: conflicts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sites/conflicts/**'
+      - '.github/workflows/conflicts.yml'
+  pull_request:
+    paths:
+      - 'sites/conflicts/**'
+      - '.github/workflows/conflicts.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: conflicts-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build & validate
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sites/conflicts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: sites/conflicts/package-lock.json
+      - name: Install
+        run: npm ci
+      - name: Typecheck + build
+        run: npm run build
+      - name: Validate data invariants
+        run: npm run data:validate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: conflicts-dist
+          path: sites/conflicts/dist
+          retention-days: 7
+
+  deploy:
+    name: Deploy to Cloudflare Pages
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      HAS_CLOUDFLARE: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+      PROJECT: ${{ vars.CLOUDFLARE_PROJECT_CONFLICTS || 'conflicts-atlas' }}
+    steps:
+      - name: Deploy skipped — secrets not configured yet
+        if: env.HAS_CLOUDFLARE != 'true'
+        run: >
+          echo "::notice title=Deploy skipped::Add CLOUDFLARE_API_TOKEN and
+          CLOUDFLARE_ACCOUNT_ID repository secrets to enable deployment
+          (see hosting-architecture.md § One-time Cloudflare setup)."
+
+      - uses: actions/download-artifact@v4
+        if: env.HAS_CLOUDFLARE == 'true'
+        with:
+          name: conflicts-dist
+          path: dist
+
+      - name: Ensure Pages project exists
+        if: env.HAS_CLOUDFLARE == 'true'
+        continue-on-error: true # fails harmlessly when the project already exists
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ${{ env.PROJECT }} --production-branch=main
+
+      - name: Publish
+        if: env.HAS_CLOUDFLARE == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ env.PROJECT }} --branch=${{ github.head_ref || github.ref_name }}
