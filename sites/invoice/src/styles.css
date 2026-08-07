@@ -68,6 +68,13 @@ body {
   align-items: start;
 }
 
+/* Grid children default to min-width:auto, which lets wide content (the
+   preview sheet) inflate the track and force page-level horizontal scroll.
+   With 0, wide content scrolls inside its own container instead. */
+.workspace > * {
+  min-width: 0;
+}
+
 @media (max-width: 64rem) {
   .workspace {
     grid-template-columns: 1fr;
@@ -226,6 +233,48 @@ button.ghost.danger {
   border: none;
   font-size: 1rem;
   padding: 0 0.4rem;
+}
+
+button.ghost.tall {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+/* ---- logo upload ------------------------------------------------------------ */
+
+.dropzone {
+  border: 1.5px dashed var(--line);
+  border-radius: var(--r-md);
+  padding: 0.9rem 0.8rem;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.dropzone:hover,
+.dropzone:focus-visible,
+.dropzone.over {
+  border-color: var(--accent);
+  color: var(--ink-soft);
+  background: #f4f7ff;
+  outline: none;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-thumb {
+  max-height: 3rem;
+  max-width: 12rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 0.25rem 0.4rem;
+  background: #fff;
 }
 
 /* ---- line items ------------------------------------------------------------ */
@@ -489,4 +538,59 @@ button.ghost.danger {
 
 .site-footer a {
   color: var(--ink-soft);
+}
+
+/* ---- small screens ---------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .shell {
+    padding: 1.1rem 0.75rem 2rem;
+  }
+
+  .masthead h1 {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .invoice-form section,
+  .download-panel {
+    padding: 0.8rem 0.8rem 0.9rem;
+    border-radius: var(--r-md);
+  }
+
+  /* Inputs need ≥16px font on iOS or the browser zooms in on focus. */
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+  }
+
+  .row {
+    gap: 0.5rem;
+  }
+
+  .download-panel .primary {
+    width: 100%;
+  }
+
+  .download-panel .ghost.tall {
+    width: 100%;
+  }
+
+  /* The invoice sheet keeps its document proportions; on narrow screens it
+     scrolls horizontally inside its own container — the page never does. */
+  .preview-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sheet {
+    min-width: 34rem;
+    font-size: 0.62rem;
+    min-height: auto;
+    padding: 6% 5%;
+  }
 }

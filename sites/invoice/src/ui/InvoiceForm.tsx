@@ -5,6 +5,7 @@ import { updateBuyer, updateInvoice, updateSeller } from '../state/store';
 import { ClientPicker } from './ClientPicker';
 import { Field } from './Field';
 import { LineItems } from './LineItems';
+import { LogoUpload } from './LogoUpload';
 import { PartyFields } from './PartyFields';
 import { ProfileManager } from './ProfileManager';
 import { TaxCasePicker } from './TaxCasePicker';
@@ -67,6 +68,7 @@ export function InvoiceForm(props: { invoice: Invoice }) {
             />
           </Field>
         </div>
+        <LogoUpload />
         <ProfileManager />
       </section>
 

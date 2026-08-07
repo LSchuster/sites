@@ -29,6 +29,11 @@ export interface Messages {
   bic: string;
   bankName: string;
 
+  logoLabel: string;
+  logoDrop: string;
+  logoRemove: string;
+  logoError: string;
+
   invoiceNumber: string;
   invoiceNumberHint: string;
   issueDate: string;
@@ -62,6 +67,7 @@ export interface Messages {
 
   download: string;
   downloadHint: string;
+  print: string;
   generating: string;
   downloadError: string;
   fixIssues: string;

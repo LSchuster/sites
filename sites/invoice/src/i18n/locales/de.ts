@@ -26,6 +26,11 @@ export const de: Messages = {
   bic: 'BIC',
   bankName: 'Bank',
 
+  logoLabel: 'Firmenlogo (optional)',
+  logoDrop: 'Logo hierher ziehen oder klicken zum Auswählen',
+  logoRemove: 'Logo entfernen',
+  logoError: 'Das Bild konnte nicht geladen werden.',
+
   invoiceNumber: 'Rechnungsnummer',
   invoiceNumberHint: 'Fortlaufend und einmalig (§ 14 UStG), z. B. 2026-001.',
   issueDate: 'Rechnungsdatum',
@@ -76,6 +81,7 @@ export const de: Messages = {
   download: 'PDF herunterladen (E-Rechnung)',
   downloadHint:
     'Erzeugt eine PDF-Datei, die zugleich eine E-Rechnung ist (PDF/A-3 mit eingebettetem ZUGFeRD/Factur-X-XML, Profil EN 16931).',
+  print: 'Drucken',
   generating: 'Wird erzeugt …',
   downloadError:
     'Die PDF-Erzeugung ist fehlgeschlagen. Bitte laden Sie die Seite neu und versuchen Sie es erneut.',
