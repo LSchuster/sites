@@ -43,7 +43,13 @@ export function Preview(props: { invoice: Invoice }) {
     <div className="preview-wrap">
       <h2>{t.previewTitle}</h2>
       <div className="sheet" lang={invoice.docLanguage}>
-        {s.logoDataUrl ? <img className="sheet-logo" src={s.logoDataUrl} alt="" /> : null}
+        {s.logoDataUrl ? (
+          <img
+            className={`sheet-logo size-${(s.logoSize ?? 'M').toLowerCase()} pos-${s.logoPosition ?? 'right'}`}
+            src={s.logoDataUrl}
+            alt=""
+          />
+        ) : null}
         <p className="sheet-return">
           {[s.name, s.street, `${s.postcode} ${s.city}`.trim()].filter(Boolean).join(' · ')}
         </p>

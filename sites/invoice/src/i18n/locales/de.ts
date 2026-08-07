@@ -30,6 +30,13 @@ export const de: Messages = {
   logoDrop: 'Logo hierher ziehen oder klicken zum Auswählen',
   logoRemove: 'Logo entfernen',
   logoError: 'Das Bild konnte nicht geladen werden.',
+  logoSize: 'Größe',
+  logoSizeS: 'Klein',
+  logoSizeM: 'Mittel',
+  logoSizeL: 'Groß',
+  logoPosition: 'Position',
+  logoLeft: 'Links',
+  logoRight: 'Rechts',
 
   invoiceNumber: 'Rechnungsnummer',
   invoiceNumberHint: 'Fortlaufend und einmalig (§ 14 UStG), z. B. 2026-001.',

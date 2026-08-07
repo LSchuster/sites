@@ -1,0 +1,61 @@
+{
+  "number": "2026-130",
+  "issueDate": "2026-08-01",
+  "deliveryDate": "2026-07-28",
+  "docLanguage": "de",
+  "seller": {
+    "name": "Muster Webdesign",
+    "street": "Beispielstraße 12",
+    "postcode": "10115",
+    "city": "Berlin",
+    "countryCode": "DE",
+    "taxNumber": "30/123/45678",
+    "vatId": "DE123456789",
+    "email": "kontakt@muster-webdesign.example",
+    "phone": "+49 30 1234567",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001",
+    "bankName": "Deutsche Kreditbank",
+    "logoDataUrl": "data:image/png;base64,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",
+    "logoSize": "L",
+    "logoPosition": "left"
+  },
+  "buyer": {
+    "name": "Beispiel GmbH",
+    "street": "Industrieweg 3",
+    "postcode": "80331",
+    "city": "München",
+    "countryCode": "DE",
+    "email": "buchhaltung@beispiel.example"
+  },
+  "buyerReference": "PO-4711",
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Konzeption und Gestaltung der Unternehmenswebsite",
+      "quantityMilli": 24000,
+      "unit": "HUR",
+      "unitPriceE4": 950000,
+      "vatRate": 19
+    },
+    {
+      "id": "L2",
+      "description": "Druck Broschüre „Unternehmensprofil“ (Auflage 500)",
+      "quantityMilli": 500000,
+      "unit": "H87",
+      "unitPriceE4": 12300,
+      "vatRate": 7
+    },
+    {
+      "id": "L3",
+      "description": "Hosting-Pauschale August 2026",
+      "quantityMilli": 1000,
+      "unit": "MON",
+      "unitPriceE4": 290000,
+      "vatRate": 19
+    }
+  ],
+  "taxCase": "standard",
+  "paymentTermsDays": 14,
+  "notes": "Vielen Dank für Ihren Auftrag!"
+}

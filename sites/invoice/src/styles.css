@@ -264,8 +264,17 @@ button.ghost.tall {
 
 .logo-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.logo-row .field {
+  margin-bottom: 0;
+}
+
+.logo-row .ghost {
+  margin-bottom: 0.2rem;
 }
 
 .logo-thumb {
@@ -365,10 +374,31 @@ button.ghost.tall {
 
 .sheet-logo {
   position: absolute;
-  top: 4%;
+  top: 3.5%;
+}
+
+.sheet-logo.pos-right {
   right: 7%;
-  max-height: 3.5em;
-  max-width: 30%;
+}
+
+.sheet-logo.pos-left {
+  left: 7%;
+}
+
+/* Mirrors the mm boxes in src/pdf/layout.ts (40×14 / 60×22 / 85×30). */
+.sheet-logo.size-s {
+  max-height: 2.4em;
+  max-width: 22%;
+}
+
+.sheet-logo.size-m {
+  max-height: 3.8em;
+  max-width: 33%;
+}
+
+.sheet-logo.size-l {
+  max-height: 5.2em;
+  max-width: 46%;
 }
 
 .sheet-return {

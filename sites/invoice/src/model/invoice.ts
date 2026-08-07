@@ -27,6 +27,9 @@ export interface Party {
   email?: string;
 }
 
+export type LogoSize = 'S' | 'M' | 'L';
+export type LogoPosition = 'left' | 'right';
+
 export interface SellerProfile extends Party {
   iban: string;
   bic?: string;
@@ -34,6 +37,10 @@ export interface SellerProfile extends Party {
   phone?: string;
   /** Optional logo as data URL (PNG/JPEG), stored in the local profile only. */
   logoDataUrl?: string;
+  /** Logo bounding box on the document; defaults to 'M'. */
+  logoSize?: LogoSize;
+  /** Which side of the letterhead the logo sits on; defaults to 'right'. */
+  logoPosition?: LogoPosition;
 }
 
 export interface LineItem {

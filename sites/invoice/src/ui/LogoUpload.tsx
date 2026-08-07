@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { t } from '../i18n';
+import type { LogoPosition, LogoSize } from '../model/invoice';
 import { updateSeller, useAppState } from '../state/store';
 
 /**
@@ -75,6 +76,27 @@ export function LogoUpload() {
       {logo ? (
         <div className="logo-row">
           <img className="logo-thumb" src={logo} alt="Logo" />
+          <label className="field">
+            <span className="field-label">{t.logoSize}</span>
+            <select
+              value={invoice.seller.logoSize ?? 'M'}
+              onChange={(e) => updateSeller({ logoSize: e.target.value as LogoSize })}
+            >
+              <option value="S">{t.logoSizeS}</option>
+              <option value="M">{t.logoSizeM}</option>
+              <option value="L">{t.logoSizeL}</option>
+            </select>
+          </label>
+          <label className="field">
+            <span className="field-label">{t.logoPosition}</span>
+            <select
+              value={invoice.seller.logoPosition ?? 'right'}
+              onChange={(e) => updateSeller({ logoPosition: e.target.value as LogoPosition })}
+            >
+              <option value="left">{t.logoLeft}</option>
+              <option value="right">{t.logoRight}</option>
+            </select>
+          </label>
           <button
             type="button"
             className="ghost"

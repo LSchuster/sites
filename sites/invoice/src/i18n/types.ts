@@ -33,6 +33,13 @@ export interface Messages {
   logoDrop: string;
   logoRemove: string;
   logoError: string;
+  logoSize: string;
+  logoSizeS: string;
+  logoSizeM: string;
+  logoSizeL: string;
+  logoPosition: string;
+  logoLeft: string;
+  logoRight: string;
 
   invoiceNumber: string;
   invoiceNumberHint: string;

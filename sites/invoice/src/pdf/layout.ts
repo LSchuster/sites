@@ -139,14 +139,28 @@ function drawFoldMarks(page: PDFPage): void {
   }
 }
 
+/** Logo bounding boxes in mm, keyed by the profile's logoSize (default M). */
+const LOGO_BOXES = {
+  S: { w: 40, h: 14 },
+  M: { w: 60, h: 22 },
+  L: { w: 85, h: 30 },
+} as const;
+
 function drawLogo(ctx: Ctx): void {
   if (!ctx.logo) return;
-  const maxW = x(55);
-  const maxH = x(18);
+  const box = LOGO_BOXES[ctx.invoice.seller.logoSize ?? 'M'];
+  const maxW = x(box.w);
+  const maxH = x(box.h);
   const scale = Math.min(maxW / ctx.logo.width, maxH / ctx.logo.height, 1);
   const w = ctx.logo.width * scale;
   const h = ctx.logo.height * scale;
-  ctx.page.drawImage(ctx.logo, { x: x(RIGHT) - w, y: yTop(14) - h, width: w, height: h });
+  const left = (ctx.invoice.seller.logoPosition ?? 'right') === 'left';
+  ctx.page.drawImage(ctx.logo, {
+    x: left ? x(LEFT) : x(RIGHT) - w,
+    y: yTop(12) - h,
+    width: w,
+    height: h,
+  });
 }
 
 function drawAddressWindow(ctx: Ctx): void {
