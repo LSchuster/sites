@@ -48,15 +48,19 @@ export function validateInvoice(invoice: Invoice): Issue[] {
   if (!hasDelivery && !hasPeriod) issues.push({ field: 'deliveryDate', key: 'delivery' });
 
   if (invoice.lines.length === 0) issues.push({ field: 'lines', key: 'noLines' });
+  if (invoice.lines.length > 0 && invoice.lines.every((l) => l.textOnly))
+    issues.push({ field: 'lines', key: 'needPricedLine' });
   invoice.lines.forEach((line, i) => {
     if (!line.description.trim())
       issues.push({ field: `lines.${i}.description`, key: 'lineDescription' });
+    if (line.textOnly) return; // no amount fields to check
     if (!(line.quantityMilli > 0)) issues.push({ field: `lines.${i}.quantity`, key: 'lineQuantity' });
     if (!(line.unitPriceE4 >= 0) || !Number.isFinite(line.unitPriceE4))
       issues.push({ field: `lines.${i}.unitPrice`, key: 'linePrice' });
   });
 
-  if (!(invoice.paymentTermsDays >= 0)) issues.push({ field: 'paymentTermsDays', key: 'terms' });
+  if (invoice.paymentTermsDays !== null && !(invoice.paymentTermsDays >= 0))
+    issues.push({ field: 'paymentTermsDays', key: 'terms' });
 
   // Tax-case preconditions.
   switch (invoice.taxCase) {

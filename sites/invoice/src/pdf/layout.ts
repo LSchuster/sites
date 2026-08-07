@@ -246,7 +246,9 @@ function drawLines(ctx: Ctx): void {
   drawTableHeader(ctx, col);
 
   invoice.lines.forEach((item, i) => {
-    const descLines = wrap(item.description, fonts.regular, size, col.desc);
+    // Text-only positions span the full width — no amount columns.
+    const descWidth = item.textOnly ? RIGHT - 33 : col.desc;
+    const descLines = wrap(item.description, fonts.regular, size, descWidth);
     const rowH = Math.max(descLines.length, 1) * lineH + 2.2;
     ensureRoom(ctx, rowH + 8);
     if (ctx.cursor === 30 + 0) {
@@ -257,26 +259,28 @@ function drawLines(ctx: Ctx): void {
     const page = ctx.page;
     text(page, String(i + 1), LEFT, mmY, fonts.regular, size);
     descLines.forEach((dl, li) => text(page, dl, 33, mmY + li * lineH, fonts.regular, size));
-    textRight(page, formatQuantity(item.quantityMilli, invoice.docLanguage), col.qtyR, mmY, fonts.regular, size);
-    text(page, doc.unit[item.unit], col.unitL, mmY, fonts.regular, size);
-    textRight(page, formatUnitPrice(item.unitPriceE4, invoice.docLanguage), col.priceR, mmY, fonts.regular, size);
-    if (col.vatR !== undefined)
+    if (!item.textOnly) {
+      textRight(page, formatQuantity(item.quantityMilli, invoice.docLanguage), col.qtyR, mmY, fonts.regular, size);
+      text(page, doc.unit[item.unit], col.unitL, mmY, fonts.regular, size);
+      textRight(page, formatUnitPrice(item.unitPriceE4, invoice.docLanguage), col.priceR, mmY, fonts.regular, size);
+      if (col.vatR !== undefined)
+        textRight(
+          page,
+          `${effectiveRate(invoice.taxCase, item.vatRate)} %`,
+          col.vatR,
+          mmY,
+          fonts.regular,
+          size,
+        );
       textRight(
         page,
-        `${effectiveRate(invoice.taxCase, item.vatRate)} %`,
-        col.vatR,
+        formatCents(totals.lineNetCents.get(item.id) ?? 0, invoice.docLanguage),
+        col.amountR,
         mmY,
         fonts.regular,
         size,
       );
-    textRight(
-      page,
-      formatCents(totals.lineNetCents.get(item.id) ?? 0, invoice.docLanguage),
-      col.amountR,
-      mmY,
-      fonts.regular,
-      size,
-    );
+    }
     ctx.cursor = mmY + rowH;
   });
 
@@ -322,12 +326,14 @@ function drawNotes(ctx: Ctx): void {
   if (isZeroRated(invoice.taxCase))
     parts.push(doc.taxNote[invoice.taxCase as Exclude<Invoice['taxCase'], 'standard'>]);
 
-  const due = dueDateIso(invoice);
-  parts.push(
-    invoice.paymentTermsDays === 0
-      ? doc.paymentTermsImmediate
-      : doc.paymentTerms(invoice.paymentTermsDays, formatDate(due, invoice.docLanguage)),
-  );
+  if (invoice.paymentTermsDays !== null) {
+    const due = dueDateIso(invoice);
+    parts.push(
+      invoice.paymentTermsDays === 0
+        ? doc.paymentTermsImmediate
+        : doc.paymentTerms(invoice.paymentTermsDays, formatDate(due, invoice.docLanguage)),
+    );
+  }
 
   if (invoice.notes?.trim()) parts.push(invoice.notes.trim());
 

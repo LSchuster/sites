@@ -84,21 +84,30 @@ export function Preview(props: { invoice: Invoice }) {
             </tr>
           </thead>
           <tbody>
-            {invoice.lines.map((line, i) => (
-              <tr key={line.id}>
-                <td>{i + 1}</td>
-                <td className="wide">{line.description || '—'}</td>
-                <td className="num">{formatQuantity(line.quantityMilli, invoice.docLanguage)}</td>
-                <td>{doc.unit[line.unit]}</td>
-                <td className="num">{formatUnitPrice(line.unitPriceE4, invoice.docLanguage)}</td>
-                {showVat ? (
-                  <td className="num">{effectiveRate(invoice.taxCase, line.vatRate)} %</td>
-                ) : null}
-                <td className="num">
-                  {formatCents(totals.lineNetCents.get(line.id) ?? 0, invoice.docLanguage)}
-                </td>
-              </tr>
-            ))}
+            {invoice.lines.map((line, i) =>
+              line.textOnly ? (
+                <tr key={line.id}>
+                  <td>{i + 1}</td>
+                  <td className="wide" colSpan={showVat ? 6 : 5}>
+                    {line.description || '—'}
+                  </td>
+                </tr>
+              ) : (
+                <tr key={line.id}>
+                  <td>{i + 1}</td>
+                  <td className="wide">{line.description || '—'}</td>
+                  <td className="num">{formatQuantity(line.quantityMilli, invoice.docLanguage)}</td>
+                  <td>{doc.unit[line.unit]}</td>
+                  <td className="num">{formatUnitPrice(line.unitPriceE4, invoice.docLanguage)}</td>
+                  {showVat ? (
+                    <td className="num">{effectiveRate(invoice.taxCase, line.vatRate)} %</td>
+                  ) : null}
+                  <td className="num">
+                    {formatCents(totals.lineNetCents.get(line.id) ?? 0, invoice.docLanguage)}
+                  </td>
+                </tr>
+              ),
+            )}
           </tbody>
         </table>
 
@@ -125,14 +134,16 @@ export function Preview(props: { invoice: Invoice }) {
           {isZeroRated(invoice.taxCase) ? (
             <p>{doc.taxNote[invoice.taxCase as Exclude<Invoice['taxCase'], 'standard'>]}</p>
           ) : null}
-          <p>
-            {invoice.paymentTermsDays === 0
-              ? doc.paymentTermsImmediate
-              : doc.paymentTerms(
-                  invoice.paymentTermsDays,
-                  formatDate(due, invoice.docLanguage),
-                )}
-          </p>
+          {invoice.paymentTermsDays !== null ? (
+            <p>
+              {invoice.paymentTermsDays === 0
+                ? doc.paymentTermsImmediate
+                : doc.paymentTerms(
+                    invoice.paymentTermsDays,
+                    formatDate(due, invoice.docLanguage),
+                  )}
+            </p>
+          ) : null}
           {invoice.notes?.trim() ? <p>{invoice.notes}</p> : null}
         </div>
 

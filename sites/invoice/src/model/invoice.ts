@@ -46,6 +46,13 @@ export interface LineItem {
   unitPriceE4: number;
   /** Only meaningful for taxCase 'standard'; forced to 0 otherwise. */
   vatRate: VatRate;
+  /**
+   * Text-only position: listed with number + description but no own amount —
+   * a priced position carries the value for the group. Rendered without
+   * qty/price columns; serialized to CII as a zero-amount line (EN 16931
+   * requires every invoice line to carry quantity/price/amount, so 0/0.00).
+   */
+  textOnly?: boolean;
 }
 
 export interface Invoice {
@@ -62,7 +69,12 @@ export interface Invoice {
   buyerReference?: string;
   lines: LineItem[];
   taxCase: TaxCase;
-  paymentTermsDays: number;
+  /**
+   * Payment target in days, or null = no payment-terms sentence on the
+   * document. The CII XML then still emits due date = issue date (immediate
+   * payability, the § 271 BGB default) to satisfy BR-CO-25.
+   */
+  paymentTermsDays: number | null;
   /** Free-form closing note printed on the invoice (never legal text). */
   notes?: string;
 }
@@ -118,6 +130,6 @@ export function emptyInvoice(seller?: SellerProfile): Invoice {
 export function dueDateIso(invoice: Invoice): string {
   const [y, m, d] = invoice.issueDate.split('-').map(Number);
   const date = new Date(Date.UTC(y ?? 1970, (m ?? 1) - 1, d ?? 1));
-  date.setUTCDate(date.getUTCDate() + invoice.paymentTermsDays);
+  date.setUTCDate(date.getUTCDate() + (invoice.paymentTermsDays ?? 0));
   return date.toISOString().slice(0, 10);
 }

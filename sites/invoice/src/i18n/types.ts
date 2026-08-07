@@ -50,9 +50,12 @@ export interface Messages {
   lineUnit: string;
   lineUnitPrice: string;
   lineVatRate: string;
+  lineTextOnly: string;
+  lineTextOnlyHint: string;
   addLine: string;
   removeLine: string;
 
+  showPaymentTerms: string;
   paymentTermsDays: string;
   notes: string;
   notesHint: string;

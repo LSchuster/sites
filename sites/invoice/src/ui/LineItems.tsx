@@ -35,6 +35,15 @@ export function LineItems(props: { invoice: Invoice }) {
               onChange={(e) => updateLine(line.id, { description: e.target.value })}
             />
           </label>
+          <label className="check" title={t.lineTextOnlyHint}>
+            <input
+              type="checkbox"
+              checked={!!line.textOnly}
+              onChange={(e) => updateLine(line.id, { textOnly: e.target.checked })}
+            />
+            {t.lineTextOnly}
+          </label>
+          {line.textOnly ? null : (
           <div className="row">
             <label className="field">
               <span className="field-label">{t.lineQty}</span>
@@ -92,6 +101,7 @@ export function LineItems(props: { invoice: Invoice }) {
               </label>
             ) : null}
           </div>
+          )}
         </div>
       ))}
       <button type="button" className="ghost" onClick={addLine}>

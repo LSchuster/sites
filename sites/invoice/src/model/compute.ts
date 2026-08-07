@@ -43,8 +43,10 @@ export function computeTotals(invoice: Invoice): Totals {
   const basisByRate = new Map<VatRate, number>();
 
   for (const line of invoice.lines) {
-    const net = lineNetCents(line);
+    // Text-only positions carry no amount — a priced position covers them.
+    const net = line.textOnly ? 0 : lineNetCents(line);
     lineNet.set(line.id, net);
+    if (line.textOnly) continue;
     const rate = effectiveRate(invoice.taxCase, line.vatRate);
     basisByRate.set(rate, (basisByRate.get(rate) ?? 0) + net);
   }

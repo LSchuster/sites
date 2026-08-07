@@ -177,19 +177,31 @@ export function InvoiceForm(props: { invoice: Invoice }) {
 
       <section>
         <h2>{t.sectionPayment}</h2>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={invoice.paymentTermsDays !== null}
+            onChange={(e) =>
+              updateInvoice({ paymentTermsDays: e.target.checked ? 14 : null })
+            }
+          />
+          {t.showPaymentTerms}
+        </label>
         <div className="row">
-          <Field label={t.paymentTermsDays}>
-            <input
-              type="number"
-              min={0}
-              step={1}
-              value={invoice.paymentTermsDays}
-              onChange={(e) => {
-                const v = Math.max(0, Math.round(Number(e.target.value)));
-                updateInvoice({ paymentTermsDays: Number.isFinite(v) ? v : 14 });
-              }}
-            />
-          </Field>
+          {invoice.paymentTermsDays !== null ? (
+            <Field label={t.paymentTermsDays}>
+              <input
+                type="number"
+                min={0}
+                step={1}
+                value={invoice.paymentTermsDays}
+                onChange={(e) => {
+                  const v = Math.max(0, Math.round(Number(e.target.value)));
+                  updateInvoice({ paymentTermsDays: Number.isFinite(v) ? v : 14 });
+                }}
+              />
+            </Field>
+          ) : null}
           <Field label={t.notes} hint={t.notesHint} grow>
             <input
               value={invoice.notes ?? ''}

@@ -76,10 +76,14 @@ export function serializeCii(invoice: Invoice): string {
   const seller = invoice.seller;
   const buyer = invoice.buyer;
   const due = dueDateIso(invoice);
+  // null = no terms on the document; the XML still gets due date = issue date
+  // (immediate payability, § 271 BGB default) so BR-CO-25 holds.
   const paymentText =
-    invoice.paymentTermsDays === 0
-      ? doc.paymentTermsImmediate
-      : doc.paymentTerms(invoice.paymentTermsDays, formatDate(due, invoice.docLanguage));
+    invoice.paymentTermsDays === null
+      ? null
+      : invoice.paymentTermsDays === 0
+        ? doc.paymentTermsImmediate
+        : doc.paymentTerms(invoice.paymentTermsDays, formatDate(due, invoice.docLanguage));
 
   const notes: string[] = [];
   if (exemptionReason) notes.push(exemptionReason);
@@ -87,15 +91,23 @@ export function serializeCii(invoice: Invoice): string {
 
   const lines = invoice.lines
     .map((line, i) => {
-      const rate = effectiveRate(invoice.taxCase, line.vatRate);
+      // Text-only positions become zero-amount lines: EN 16931 requires every
+      // line to carry quantity/price/amount (BR-25/26/24), so 0 / 0.00 / 0.00.
+      // Under category S the line rate must still be > 0 (BR-S-5).
+      const lineRate =
+        line.textOnly && invoice.taxCase === 'standard' ? 19 : line.vatRate;
+      const rate = effectiveRate(invoice.taxCase, lineRate);
       const net = totals.lineNetCents.get(line.id) ?? 0;
+      const unitCode = line.textOnly ? 'C62' : line.unit;
+      const quantity = line.textOnly ? '0' : qty(line.quantityMilli);
+      const unitPrice = line.textOnly ? '0.00' : price(line.unitPriceE4);
       return `<ram:IncludedSupplyChainTradeLineItem>
 <ram:AssociatedDocumentLineDocument><ram:LineID>${i + 1}</ram:LineID></ram:AssociatedDocumentLineDocument>
 <ram:SpecifiedTradeProduct><ram:Name>${esc(line.description)}</ram:Name></ram:SpecifiedTradeProduct>
 <ram:SpecifiedLineTradeAgreement>
-<ram:NetPriceProductTradePrice><ram:ChargeAmount>${price(line.unitPriceE4)}</ram:ChargeAmount></ram:NetPriceProductTradePrice>
+<ram:NetPriceProductTradePrice><ram:ChargeAmount>${unitPrice}</ram:ChargeAmount></ram:NetPriceProductTradePrice>
 </ram:SpecifiedLineTradeAgreement>
-<ram:SpecifiedLineTradeDelivery><ram:BilledQuantity unitCode="${line.unit}">${qty(line.quantityMilli)}</ram:BilledQuantity></ram:SpecifiedLineTradeDelivery>
+<ram:SpecifiedLineTradeDelivery><ram:BilledQuantity unitCode="${unitCode}">${quantity}</ram:BilledQuantity></ram:SpecifiedLineTradeDelivery>
 <ram:SpecifiedLineTradeSettlement>
 <ram:ApplicableTradeTax>
 <ram:TypeCode>VAT</ram:TypeCode>
@@ -196,8 +208,7 @@ ${bic}
 ${headerTaxes}
 ${billingPeriod}
 <ram:SpecifiedTradePaymentTerms>
-<ram:Description>${esc(paymentText)}</ram:Description>
-<ram:DueDateDateTime>${date102(due)}</ram:DueDateDateTime>
+${paymentText ? `<ram:Description>${esc(paymentText)}</ram:Description>\n` : ''}<ram:DueDateDateTime>${date102(due)}</ram:DueDateDateTime>
 </ram:SpecifiedTradePaymentTerms>
 <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
 <ram:LineTotalAmount>${cents(totals.netCents)}</ram:LineTotalAmount>

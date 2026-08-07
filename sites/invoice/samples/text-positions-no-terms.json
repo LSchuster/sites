@@ -1,0 +1,56 @@
+{
+  "number": "2026-120",
+  "issueDate": "2026-08-07",
+  "servicePeriod": { "from": "2026-07-15", "to": "2026-08-05" },
+  "docLanguage": "de",
+  "seller": {
+    "name": "Straßenbau Muster GmbH",
+    "street": "Lemsahler Dorfstraße 23",
+    "postcode": "22397",
+    "city": "Hamburg",
+    "countryCode": "DE",
+    "taxNumber": "02/084/65432",
+    "vatId": "DE987654321",
+    "email": "info@strassenbau-muster.example",
+    "iban": "DE02200505501234567890",
+    "bic": "HASPDEHHXXX",
+    "bankName": "Hamburger Sparkasse"
+  },
+  "buyer": {
+    "name": "Dr. Nils Krögerson",
+    "street": "Alsterweg 7",
+    "postcode": "22397",
+    "city": "Hamburg",
+    "countryCode": "DE"
+  },
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Umbau eines seitlich gesetzten Trennschildes mit Hubraumverkleinerung",
+      "quantityMilli": 0,
+      "unit": "C62",
+      "unitPriceE4": 0,
+      "vatRate": 19,
+      "textOnly": true
+    },
+    {
+      "id": "L2",
+      "description": "Erneuerung der Pflasterung an der Zufahrt",
+      "quantityMilli": 0,
+      "unit": "C62",
+      "unitPriceE4": 0,
+      "vatRate": 19,
+      "textOnly": true
+    },
+    {
+      "id": "L3",
+      "description": "Pauschal für Pos. 1–2 (Material und Arbeitszeit)",
+      "quantityMilli": 1000,
+      "unit": "C62",
+      "unitPriceE4": 20005200,
+      "vatRate": 19
+    }
+  ],
+  "taxCase": "standard",
+  "paymentTermsDays": null
+}

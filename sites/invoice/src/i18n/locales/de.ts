@@ -62,9 +62,13 @@ export const de: Messages = {
   lineUnit: 'Einheit',
   lineUnitPrice: 'Einzelpreis (netto) €',
   lineVatRate: 'USt.-Satz',
+  lineTextOnly: 'Nur Text (ohne Betrag)',
+  lineTextOnlyHint:
+    'Position wird ohne eigenen Betrag aufgeführt — eine andere Position trägt den Gesamtbetrag (z. B. „Pauschal für Pos. 1–3“).',
   addLine: '+ Position hinzufügen',
   removeLine: 'Position entfernen',
 
+  showPaymentTerms: 'Zahlungsziel auf der Rechnung angeben',
   paymentTermsDays: 'Zahlungsziel (Tage)',
   notes: 'Schlusstext (optional)',
   notesHint: 'z. B. „Vielen Dank für Ihren Auftrag!“',
@@ -98,6 +102,7 @@ export const de: Messages = {
     issueDate: 'Rechnungsdatum fehlt oder ist ungültig.',
     delivery: 'Leistungsdatum oder Leistungszeitraum fehlt (§ 14 UStG).',
     noLines: 'Mindestens eine Position wird benötigt.',
+    needPricedLine: 'Mindestens eine Position mit Betrag wird benötigt (reine Textpositionen tragen keinen Wert).',
     lineDescription: 'Eine Position hat keine Beschreibung.',
     lineQuantity: 'Eine Position hat keine gültige Menge.',
     linePrice: 'Eine Position hat keinen gültigen Einzelpreis.',
