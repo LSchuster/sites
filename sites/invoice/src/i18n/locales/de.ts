@@ -5,6 +5,11 @@ export const de: Messages = {
   tagline:
     'PDF + E-Rechnung (ZUGFeRD/Factur-X, EN 16931) in einem Dokument — komplett im Browser. Keine Anmeldung, keine Cloud: Ihre Daten verlassen Ihr Gerät nicht.',
 
+  themeTitle: 'Design wechseln (System / Dunkel / Hell)',
+  themeSystem: 'System',
+  themeLight: 'Hell',
+  themeDark: 'Dunkel',
+
   sectionSeller: 'Ihre Angaben (Rechnungssteller)',
   sectionBuyer: 'Empfänger (Rechnungsadresse)',
   sectionMeta: 'Rechnungsdaten',

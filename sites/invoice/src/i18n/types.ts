@@ -8,6 +8,11 @@ export interface Messages {
   appTitle: string;
   tagline: string;
 
+  themeTitle: string;
+  themeSystem: string;
+  themeLight: string;
+  themeDark: string;
+
   sectionSeller: string;
   sectionBuyer: string;
   sectionMeta: string;

@@ -4,13 +4,17 @@ import { DownloadPanel } from './ui/DownloadPanel';
 import { Footer } from './ui/Footer';
 import { InvoiceForm } from './ui/InvoiceForm';
 import { Preview } from './ui/Preview';
+import { ThemeToggle } from './ui/ThemeToggle';
 
 export function App() {
   const { invoice } = useAppState();
   return (
     <main className="shell">
       <header className="masthead">
-        <h1>{t.appTitle}</h1>
+        <div className="masthead-row">
+          <h1>{t.appTitle}</h1>
+          <ThemeToggle />
+        </div>
         <p className="tagline">{t.tagline}</p>
       </header>
       <div className="workspace">

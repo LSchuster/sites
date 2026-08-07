@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
   <title>Datenschutzerklärung</title>
   <style>
     body { font-family: system-ui, sans-serif; color: #1a1c1e; background: #f5f6f7;
@@ -16,6 +17,13 @@
             padding: 0.2rem 0.45rem; font-weight: 600; }
     .en { color: #4c5258; font-size: 0.9rem; border-top: 1px solid #dcdfe2;
           margin-top: 2rem; padding-top: 1rem; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #16181a; color: #e6e8ea; }
+      main { background: #1e2124; border-color: #34383c; }
+      a { color: #6b96ff; }
+      .todo { background: #3a3120; border-color: #5c4d2a; }
+      .en { color: #aab1b7; border-top-color: #34383c; }
+    }
   </style>
 </head>
 <body>

@@ -1,4 +1,8 @@
-/* Light-first business tool. Design tokens on :root; plain CSS, no framework. */
+/* Light-first business tool. Design tokens on :root; plain CSS, no framework.
+   Theming: 'system' = no data-theme attribute (prefers-color-scheme decides);
+   an explicit user choice sets data-theme="light|dark" (src/theme.ts).
+   The dark token block appears twice on purpose — once for the system
+   preference, once for the explicit choice — keep them identical. */
 
 :root {
   color-scheme: light;
@@ -12,6 +16,11 @@
   --accent: #1f5eff; /* actions, links */
   --accent-ink: #ffffff;
   --danger: #b3261e;
+  --accent-soft: #f4f7ff; /* dropzone hover, subtle accent washes */
+  --card-soft: #fafbfc; /* affiliate card background */
+  --issue-bg: #fdf3f2; /* validation issue box */
+  --issue-border: #efc7c4;
+  --shadow: 0 1px 4px rgb(0 0 0 / 0.08);
 
   --font-sans:
     system-ui,
@@ -23,6 +32,46 @@
   --r-sm: 4px;
   --r-md: 8px;
   --r-lg: 12px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --paper: #16181a;
+  --surface: #1e2124;
+  --ink: #e6e8ea;
+  --ink-soft: #aab1b7;
+  --ink-faint: #7c838a;
+  --line: #34383c;
+  --accent: #6b96ff;
+  --accent-ink: #0f1420;
+  --danger: #f2726d;
+  --accent-soft: #1f2636;
+  --card-soft: #22262a;
+  --issue-bg: #322220;
+  --issue-border: #5c3835;
+  --shadow: 0 1px 5px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --paper: #16181a;
+    --surface: #1e2124;
+    --ink: #e6e8ea;
+    --ink-soft: #aab1b7;
+    --ink-faint: #7c838a;
+    --line: #34383c;
+    --accent: #6b96ff;
+    --accent-ink: #0f1420;
+    --danger: #f2726d;
+    --accent-soft: #1f2636;
+    --card-soft: #22262a;
+    --issue-bg: #322220;
+    --issue-border: #5c3835;
+    --shadow: 0 1px 5px rgb(0 0 0 / 0.5);
+  }
 }
 
 * {
@@ -48,9 +97,22 @@ body {
   padding: 2rem 1rem 3rem;
 }
 
+.masthead-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .masthead h1 {
   font-size: 1.6rem;
   margin: 0 0 0.4rem;
+}
+
+.theme-toggle {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-top: 0.25rem;
 }
 
 .tagline {
@@ -258,7 +320,7 @@ button.ghost.tall {
 .dropzone.over {
   border-color: var(--accent);
   color: var(--ink-soft);
-  background: #f4f7ff;
+  background: var(--accent-soft);
   outline: none;
 }
 
@@ -314,8 +376,8 @@ button.ghost.tall {
 /* ---- download / issues ------------------------------------------------------ */
 
 .issues {
-  background: #fdf3f2;
-  border: 1px solid #efc7c4;
+  background: var(--issue-bg);
+  border: 1px solid var(--issue-border);
   border-radius: var(--r-md);
   padding: 0.6rem 0.8rem;
   font-size: 0.83rem;
@@ -343,7 +405,7 @@ button.ghost.tall {
   border-radius: var(--r-md);
   padding: 0.7rem 0.9rem;
   font-size: 0.85rem;
-  background: #fafbfc;
+  background: var(--card-soft);
 }
 
 .affiliate-label {
@@ -357,10 +419,19 @@ button.ghost.tall {
 /* ---- preview sheet ----------------------------------------------------------- */
 
 .sheet {
+  /* The sheet is paper: it keeps fixed LIGHT tokens in dark mode, matching
+     the PDF (which is white regardless of app theme). Children read these
+     scoped values instead of the theme tokens. */
+  --ink: #1a1c1e;
+  --ink-soft: #4c5258;
+  --ink-faint: #8a9096;
+  --line: #dcdfe2;
+  color-scheme: light;
+  color: var(--ink);
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 2px;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+  box-shadow: var(--shadow);
   padding: 4% 7% 5%;
   font-size: clamp(0.55rem, 1.1vw, 0.8rem);
   line-height: 1.45;
