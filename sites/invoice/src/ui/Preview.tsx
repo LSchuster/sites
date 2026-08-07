@@ -43,13 +43,20 @@ export function Preview(props: { invoice: Invoice }) {
     <div className="preview-wrap">
       <h2>{t.previewTitle}</h2>
       <div className="sheet" lang={invoice.docLanguage}>
-        {s.logoDataUrl ? (
-          <img
-            className={`sheet-logo size-${(s.logoSize ?? 'M').toLowerCase()} pos-${s.logoPosition ?? 'right'}`}
-            src={s.logoDataUrl}
-            alt=""
-          />
-        ) : null}
+        {/* Letterhead band with fixed height: the logo lives in its own
+            reserved space (like on the PDF, where it sits above the DIN
+            window zone), so it can never overlap the info block — and the
+            address below stays at its envelope-window position whether a
+            logo is present or not. */}
+        <div className={`sheet-logoband pos-${s.logoPosition ?? 'right'}`}>
+          {s.logoDataUrl ? (
+            <img
+              className={`sheet-logo size-${(s.logoSize ?? 'M').toLowerCase()}`}
+              src={s.logoDataUrl}
+              alt=""
+            />
+          ) : null}
+        </div>
         <p className="sheet-return">
           {[s.name, s.street, `${s.postcode} ${s.city}`.trim()].filter(Boolean).join(' · ')}
         </p>

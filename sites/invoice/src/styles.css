@@ -361,7 +361,7 @@ button.ghost.tall {
   border: 1px solid var(--line);
   border-radius: 2px;
   box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
-  padding: 7% 7% 5%;
+  padding: 4% 7% 5%;
   font-size: clamp(0.55rem, 1.1vw, 0.8rem);
   line-height: 1.45;
   min-height: 60vh;
@@ -372,17 +372,21 @@ button.ghost.tall {
   margin: 0;
 }
 
-.sheet-logo {
-  position: absolute;
-  top: 3.5%;
+/* Letterhead band: constant height (fits even the L logo), so the address
+   below never moves — it must stay in the DIN envelope-window position. */
+.sheet-logoband {
+  display: flex;
+  align-items: flex-start;
+  min-height: 5.6em;
+  margin-bottom: 0.6em;
 }
 
-.sheet-logo.pos-right {
-  right: 7%;
+.sheet-logoband.pos-right {
+  justify-content: flex-end;
 }
 
-.sheet-logo.pos-left {
-  left: 7%;
+.sheet-logoband.pos-left {
+  justify-content: flex-start;
 }
 
 /* Mirrors the mm boxes in src/pdf/layout.ts (40×14 / 60×22 / 85×30). */
