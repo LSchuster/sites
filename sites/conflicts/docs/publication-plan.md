@@ -8,7 +8,8 @@ Status: **plan, not yet implemented** · Written 2026-08-07. This is the index o
 | `publication-plan.md` (this file) | What stands between the repo and a public site; domain; legal; SEO; launch sequence |
 | `hosting-architecture.md` | Where it runs, costs, CI/CD, headers, monitoring, backups, security |
 | `commercialization-plan.md` | Which monetization models fit, which don't, in what order |
-| `implementation-roadmap.md` | The task list (P0-*, P1-*, P2-*, M*, G-*) an agent can execute one by one |
+| `marketing-plan.md` | How the site gets traffic: channel analysis, launch playbook, content flywheel |
+| `implementation-roadmap.md` | The task list (P0-*, P1-*, P2-*, MK-*, M*, G-*) an agent can execute one by one |
 
 Facts below were verified against the codebase on 2026-08-07 (file:line refs included) — an
 agent picking this up later should spot-check any it depends on.
@@ -131,6 +132,9 @@ Priorities in that order:
    105 indexable pages of curated, cited content. Significant work; explicitly deferred.
 
 ## Launch sequence
+
+(The condensed version — the full channel analysis, sequenced playbook, and content
+flywheel live in `marketing-plan.md`.)
 
 1. **Silent beta (target: within ~2 weeks of starting work)** — P0 done, site on
    `*.pages.dev` behind no announcement. Ask 5–10 people (mixed: one historian, one teacher,

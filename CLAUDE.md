@@ -21,7 +21,7 @@ Hard rules at repo level:
    package.json by design.
 3. **Root `LICENSE` (GPL-3.0-or-later) covers everything** unless a site folder carries
    its own licence file. `sites/conflicts/` must stay GPL while it ships its border data.
-4. Hosting/deploy/launch/monetization strategy for the repo lives in
+4. Hosting/deploy/launch/monetization/marketing strategy for the repo lives in
    `sites/conflicts/docs/` (publication-plan, hosting-architecture,
-   commercialization-plan, implementation-roadmap) — `hosting-architecture.md` describes
-   the umbrella-domain model all sites share.
+   commercialization-plan, marketing-plan, implementation-roadmap) —
+   `hosting-architecture.md` describes the umbrella-domain model all sites share.

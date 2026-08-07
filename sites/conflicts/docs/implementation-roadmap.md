@@ -281,7 +281,9 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 - **Changes:** `docs/launch-kit.md` (gitignored is fine too — owner's call): Show HN draft
   (technical angle: static atlas, 60 fps canvas, uncertainty rendering), r/dataisbeautiful +
   r/MapPorn drafts, 4–6 screenshots via `tools/shot.mjs` at years 117 / 755 / 1815 / 1942 /
-  2022, submission list (Flowing Data, Data Is Plural). [HUMAN] posts them.
+  2022, submission list (Flowing Data, Data Is Plural). [HUMAN] posts them, following the
+  sequenced waves in `marketing-plan.md` § Launch playbook (English wave → image wave →
+  German wave).
 - **Depends:** P2-1 (links in posts should deep-link), P1-2 (unfurls).
 - **Accept:** kit exists with drafts + rendered screenshots; owner has a checklist.
 
@@ -313,6 +315,61 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 - **Depends:** P1-8.
 - **Accept:** on a 390px touch emulation, tapping a country shows its card; desktop hover
   behaviour unchanged; perf.mjs hover sweep unchanged.
+
+---
+
+## Phase MK — Marketing (runs alongside P2 and M; strategy in marketing-plan.md)
+
+Mostly [HUMAN] content/outreach work with small technical assists; kept brief here — the
+channel reasoning, sequencing, and taste rules live in `marketing-plan.md`.
+
+### ☐ MK-1 · Press kit — Priority: high (blocks the video channel)
+- **Goal:** One page/folder that makes covering or reusing the atlas effortless.
+- **Changes:** `docs/press/` (or a static `press.html` like the P1-4 pages): 5–6 curated
+  screenshots (`tools/shot.mjs` at years 117 / 755 / 1815 / 1942 / 2022), boilerplate
+  description (EN+DE), the licence/attribution line, and — once MK-3 exists — downloadable
+  timelapse clips marked "free to use with attribution".
+- **Depends:** P1-2 (favicon/OG assets double as kit assets).
+- **Accept:** a journalist or video creator can get image, clip, description, and
+  attribution rules in one place without emailing.
+
+### ☐ MK-2 · Social accounts + weekly cadence — Priority: medium [HUMAN]
+- **Goal:** A living Bluesky/Mastodon presence before the launch waves need it.
+- **Changes:** [HUMAN] create accounts; establish the weekly "year spotlight" routine
+  (screenshot + two sentences + P2-1 deep link). Optional technical assist: a small script
+  listing curated conflicts by calendar month (from `conflicts.json` dates) to feed the
+  anniversary calendar.
+- **Depends:** P2-1 (deep links). **Accept:** 4 consecutive weekly posts published.
+
+### ☐ MK-3 · Border-timelapse video clips — Priority: high (highest-ceiling channel) [HUMAN]
+- **Goal:** 3–5 short clips ("2,000 years in 60 seconds"; Europe-only; China-only; the
+  20th century) for Shorts/TikTok/Reels and the MK-1 press kit.
+- **Changes:** [HUMAN] OBS screen-capture of playback at 1080×1920 crop or 4K; site URL
+  visible in-frame (watermark or end card). Post to own channels; add to press kit with
+  the reuse invitation.
+- **Depends:** MK-1 for distribution; none technically.
+- **Accept:** clips uploaded and downloadable; at least one posted natively per platform.
+
+### ☐ MK-4 · Launch waves — Priority: high, one focused week [HUMAN]
+- **Goal:** Execute `marketing-plan.md` § Launch playbook: Show HN →
+  r/InternetIsBeautiful → newsletters → r/dataisbeautiful [OC] → r/MapPorn → German wave
+  (r/de, Piqd, German data-desk pitches).
+- **Depends:** P1-* complete, P2-1, P2-3 kit, MK-1.
+- **Accept:** each wave posted per the sequencing; referrer spikes visible in analytics;
+  learnings noted in `marketing-plan.md`.
+
+### ☐ MK-5 · Seasonal entries: #30DayMapChallenge + IIB Awards — Priority: medium [HUMAN]
+- **Goal:** The cartography community's November event (~10 of the 30 prompts served from
+  atlas frames) and an Information is Beautiful Awards entry.
+- **Depends:** MK-2 accounts. **Accept:** posts published in November 2026; awards entry
+  submitted in the current cycle (verify both still run as described).
+
+### ☐ MK-6 · Education link-list submissions — Priority: low, background [HUMAN]
+- **Goal:** Durable backlinks + the honest route into classrooms (feeds M4).
+- **Changes:** [HUMAN] submit to German educational link collections (Landesbildungsserver
+  Linktipps, history-teacher portals) and English equivalents; track submissions in a list.
+- **Depends:** P1-4 (legal pages — edu portals check), P1-5 (citability).
+- **Accept:** ≥5 submissions sent; accepted listings recorded.
 
 ---
 
@@ -401,7 +458,9 @@ traffic [HUMAN]
   shareable via P2-1 permalinks.
 - **G-3 · Per-conflict prerendered pages:** build-time static HTML per conflict from
   `conflicts.json` (105 indexable, cited pages linking into the atlas) — the honest
-  long-tail SEO play. Real build-tooling work; do only if search traffic matters.
+  long-tail SEO play. Real build-tooling work. **Priority raised 2026-08-07** (see
+  `marketing-plan.md` § SEO): treat as the first post-release growth project after
+  M1/M2 — it is the main lever on baseline daily traffic and multiplies the M2 shelves.
 - **G-4 · CONTRIBUTING.md + data-contribution guide:** turn corrections into PRs — the
   YAML-with-comments format (`docs/data.md`) is already contributor-friendly.
 - **G-5 · Newsletter link** (Buttondown or similar) for release notes / new-conflict

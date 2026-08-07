@@ -12,7 +12,7 @@ Do not read them all — each is a deep dive and only one will be relevant.
 | Map appearance, canvas layers, performance, hit-testing | `docs/rendering.md` |
 | Add a language, translate, flags, country-name matching | `docs/i18n-and-flags.md` |
 | Change an encoding, a colour, or ask "why is it like this" | `docs/decisions.md` |
-| Deploy, hosting, launch, legal pages, monetization | `docs/implementation-roadmap.md` (tasks; strategy in `docs/publication-plan.md`) |
+| Deploy, hosting, launch, legal pages, monetization, marketing | `docs/implementation-roadmap.md` (tasks; strategy in `docs/publication-plan.md`) |
 
 Human-facing setup and deployment live in `README.md`.
 
