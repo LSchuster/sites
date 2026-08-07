@@ -40,14 +40,18 @@ if (hash !== MUSTANG_SHA256) {
   process.exit(2);
 }
 
-const pdfs = (await readdir(outDir)).filter((f) => f.endsWith('.pdf')).sort();
-if (pdfs.length === 0) {
-  console.error('no PDFs in samples/out/ — run `npm run samples` first.');
+// Validate the hybrid PDFs AND the standalone CII XML files (the XRechnung
+// download is pure XML, so the XML path needs its own coverage).
+const files = (await readdir(outDir))
+  .filter((f) => f.endsWith('.pdf') || f.endsWith('.xml'))
+  .sort();
+if (files.length === 0) {
+  console.error('nothing in samples/out/ — run `npm run samples` first.');
   process.exit(2);
 }
 
 let failures = 0;
-for (const pdf of pdfs) {
+for (const pdf of files) {
   const result = spawnSync(
     'java',
     ['-Xmx1G', '-jar', jarPath, '--no-notices', '--action', 'validate', '--source', outDir + pdf],
@@ -68,7 +72,7 @@ for (const pdf of pdfs) {
 }
 
 if (failures > 0) {
-  console.error(`\n${failures}/${pdfs.length} sample(s) failed validation.`);
+  console.error(`\n${failures}/${files.length} file(s) failed validation.`);
   process.exit(1);
 }
-console.log(`\nall ${pdfs.length} samples valid (PDF/A-3 + EN 16931).`);
+console.log(`\nall ${files.length} files valid (PDF/A-3 + EN 16931/XRechnung).`);

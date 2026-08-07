@@ -13,6 +13,12 @@ export interface Messages {
   themeLight: string;
   themeDark: string;
 
+  formatHeading: string;
+  formatZugferd: string;
+  formatZugferdDesc: string;
+  formatXrechnung: string;
+  formatXrechnungDesc: string;
+
   sectionSeller: string;
   sectionBuyer: string;
   sectionMeta: string;
@@ -57,6 +63,8 @@ export interface Messages {
   docLanguageDe: string;
   docLanguageEn: string;
   buyerReference: string;
+  buyerReferenceXr: string;
+  buyerReferenceXrHint: string;
 
   taxCaseLabel: string;
   taxCase: Record<TaxCase, string>;
@@ -79,6 +87,8 @@ export interface Messages {
 
   download: string;
   downloadHint: string;
+  downloadXml: string;
+  downloadXmlHint: string;
   print: string;
   generating: string;
   downloadError: string;

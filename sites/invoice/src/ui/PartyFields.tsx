@@ -47,13 +47,22 @@ export function PartyFields(props: {
         </Field>
       </div>
       {props.withVatId ? (
-        <Field label={t.vatId}>
-          <input
-            value={party.vatId ?? ''}
-            onChange={(e) => onPatch({ vatId: e.target.value })}
-            placeholder="DE123456789"
-          />
-        </Field>
+        <div className="row">
+          <Field label={t.vatId}>
+            <input
+              value={party.vatId ?? ''}
+              onChange={(e) => onPatch({ vatId: e.target.value })}
+              placeholder="DE123456789"
+            />
+          </Field>
+          <Field label={t.email} grow>
+            <input
+              type="email"
+              value={party.email ?? ''}
+              onChange={(e) => onPatch({ email: e.target.value })}
+            />
+          </Field>
+        </div>
       ) : null}
     </>
   );

@@ -10,6 +10,14 @@ export const de: Messages = {
   themeLight: 'Hell',
   themeDark: 'Dunkel',
 
+  formatHeading: 'Was möchten Sie erstellen?',
+  formatZugferd: 'E-Rechnung als PDF (ZUGFeRD)',
+  formatZugferdDesc:
+    'Hybrid-Datei: eine PDF zum Lesen, mit eingebettetem XML für die Buchhaltungssoftware des Empfängers. Der Standard für Rechnungen an Unternehmen (B2B).',
+  formatXrechnung: 'XRechnung (reines XML)',
+  formatXrechnungDesc:
+    'Strukturierte XML-Datei ohne PDF — das Pflichtformat für Rechnungen an deutsche Behörden und öffentliche Auftraggeber (B2G). Erfordert die Leitweg-ID des Empfängers.',
+
   sectionSeller: 'Ihre Angaben (Rechnungssteller)',
   sectionBuyer: 'Empfänger (Rechnungsadresse)',
   sectionMeta: 'Rechnungsdaten',
@@ -54,6 +62,9 @@ export const de: Messages = {
   docLanguageDe: 'Deutsch',
   docLanguageEn: 'Englisch',
   buyerReference: 'Referenz des Empfängers (optional)',
+  buyerReferenceXr: 'Leitweg-ID',
+  buyerReferenceXrHint:
+    'Pflicht bei XRechnung: die Leitweg-ID teilt Ihnen die Behörde mit (z. B. 04011000-1234512345-06).',
 
   taxCaseLabel: 'Umsatzsteuer-Fall',
   taxCase: {
@@ -93,6 +104,9 @@ export const de: Messages = {
   download: 'PDF herunterladen (E-Rechnung)',
   downloadHint:
     'Erzeugt eine PDF-Datei, die zugleich eine E-Rechnung ist (PDF/A-3 mit eingebettetem ZUGFeRD/Factur-X-XML, Profil EN 16931).',
+  downloadXml: 'XRechnung herunterladen (XML)',
+  downloadXmlHint:
+    'Erzeugt eine XML-Datei nach Standard XRechnung für die Einreichung bei Behörden (z. B. über ZRE/OZG-RE). „Drucken“ liefert zusätzlich eine lesbare Sichtkopie.',
   print: 'Drucken',
   generating: 'Wird erzeugt …',
   downloadError:
@@ -125,6 +139,10 @@ export const de: Messages = {
     lineQuantity: 'Eine Position hat keine gültige Menge.',
     linePrice: 'Eine Position hat keinen gültigen Einzelpreis.',
     terms: 'Zahlungsziel fehlt oder ist ungültig.',
+    xrLeitweg: 'XRechnung: Leitweg-ID des Empfängers fehlt (Feld „Leitweg-ID“).',
+    xrSellerEmail: 'XRechnung: Ihre E-Mail-Adresse ist erforderlich (Ansprechpartner-Pflicht).',
+    xrSellerPhone: 'XRechnung: Ihre Telefonnummer ist erforderlich (Ansprechpartner-Pflicht).',
+    xrBuyerEmail: 'XRechnung: E-Mail-Adresse des Empfängers ist erforderlich (elektronische Adresse).',
     innergemSellerVat: 'Innergem. Lieferung: Ihre USt-IdNr. ist erforderlich.',
     innergemBuyerVat: 'Innergem. Lieferung: USt-IdNr. des Empfängers ist erforderlich.',
     innergemCountry: 'Innergem. Lieferung: Empfänger muss im EU-Ausland sitzen.',

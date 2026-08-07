@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { MONETIZATION } from '../config';
 import { t } from '../i18n';
 import type { Invoice } from '../model/invoice';
+import { outputFormat } from '../model/invoice';
 import { validateInvoice } from '../model/validate';
 import { bumpSequence } from '../state/store';
 
@@ -35,10 +36,24 @@ export function DownloadPanel(props: { invoice: Invoice }) {
     }
   }
 
+  const isXr = outputFormat(invoice) === 'xrechnung';
+
   async function download() {
     setStatus('working');
     try {
-      const { url, name } = await generatePdfUrl(invoice);
+      let url: string;
+      let name: string;
+      if (isXr) {
+        // XRechnung is the pure XML — no PDF wrapper (Behörden portals like
+        // ZRE/OZG-RE take the XML directly). The serializer is tiny; only
+        // the PDF stack is a heavy lazy chunk.
+        const { serializeCii } = await import('../cii/serialize');
+        const blob = new Blob([serializeCii(invoice)], { type: 'application/xml' });
+        url = URL.createObjectURL(blob);
+        name = `XRechnung_${invoice.number.replace(/[^\w.-]+/g, '_') || 'rechnung'}.xml`;
+      } else {
+        ({ url, name } = await generatePdfUrl(invoice));
+      }
       const a = document.createElement('a');
       a.href = url;
       a.download = name;
@@ -101,7 +116,7 @@ export function DownloadPanel(props: { invoice: Invoice }) {
           disabled={issues.length > 0 || status === 'working'}
           onClick={download}
         >
-          {status === 'working' ? t.generating : t.download}
+          {status === 'working' ? t.generating : isXr ? t.downloadXml : t.download}
         </button>
         <button
           type="button"
@@ -112,7 +127,7 @@ export function DownloadPanel(props: { invoice: Invoice }) {
           {t.print}
         </button>
       </div>
-      <p className="field-hint">{t.downloadHint}</p>
+      <p className="field-hint">{isXr ? t.downloadXmlHint : t.downloadHint}</p>
       {status === 'error' ? (
         <p className="error" role="alert">
           {t.downloadError}

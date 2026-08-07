@@ -3,6 +3,7 @@ import { embedFacturX, PDFDocument } from '@cantoo/pdf-lib';
 import { serializeCii } from '../cii/serialize';
 import { docMessages } from '../doc-i18n';
 import type { Invoice } from '../model/invoice';
+import { outputFormat } from '../model/invoice';
 import { loadFontBytes } from './fonts';
 import { drawInvoice } from './layout';
 
@@ -42,8 +43,12 @@ export async function generateInvoicePdf(invoice: Invoice): Promise<Uint8Array> 
 
   // Converts to PDF/A-3B (sRGB output intent + XMP) and attaches the CII XML
   // with the fx: extension schema and AFRelationship the validators expect.
+  // The XMP conformance level must match the guideline URN in the XML —
+  // XRechnung-mode prints get the ZUGFeRD XRECHNUNG reference profile.
   const xml = new TextEncoder().encode(serializeCii(invoice));
-  await embedFacturX(pdfDoc, xml, { conformanceLevel: 'EN 16931' });
+  await embedFacturX(pdfDoc, xml, {
+    conformanceLevel: outputFormat(invoice) === 'xrechnung' ? 'XRECHNUNG' : 'EN 16931',
+  });
 
   return pdfDoc.save();
 }

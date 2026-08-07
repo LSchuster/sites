@@ -3,6 +3,16 @@ import type { UnitCode } from './codes';
 export type DocLanguage = 'de' | 'en';
 
 /**
+ * What the download produces:
+ * - 'zugferd'  → hybrid PDF/A-3 with embedded Factur-X CII XML (EN 16931
+ *   profile) — the B2B standard, one file for humans and software.
+ * - 'xrechnung' → pure CII XML per the XRechnung CIUS — mandatory for
+ *   invoices to German public-sector buyers (B2G); requires a Leitweg-ID.
+ * Displayed spec versions live in FORMAT_VERSIONS (config.ts).
+ */
+export type OutputFormat = 'zugferd' | 'xrechnung';
+
+/**
  * The five supported German tax situations. Each maps to a fixed EN 16931 VAT
  * category and a fixed, vetted note text (see doc-i18n) — never free-form.
  */
@@ -63,6 +73,8 @@ export interface LineItem {
 }
 
 export interface Invoice {
+  /** Optional for drafts persisted before the field existed → 'zugferd'. */
+  outputFormat?: OutputFormat;
   number: string;
   /** ISO date yyyy-mm-dd. */
   issueDate: string;
@@ -118,9 +130,14 @@ export function todayIso(): string {
   return `${d.getFullYear()}-${m}-${day}`;
 }
 
+export function outputFormat(invoice: Invoice): OutputFormat {
+  return invoice.outputFormat ?? 'zugferd';
+}
+
 export function emptyInvoice(seller?: SellerProfile): Invoice {
   const issueDate = todayIso();
   return {
+    outputFormat: 'zugferd',
     number: '',
     issueDate,
     deliveryDate: issueDate,

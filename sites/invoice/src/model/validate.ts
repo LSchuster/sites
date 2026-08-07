@@ -1,5 +1,6 @@
 import { EU_COUNTRIES } from './codes';
 import type { Invoice } from './invoice';
+import { outputFormat } from './invoice';
 
 /**
  * Form-level validation of the § 14 UStG Pflichtangaben plus the
@@ -61,6 +62,17 @@ export function validateInvoice(invoice: Invoice): Issue[] {
 
   if (invoice.paymentTermsDays !== null && !(invoice.paymentTermsDays >= 0))
     issues.push({ field: 'paymentTermsDays', key: 'terms' });
+
+  // XRechnung (B2G) national rules the form must guarantee: Leitweg-ID as
+  // buyer reference (BR-DE-15), seller contact phone + email (BR-DE-6/7),
+  // and electronic addresses for both parties (BT-34/BT-49).
+  if (outputFormat(invoice) === 'xrechnung') {
+    if (!invoice.buyerReference?.trim())
+      issues.push({ field: 'buyerReference', key: 'xrLeitweg' });
+    if (!invoice.seller.email?.trim()) issues.push({ field: 'seller.email', key: 'xrSellerEmail' });
+    if (!invoice.seller.phone?.trim()) issues.push({ field: 'seller.phone', key: 'xrSellerPhone' });
+    if (!invoice.buyer.email?.trim()) issues.push({ field: 'buyer.email', key: 'xrBuyerEmail' });
+  }
 
   // Tax-case preconditions.
   switch (invoice.taxCase) {

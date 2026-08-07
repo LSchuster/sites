@@ -163,12 +163,22 @@ export function InvoiceForm(props: { invoice: Invoice }) {
               <option value="en">{t.docLanguageEn}</option>
             </select>
           </Field>
-          <Field label={t.buyerReference} grow>
-            <input
-              value={invoice.buyerReference ?? ''}
-              onChange={(e) => updateInvoice({ buyerReference: e.target.value })}
-            />
-          </Field>
+          {invoice.outputFormat === 'xrechnung' ? (
+            <Field label={t.buyerReferenceXr} hint={t.buyerReferenceXrHint} grow>
+              <input
+                value={invoice.buyerReference ?? ''}
+                onChange={(e) => updateInvoice({ buyerReference: e.target.value })}
+                placeholder="04011000-1234512345-06"
+              />
+            </Field>
+          ) : (
+            <Field label={t.buyerReference} grow>
+              <input
+                value={invoice.buyerReference ?? ''}
+                onChange={(e) => updateInvoice({ buyerReference: e.target.value })}
+              />
+            </Field>
+          )}
         </div>
       </section>
 

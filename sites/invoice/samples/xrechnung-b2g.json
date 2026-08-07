@@ -1,0 +1,42 @@
+{
+  "outputFormat": "xrechnung",
+  "number": "2026-140",
+  "issueDate": "2026-08-07",
+  "servicePeriod": { "from": "2026-07-01", "to": "2026-07-31" },
+  "docLanguage": "de",
+  "seller": {
+    "name": "Muster IT-Beratung",
+    "street": "Beispielstraße 12",
+    "postcode": "10115",
+    "city": "Berlin",
+    "countryCode": "DE",
+    "taxNumber": "30/123/45678",
+    "vatId": "DE123456789",
+    "email": "rechnung@muster-it.example",
+    "phone": "+49 30 1234567",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001",
+    "bankName": "Deutsche Kreditbank"
+  },
+  "buyer": {
+    "name": "Stadt Beispielstadt — Amt für Digitalisierung",
+    "street": "Rathausplatz 1",
+    "postcode": "28195",
+    "city": "Bremen",
+    "countryCode": "DE",
+    "email": "rechnungseingang@beispielstadt.example"
+  },
+  "buyerReference": "04011000-1234512345-06",
+  "lines": [
+    {
+      "id": "L1",
+      "description": "IT-Beratung Fachverfahren, Juli 2026",
+      "quantityMilli": 32000,
+      "unit": "HUR",
+      "unitPriceE4": 1050000,
+      "vatRate": 19
+    }
+  ],
+  "taxCase": "standard",
+  "paymentTermsDays": 30
+}

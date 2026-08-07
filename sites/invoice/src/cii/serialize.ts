@@ -2,6 +2,7 @@ import { docMessages, formatDate } from '../doc-i18n';
 import { computeTotals } from '../model/compute';
 import type { Invoice, Party } from '../model/invoice';
 import { dueDateIso } from '../model/invoice';
+import { outputFormat } from '../model/invoice';
 import { effectiveRate, needsExemptionReason, VAT_CATEGORY } from '../model/taxcases';
 
 /**
@@ -16,6 +17,10 @@ import { effectiveRate, needsExemptionReason, VAT_CATEGORY } from '../model/taxc
  */
 
 const GUIDELINE_URN = 'urn:cen.eu:en16931:2017';
+/** XRechnung CIUS (currently 3.0.x — see FORMAT_VERSIONS in config.ts). */
+const XRECHNUNG_URN = 'urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0';
+/** BT-23 default business process required by XRechnung. */
+const XRECHNUNG_PROCESS = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
 
 function esc(s: string): string {
   return s
@@ -66,6 +71,7 @@ function electronicAddress(p: Party): string {
 }
 
 export function serializeCii(invoice: Invoice): string {
+  const isXr = outputFormat(invoice) === 'xrechnung';
   const totals = computeTotals(invoice);
   const doc = docMessages(invoice.docLanguage);
   const category = VAT_CATEGORY[invoice.taxCase];
@@ -172,7 +178,7 @@ ${reason}<ram:BasisAmount>${cents(g.basisCents)}</ram:BasisAmount>
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:100">
 <rsm:ExchangedDocumentContext>
-<ram:GuidelineSpecifiedDocumentContextParameter><ram:ID>${GUIDELINE_URN}</ram:ID></ram:GuidelineSpecifiedDocumentContextParameter>
+${isXr ? `<ram:BusinessProcessSpecifiedDocumentContextParameter><ram:ID>${XRECHNUNG_PROCESS}</ram:ID></ram:BusinessProcessSpecifiedDocumentContextParameter>\n` : ''}<ram:GuidelineSpecifiedDocumentContextParameter><ram:ID>${isXr ? XRECHNUNG_URN : GUIDELINE_URN}</ram:ID></ram:GuidelineSpecifiedDocumentContextParameter>
 </rsm:ExchangedDocumentContext>
 <rsm:ExchangedDocument>
 <ram:ID>${esc(invoice.number)}</ram:ID>
@@ -186,7 +192,18 @@ ${lines}
 ${invoice.buyerReference?.trim() ? `<ram:BuyerReference>${esc(invoice.buyerReference.trim())}</ram:BuyerReference>` : ''}
 <ram:SellerTradeParty>
 ${!seller.vatId?.trim() && seller.taxNumber?.trim() ? `<ram:ID>${esc(seller.taxNumber.trim())}</ram:ID>` : ''}<ram:Name>${esc(seller.name)}</ram:Name>
-${postalAddress(seller)}
+${
+  // BR-DE-2/5/6/7: XRechnung requires a seller contact point with name,
+  // phone and email (the form enforces their presence in XRechnung mode).
+  isXr
+    ? `<ram:DefinedTradeContact>
+<ram:PersonName>${esc(seller.name)}</ram:PersonName>
+<ram:TelephoneUniversalCommunication><ram:CompleteNumber>${esc(seller.phone?.trim() ?? '')}</ram:CompleteNumber></ram:TelephoneUniversalCommunication>
+<ram:EmailURIUniversalCommunication><ram:URIID>${esc(seller.email?.trim() ?? '')}</ram:URIID></ram:EmailURIUniversalCommunication>
+</ram:DefinedTradeContact>
+`
+    : ''
+}${postalAddress(seller)}
 ${electronicAddress(seller)}
 ${taxRegistrations}
 </ram:SellerTradeParty>
