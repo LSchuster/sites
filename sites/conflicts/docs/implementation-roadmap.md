@@ -149,7 +149,16 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
   1. Create `public/impressum.html` and `public/datenschutz.html` as small static pages
      (stable URLs matter for legal pages; avoids touching the SPA). Minimal inline CSS
      matching the dark theme; German primary, short English summary section below.
-  2. Content: Impressum with [HUMAN] name, address, e-mail; Datenschutzerklärung covering:
+  2. Content: Impressum with [HUMAN] name, ladungsfähige address, e-mail (no phone needed
+     — e-mail satisfies the fast-contact requirement per ECJ case law; a P.O. box does NOT
+     satisfy the address requirement). **Address-privacy options** [HUMAN decision]: (a)
+     home address + `noindex` on the legal pages (no duty to be indexed) + light
+     obfuscation against scrapers — the common solo-operator default; (b) rented
+     ladungsfähige Anschrift via an Impressum-service (~€10–30/mo — note this would be the
+     largest cost in the stack; choose a provider that genuinely accepts service of legal
+     documents). Duty trigger reminder: gray zone while unannounced on `*.pages.dev`,
+     required from public launch, unambiguous once donations/affiliate/sales exist.
+     Datenschutzerklärung covering:
      static hosting via Cloudflare (server logs/DPA), cookie-less analytics (added in P1-6
      — write the section now, it ships together), locale in localStorage (no personal
      data), no accounts, no tracking, outbound links. Keep to one screen. [HUMAN] should
