@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>dataplant — Turn Data into a Planet</title>
+    <meta
+      name="description"
+      content="Paste JSON, CSV or plain text and watch it become a unique, explorable 3D planet — moons from your groups, city lights from your fields, terrain from your types. Free, private, runs entirely in your browser."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <canvas id="stage" aria-label="Interactive 3D planet generated from your data"></canvas>
+
+    <!-- HUD chrome -->
+    <header class="brand" id="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h1>dataplant</h1>
+      <span class="brand-sub">turn data into a planet</span>
+    </header>
+
+    <!-- Input panel -->
+    <section class="panel" id="panel" aria-label="Data input">
+      <div class="panel-head">
+        <h2>Feed the planet</h2>
+        <button class="ghost-btn" id="panel-close" title="Close (Esc)" aria-label="Close panel">×</button>
+      </div>
+      <p class="panel-hint">
+        Paste <b>JSON</b>, <b>CSV</b> or plain <b>text</b> — or drop a file anywhere.
+        Your data never leaves this browser.
+      </p>
+      <textarea
+        id="data-input"
+        spellcheck="false"
+        placeholder='{"paste": "anything", "e.g.": ["an API response", "a CSV export", "a poem"]}'
+      ></textarea>
+      <div class="panel-row">
+        <button class="primary-btn" id="generate-btn">Generate planet</button>
+        <label class="ghost-btn file-btn">
+          Open file<input type="file" id="file-input" accept=".json,.csv,.tsv,.txt,.md,.log,.xml,.yaml,.yml" hidden />
+        </label>
+      </div>
+      <div class="panel-samples">
+        <span>No data at hand?</span>
+        <button class="chip" data-sample="json">API response</button>
+        <button class="chip" data-sample="csv">Sales CSV</button>
+        <button class="chip" data-sample="text">A poem</button>
+      </div>
+      <p class="panel-error" id="panel-error" role="alert" hidden></p>
+      <footer class="panel-legend">
+        <span>volume → size</span><span>groups → moons</span><span>fields → lights</span
+        ><span>types → biome</span><span>depth → clouds</span><span>arrays → rings</span>
+      </footer>
+    </section>
+
+    <!-- Bottom control bar (appears once a planet exists) -->
+    <nav class="dock" id="dock" hidden aria-label="Planet controls">
+      <button class="dock-btn" id="dock-data" title="Load different data">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9" /></svg>
+        Data
+      </button>
+      <button class="dock-btn" id="dock-remix" title="Same data, new world seed">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 6h4l6 8h3m0 0-2-2m2 2-2 2M4 14h4m9-8-2-2m2 2-2 2m2-2h-3l-2 2.7" /></svg>
+        Remix
+      </button>
+      <button class="dock-btn" id="dock-export" title="Save a high-resolution PNG">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v9m0 0 3.5-3.5M10 12 6.5 8.5M4 16h12" /></svg>
+        Export
+      </button>
+    </nav>
+
+    <!-- Planet stats readout -->
+    <aside class="stats" id="stats" hidden aria-live="polite"></aside>
+
+    <!-- Hover tooltip -->
+    <div class="tip" id="tip" hidden></div>
+
+    <!-- Drag-and-drop veil -->
+    <div class="dropveil" id="dropveil" hidden><div>Release to terraform</div></div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" hidden></div>
+
+    <script type="module" src="/src/main.ts"></script>
+
+    <noscript>
+      <div style="position:fixed;inset:0;display:grid;place-items:center;background:#05070d;color:#dfe7ef;font-family:system-ui;padding:2rem;text-align:center">
+        dataplant renders your data as an interactive 3D planet and needs JavaScript + WebGL to run.
+      </div>
+    </noscript>
+  </body>
+</html>

@@ -12,6 +12,7 @@ the contract for everything inside.** Currently:
 |---|---|
 | `sites/conflicts/` — conflicts.io atlas | `sites/conflicts/CLAUDE.md` |
 | `sites/invoice/` — invoice generator (ZUGFeRD) | `sites/invoice/CLAUDE.md` |
+| `sites/dataplant/` — data → 3D planet art toy | `sites/dataplant/CLAUDE.md` |
 
 Hard rules at repo level:
 

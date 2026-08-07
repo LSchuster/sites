@@ -1,0 +1,12 @@
+# Cloudflare Pages headers. Fully self-contained app: no external origins at
+# all (add the Cloudflare analytics beacon origins here if analytics lands).
+# img-src blob:/data: is for the PNG export download and generated textures.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:; connect-src 'self'; base-uri 'self'; frame-ancestors 'self'
+
+# Vite emits content-hashed filenames under /assets/ — cache forever.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
