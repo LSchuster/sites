@@ -29,7 +29,7 @@ a maintained perf harness (`tools/perf.mjs`, `tools/shot.mjs`). What is missing 
 
 | Area | State (verified) |
 |---|---|
-| Git remote / off-site copy | **None — the repo exists only on one Windows machine** |
+| Git remote / off-site copy | ☑ Done 2026-08-07 — public repo github.com/LSchuster/sites, branch `main` |
 | CI, deploy config | None (`.github/workflows/`, `_headers`, `netlify.toml` etc. all absent) |
 | Domain | Strategy: subdomain of a shared umbrella `.io` domain, not yet registered. The name conflicts.io itself: **registered June 2025 via Cloudflare, expired 2026-06-22, now in redemption** (RDAP, 2026-08-07) — rescuing it is optional, see below |
 | Favicon | None — every visit 404s on `/favicon.ico` |
@@ -79,8 +79,8 @@ Everything else in this plan is domain-agnostic; hosting can go live on the free
 
 Ordered; IDs refer to `implementation-roadmap.md`.
 
-1. **P0-1 — Push to GitHub, public.** Off-site backup, free CI, and GPL §6 source-offer
-   satisfied in one move. Until this is done the project has a bus factor of one hard drive.
+1. **P0-1 — Push to GitHub, public.** ☑ Done 2026-08-07 (github.com/LSchuster/sites) —
+   off-site backup, free CI substrate, and GPL §6 source-offer satisfied in one move.
 2. **P0-3/P0-4 — CI + Cloudflare Pages.** After this, every push deploys; the site is live
    on `conflicts-io.pages.dev` even while the domain question resolves.
 3. **P1-2/P1-3 — Head metadata, favicon, OG image, robots, sitemap.** A link shared on

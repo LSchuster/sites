@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": { "node": ">=22" },
   "license": "GPL-3.0-or-later",
   "description": "An interactive atlas of human conflict, year 0 to now.",
   "scripts": {

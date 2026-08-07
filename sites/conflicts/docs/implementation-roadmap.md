@@ -1,6 +1,6 @@
 # Implementation roadmap
 
-Status: **plan — no task below is implemented yet** · Written 2026-08-07 · Index doc:
+Status: **in progress — P0-1 done, everything else planned** · Written 2026-08-07 · Index doc:
 `publication-plan.md`. Strategy rationale: `hosting-architecture.md`,
 `commercialization-plan.md`.
 
@@ -31,21 +31,12 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 
 ## Phase 0 — Foundation (before anything is public)
 
-### ☐ P0-1 · Push the repo to GitHub — Priority: highest, do first
-- **Goal:** Off-site backup, CI substrate, and GPL source-offer in one move. The project
-  currently exists only on one machine (no git remote).
-- **Changes:**
-  1. Add `"engines": { "node": ">=22" }` to `sites/conflicts/package.json` (local dev is
-     v22.13). (`tsconfig.tsbuildinfo` was already untracked during the 2026-08-07
-     restructure.)
-  2. [HUMAN] Create GitHub repo (**public** — GPL compliance and free CI/Pages both want
-     public; pick a neutral name since the repo now hosts multiple sites), add remote,
-     push `master`.
-  3. Confirm `sites/conflicts/data/raw/` absent from the pushed tree and
-     `sites/conflicts/public/data/` present.
-- **Depends:** nothing.
-- **Accept:** fresh `git clone` on another path → `cd sites/conflicts && npm ci &&
-  npm run build` succeeds; repo page shows LICENSE detected as GPL-3.0.
+### ☑ P0-1 · Push the repo to GitHub — DONE 2026-08-07
+- **Outcome:** public repo **github.com/LSchuster/sites**, default branch `main`
+  (renamed from `master`), local history squashed to two clean commits before first push.
+  `engines: { "node": ">=22" }` added to `sites/conflicts/package.json`. Git identity set
+  to the GitHub noreply address. `data/raw/` confirmed absent from the pushed tree,
+  `public/data/` present.
 
 ### ☐ P0-2 · Register the umbrella domain (+ optional conflicts.io rescue ⏰) [HUMAN]
 - **Goal:** One `.io` domain that all sites in the repo share as subdomains; this site at
@@ -85,7 +76,7 @@ Legend: `[HUMAN]` needs owner input · ⏰ time-critical.
 - **Changes:** [HUMAN] create Cloudflare account (2FA), Pages project via Git integration
   → repo from P0-1. Settings (full table in `hosting-architecture.md`): **root directory
   `sites/conflicts`**, build `npm run build`, output `dist`, **build watch paths
-  `sites/conflicts/*`**, env `NODE_VERSION=22`, production branch `master`. When P0-2
+  `sites/conflicts/*`**, env `NODE_VERSION=22`, production branch `main`. When P0-2
   resolves: attach custom domain `conflicts.<umbrella>.io`, then enable Always-Use-HTTPS;
   enable HSTS a few days later. Turn on Cloudflare Web Analytics readiness (token used in
   P1-6).

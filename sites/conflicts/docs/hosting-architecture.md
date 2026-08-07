@@ -67,7 +67,7 @@ week — an order of magnitude of headroom everywhere.
 
 ```
 GitHub monorepo (source of truth, incl. each site's committed data)
-   │  push to master
+   │  push to main
    ├─▶ GitHub Actions — checks only, path-filtered per site
    │        conflicts job: cd sites/conflicts → tsc -b, vite build, data:validate
    └─▶ Cloudflare Pages — one project PER SITE, Git integration
@@ -101,7 +101,7 @@ GitHub monorepo (source of truth, incl. each site's committed data)
 | Output directory | `dist` (relative to root directory) |
 | Build watch paths | include `sites/conflicts/*` |
 | Environment | `NODE_VERSION=22` (matches local v22.13; add `"engines": {"node": ">=22"}` to package.json) |
-| Production branch | `master` (or rename to `main` first — repo default branch is currently `master`) |
+| Production branch | `main` |
 | Custom domain | `conflicts.<umbrella>.io` (after roadmap P0-2 picks the umbrella) |
 
 ## Alternatives compared
@@ -146,7 +146,7 @@ Two independent lanes, both triggered by git push:
    `tsc -b` first) → `npm run data:validate`. Node 22. Public repo ⇒ Actions minutes are
    free. A new site = copy the job, change the folder.
 2. **Deploy lane — Cloudflare Pages Git integration**: one project per site (root
-   directory + build watch paths per the settings table), `master` → production, every
+   directory + build watch paths per the settings table), `main` → production, every
    branch → preview URL. No secrets in the repo; the Pages↔GitHub link is configured
    once in the dashboard. (Alternative if more control is ever needed: deploy from Actions
    with `wrangler pages deploy` and a `CLOUDFLARE_API_TOKEN` secret — not needed at launch.)
@@ -198,8 +198,8 @@ Exact file content is specified in `implementation-roadmap.md` P1-1.
 
 ## Backups and disaster recovery
 
-Current state: **the repo has no git remote — the entire project exists on one Windows
-machine.** This is the first thing to fix (roadmap P0-1), before any hosting work.
+Current state: pushed to **github.com/LSchuster/sites** (public, branch `main`) on
+2026-08-07 — the off-site copy exists (roadmap P0-1 ☑).
 
 - **Primary backup = GitHub.** Everything needed to rebuild the site is in git, including
   `public/data/`. Recovery on any machine: clone → `npm ci` → `npm run build` → upload
