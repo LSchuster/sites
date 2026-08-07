@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Rechnung schreiben kostenlos — mit E-Rechnung (ZUGFeRD)</title>
+    <meta
+      name="description"
+      content="Kostenlos Rechnungen schreiben — als PDF und E-Rechnung (ZUGFeRD/Factur-X, EN 16931) in einem Dokument. Läuft komplett im Browser: keine Anmeldung, keine Cloud, Ihre Daten verlassen Ihr Gerät nicht."
+    />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rechnung schreiben kostenlos — mit E-Rechnung (ZUGFeRD)" />
+    <meta
+      property="og:description"
+      content="PDF + E-Rechnung (ZUGFeRD/Factur-X, EN 16931) in einem Dokument, komplett im Browser. Keine Anmeldung, keine Cloud."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Rechnung schreiben — kostenloser Rechnungsgenerator mit E-Rechnung",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "featureList": "PDF-Rechnung, E-Rechnung (ZUGFeRD/Factur-X EN 16931), § 19 UStG Kleinunternehmer, Reverse Charge § 13b, DIN 5008, deutsch/englisch",
+        "browserRequirements": "Requires JavaScript"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ist der Rechnungsgenerator wirklich kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Alle Funktionen — PDF-Erzeugung, E-Rechnung (ZUGFeRD), Vorlagen für Kleinunternehmer und Reverse Charge — sind kostenlos und ohne Anmeldung nutzbar. Es gibt keine Premium-Version und keine versteckten Kosten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist eine E-Rechnung (ZUGFeRD/Factur-X)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eine E-Rechnung ist ein strukturierter Datensatz nach der EU-Norm EN 16931. ZUGFeRD/Factur-X ist ein Hybridformat: eine normale PDF-Datei, in die die maschinenlesbaren Rechnungsdaten als XML eingebettet sind. Dieses Werkzeug erzeugt beides in einem einzigen Dokument (PDF/A-3, Profil EN 16931)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer muss ab wann E-Rechnungen ausstellen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Seit dem 1. Januar 2025 müssen alle deutschen Unternehmen E-Rechnungen im B2B-Bereich empfangen können. Ab 2027 wird das Ausstellen für Unternehmen mit mehr als 800.000 € Vorjahresumsatz Pflicht, ab 2028 für alle. Wer jetzt schon ZUGFeRD-Rechnungen verschickt, ist auf der sicheren Seite."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wohin werden meine Rechnungsdaten übertragen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nirgendwohin. Die gesamte Rechnung — PDF und XML — wird von Ihrem Browser auf Ihrem Gerät erzeugt. Es gibt keinen Server, kein Konto und keine Cloud. Gespeicherte Profile liegen ausschließlich im lokalen Speicher Ihres Browsers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Erfüllt die Rechnung die Pflichtangaben nach § 14 UStG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Das Formular prüft die Pflichtangaben nach § 14 Abs. 4 UStG (vollständige Anschriften, Steuernummer oder USt-IdNr., Rechnungsnummer, Leistungsdatum, Entgeltaufschlüsselung, Steuersätze) und blockiert den Download, solange etwas fehlt. Die inhaltliche Verantwortung bleibt beim Rechnungssteller — das Werkzeug ersetzt keine Steuerberatung."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Static SEO content: processed by Vite, visible to crawlers without JS.
+         React owns only #root above. -->
+    <article class="landing">
+      <section>
+        <h2>So funktioniert's</h2>
+        <ol>
+          <li>Eigene Angaben und Empfänger eintragen — beim nächsten Besuch vorausgefüllt (alles bleibt lokal in Ihrem Browser).</li>
+          <li>Positionen erfassen; Umsatzsteuer-Fall wählen (Regelbesteuerung, § 19 UStG, Reverse Charge, innergemeinschaftliche Lieferung oder Ausfuhr).</li>
+          <li>Herunterladen: Sie erhalten eine PDF-Rechnung im DIN-5008-Layout, die zugleich eine gültige E-Rechnung ist (ZUGFeRD/Factur-X, Profil EN 16931).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Pflichtangaben einer Rechnung (§ 14 UStG)</h2>
+        <p>Jede Rechnung an Unternehmer muss nach § 14 Abs. 4 UStG enthalten:</p>
+        <ul>
+          <li>vollständiger Name und Anschrift von Rechnungssteller und Empfänger,</li>
+          <li>Steuernummer oder Umsatzsteuer-Identifikationsnummer des Ausstellers,</li>
+          <li>Ausstellungsdatum und eine fortlaufende, einmalige Rechnungsnummer,</li>
+          <li>Menge und Art der gelieferten Gegenstände bzw. Umfang und Art der Leistung,</li>
+          <li>Zeitpunkt der Lieferung oder Leistung (bzw. Leistungszeitraum),</li>
+          <li>nach Steuersätzen aufgeschlüsseltes Entgelt, Steuersatz und Steuerbetrag —
+            oder ein Hinweis auf die Steuerbefreiung (z. B. § 19 UStG, Reverse Charge).</li>
+        </ul>
+        <p>Das Formular prüft diese Angaben automatisch und blockiert den Download, solange etwas fehlt.</p>
+      </section>
+
+      <section>
+        <h2>E-Rechnung-Pflicht: der Zeitplan</h2>
+        <ul>
+          <li><strong>Seit 1. Januar 2025:</strong> Alle Unternehmen in Deutschland müssen E-Rechnungen im B2B-Geschäft <em>empfangen</em> können. Eine einfache PDF gilt dann nicht mehr als E-Rechnung.</li>
+          <li><strong>Ab 1. Januar 2027:</strong> Unternehmen mit mehr als 800.000 € Vorjahresumsatz müssen B2B-Rechnungen als E-Rechnung <em>ausstellen</em>.</li>
+          <li><strong>Ab 1. Januar 2028:</strong> Die Ausstellungspflicht gilt für alle Unternehmen.</li>
+        </ul>
+        <p>
+          Dieses Werkzeug erzeugt schon heute das Hybridformat ZUGFeRD/Factur-X im Profil
+          EN 16931: eine menschenlesbare PDF, in der die maschinenlesbaren Daten als XML
+          eingebettet sind — akzeptiert von Buchhaltungssoftware und Behördenvalidatoren.
+        </p>
+      </section>
+
+      <section>
+        <h2>Kleinunternehmerregelung (§ 19 UStG)</h2>
+        <p>
+          Kleinunternehmer weisen keine Umsatzsteuer aus, müssen ihre Rechnung aber mit einem
+          Hinweis auf § 19 UStG versehen. Wählen Sie einfach den Umsatzsteuer-Fall
+          „Kleinunternehmer“ — der Pflichthinweis wird automatisch auf der Rechnung und in den
+          strukturierten E-Rechnungs-Daten ergänzt, und die Positionen werden ohne Steuer
+          berechnet.
+        </p>
+      </section>
+
+      <section>
+        <h2>Häufige Fragen</h2>
+        <dl>
+          <dt>Ist der Rechnungsgenerator wirklich kostenlos?</dt>
+          <dd>Ja — alle Funktionen, ohne Anmeldung, ohne Premium-Version, ohne versteckte Kosten.</dd>
+          <dt>Was ist eine E-Rechnung (ZUGFeRD/Factur-X)?</dt>
+          <dd>Ein Hybridformat nach EN 16931: eine normale PDF, in die die maschinenlesbaren Rechnungsdaten als XML eingebettet sind. Empfänger mit Buchhaltungssoftware lesen das XML, Menschen lesen die PDF.</dd>
+          <dt>Wer muss ab wann E-Rechnungen ausstellen?</dt>
+          <dd>Empfangen: seit 2025 Pflicht für alle Unternehmen (B2B). Ausstellen: ab 2027 für Unternehmen über 800.000 € Umsatz, ab 2028 für alle.</dd>
+          <dt>Wohin werden meine Rechnungsdaten übertragen?</dt>
+          <dd>Nirgendwohin — die Rechnung entsteht vollständig in Ihrem Browser. Kein Server, kein Konto, keine Cloud.</dd>
+          <dt>Kann ich Rechnungen auf Englisch schreiben?</dt>
+          <dd>Ja. Die Sprache des Rechnungsdokuments ist pro Rechnung wählbar (Deutsch oder Englisch), z. B. für Kunden im Ausland — inklusive korrekter Reverse-Charge-Hinweise.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <p class="landing-disclaimer">
+          Dieses Werkzeug bietet keine Steuer- oder Rechtsberatung. Prüfen Sie Rechnungen vor dem
+          Versand; im Zweifel fragen Sie Ihre Steuerberatung.
+        </p>
+      </section>
+    </article>
+
+    <noscript>
+      <p style="max-width: 40rem; margin: 2rem auto; font-family: system-ui">
+        Dieser kostenlose Rechnungsgenerator läuft vollständig in Ihrem Browser und benötigt
+        JavaScript. Es werden keine Daten an einen Server übertragen.
+      </p>
+    </noscript>
+
+    <!-- Cloudflare Web Analytics (cookie-less) — enable at launch by inserting
+         the beacon token here; the CSP in public/_headers already allows it.
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "TOKEN"}'></script> -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hostname is the pages.dev default until the custom domain is bound;
+     update both URLs and robots.txt when invoice.<umbrella>.io goes live. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://invoice-generator.pages.dev/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>

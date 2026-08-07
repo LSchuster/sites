@@ -1,0 +1,36 @@
+{
+  "number": "2026-014",
+  "issueDate": "2026-08-05",
+  "servicePeriod": { "from": "2026-07-01", "to": "2026-07-31" },
+  "docLanguage": "de",
+  "seller": {
+    "name": "Lena Beispiel — Texterin",
+    "street": "Gartenweg 8",
+    "postcode": "50667",
+    "city": "Köln",
+    "countryCode": "DE",
+    "taxNumber": "215/5310/1234",
+    "email": "post@lena-beispiel.example",
+    "iban": "DE02100100100006820101",
+    "bic": "PBNKDEFF"
+  },
+  "buyer": {
+    "name": "Agentur Nordlicht GmbH",
+    "street": "Hafenstraße 21",
+    "postcode": "20457",
+    "city": "Hamburg",
+    "countryCode": "DE"
+  },
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Blogartikel (4 Stück à 1.200 Wörter)",
+      "quantityMilli": 4000,
+      "unit": "H87",
+      "unitPriceE4": 1800000,
+      "vatRate": 0
+    }
+  ],
+  "taxCase": "kleinunternehmer",
+  "paymentTermsDays": 14
+}

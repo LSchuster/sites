@@ -1,0 +1,36 @@
+{
+  "number": "2026-090",
+  "issueDate": "2026-08-07",
+  "deliveryDate": "2026-08-05",
+  "docLanguage": "en",
+  "seller": {
+    "name": "Muster Maschinenteile GmbH",
+    "street": "Werkstraße 5",
+    "postcode": "70173",
+    "city": "Stuttgart",
+    "countryCode": "DE",
+    "vatId": "DE123456789",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001"
+  },
+  "buyer": {
+    "name": "Precision Parts Inc.",
+    "street": "450 Industrial Ave",
+    "postcode": "60607",
+    "city": "Chicago",
+    "countryCode": "US"
+  },
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Precision shaft PW-300, stainless steel",
+      "quantityMilli": 6000,
+      "unit": "H87",
+      "unitPriceE4": 745000,
+      "vatRate": 0
+    }
+  ],
+  "taxCase": "export_third",
+  "paymentTermsDays": 30,
+  "notes": "Incoterms 2020: FCA Stuttgart."
+}

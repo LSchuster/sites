@@ -1,0 +1,46 @@
+{
+  "number": "2026-078",
+  "issueDate": "2026-08-06",
+  "deliveryDate": "2026-08-04",
+  "docLanguage": "de",
+  "seller": {
+    "name": "Muster Maschinenteile GmbH",
+    "street": "Werkstraße 5",
+    "postcode": "70173",
+    "city": "Stuttgart",
+    "countryCode": "DE",
+    "vatId": "DE123456789",
+    "taxNumber": "99/123/45678",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001",
+    "bankName": "DKB"
+  },
+  "buyer": {
+    "name": "Autriche Industrie GmbH",
+    "street": "Ringstraße 40",
+    "postcode": "1010",
+    "city": "Wien",
+    "countryCode": "AT",
+    "vatId": "ATU12345678"
+  },
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Präzisionswelle Typ PW-300, Edelstahl",
+      "quantityMilli": 12000,
+      "unit": "H87",
+      "unitPriceE4": 745000,
+      "vatRate": 0
+    },
+    {
+      "id": "L2",
+      "description": "Fracht und Verpackung",
+      "quantityMilli": 1000,
+      "unit": "C62",
+      "unitPriceE4": 480000,
+      "vatRate": 0
+    }
+  ],
+  "taxCase": "innergem",
+  "paymentTermsDays": 30
+}

@@ -1,0 +1,492 @@
+/* Light-first business tool. Design tokens on :root; plain CSS, no framework. */
+
+:root {
+  color-scheme: light;
+
+  --paper: #f5f6f7; /* page background */
+  --surface: #ffffff; /* cards, form panels */
+  --ink: #1a1c1e; /* primary text */
+  --ink-soft: #4c5258; /* secondary text */
+  --ink-faint: #8a9096; /* hints, placeholders */
+  --line: #dcdfe2; /* borders, rules */
+  --accent: #1f5eff; /* actions, links */
+  --accent-ink: #ffffff;
+  --danger: #b3261e;
+
+  --font-sans:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.shell {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.masthead h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem;
+}
+
+.tagline {
+  color: var(--ink-soft);
+  margin: 0 0 1.8rem;
+  max-width: 52rem;
+}
+
+/* ---- two-pane workspace -------------------------------------------------- */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(22rem, 30rem) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 64rem) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pane-preview {
+  position: sticky;
+  top: 1rem;
+}
+
+@media (max-width: 64rem) {
+  .pane-preview {
+    position: static;
+  }
+}
+
+/* ---- form ----------------------------------------------------------------- */
+
+.invoice-form section,
+.download-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 1rem 1.1rem 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.invoice-form h2,
+.download-panel h2,
+.preview-wrap h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.8rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 0 0.65rem;
+  min-width: 0;
+}
+
+.field.grow {
+  flex: 1 1 8rem;
+}
+
+.field-label {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.field-hint {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 0.42rem 0.5rem;
+  min-width: 0;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+  border-color: var(--accent);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.row > .field {
+  flex: 0 1 auto;
+}
+
+.row > .field.grow {
+  flex: 1 1 10rem;
+}
+
+.check {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 0.1rem 0 0.65rem;
+}
+
+.toolbar {
+  border-top: 1px dashed var(--line);
+  padding-top: 0.7rem;
+  margin-top: 0.3rem;
+  align-items: center;
+}
+
+.toolbar .spacer {
+  flex: 1;
+}
+
+.toolbar.wrap {
+  flex-wrap: wrap;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: var(--r-sm);
+}
+
+button.primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+button.primary:disabled {
+  background: var(--ink-faint);
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+button.ghost:hover {
+  border-color: var(--ink-faint);
+  color: var(--ink);
+}
+
+button.ghost.danger {
+  color: var(--danger);
+  border: none;
+  font-size: 1rem;
+  padding: 0 0.4rem;
+}
+
+/* ---- line items ------------------------------------------------------------ */
+
+.line-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 0.6rem 0.7rem 0.4rem;
+  margin: 0 0 0.6rem;
+}
+
+.line-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.line-no {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+.lines .field {
+  margin-bottom: 0.45rem;
+}
+
+/* ---- download / issues ------------------------------------------------------ */
+
+.issues {
+  background: #fdf3f2;
+  border: 1px solid #efc7c4;
+  border-radius: var(--r-md);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.83rem;
+  margin-bottom: 0.8rem;
+}
+
+.issues p {
+  margin: 0 0 0.3rem;
+  font-weight: 600;
+}
+
+.issues ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.85rem;
+}
+
+.affiliate-card {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  background: #fafbfc;
+}
+
+.affiliate-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  margin: 0 0 0.3rem;
+}
+
+/* ---- preview sheet ----------------------------------------------------------- */
+
+.sheet {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+  padding: 7% 7% 5%;
+  font-size: clamp(0.55rem, 1.1vw, 0.8rem);
+  line-height: 1.45;
+  min-height: 60vh;
+  position: relative;
+}
+
+.sheet p {
+  margin: 0;
+}
+
+.sheet-logo {
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  max-height: 3.5em;
+  max-width: 30%;
+}
+
+.sheet-return {
+  font-size: 0.72em;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.2em;
+  margin-bottom: 1.2em;
+  max-width: 60%;
+}
+
+.sheet-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-bottom: 2.5em;
+}
+
+.sheet-address {
+  min-height: 6em;
+}
+
+.sheet-info {
+  border-collapse: collapse;
+  font-size: 0.85em;
+  align-self: flex-start;
+}
+
+.sheet-info td {
+  padding: 0.08em 0;
+}
+
+.sheet-info td:first-child {
+  color: var(--ink-faint);
+  padding-right: 1.2em;
+}
+
+.sheet-info td:last-child {
+  text-align: right;
+}
+
+.sheet-title {
+  font-size: 1.15em;
+  margin: 0 0 0.8em;
+}
+
+.sheet-lines {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.sheet-lines th {
+  font-size: 0.8em;
+  color: var(--ink-faint);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 0.2em 0.4em 0.3em;
+}
+
+.sheet-lines td {
+  padding: 0.35em 0.4em;
+  vertical-align: top;
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.sheet-lines .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.sheet-lines .wide {
+  width: 40%;
+}
+
+.sheet-totals {
+  margin-left: auto;
+  max-width: 55%;
+  margin-bottom: 1.6em;
+}
+
+.sheet-totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 0.12em 0.4em;
+}
+
+.sheet-totals > div > span:first-child {
+  color: var(--ink-soft);
+}
+
+.sheet-totals .grand {
+  border-top: 1px solid var(--ink);
+  font-weight: 600;
+  margin-top: 0.25em;
+  padding-top: 0.35em;
+}
+
+.sheet-totals .grand > span:first-child {
+  color: var(--ink);
+}
+
+.sheet-notes p {
+  margin: 0 0 0.6em;
+}
+
+.sheet-footer {
+  display: flex;
+  gap: 1.5em;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 2.5em;
+  padding-top: 0.6em;
+  font-size: 0.72em;
+  color: var(--ink-faint);
+}
+
+/* ---- static landing content (index.html, below #root) --------------------------- */
+
+.landing {
+  max-width: 46rem;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.landing h2 {
+  color: var(--ink);
+  font-size: 1.05rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.landing li {
+  margin-bottom: 0.3rem;
+}
+
+.landing dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0.8rem;
+}
+
+.landing dd {
+  margin: 0.15rem 0 0;
+}
+
+.landing-disclaimer {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+/* ---- site footer ---------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.site-footer a {
+  color: var(--ink-soft);
+}

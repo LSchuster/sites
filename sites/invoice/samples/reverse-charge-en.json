@@ -1,0 +1,38 @@
+{
+  "number": "2026-055",
+  "issueDate": "2026-08-03",
+  "servicePeriod": { "from": "2026-07-01", "to": "2026-07-31" },
+  "docLanguage": "en",
+  "seller": {
+    "name": "Muster Software Consulting",
+    "street": "Beispielstraße 12",
+    "postcode": "10115",
+    "city": "Berlin",
+    "countryCode": "DE",
+    "vatId": "DE123456789",
+    "email": "billing@muster-consulting.example",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001"
+  },
+  "buyer": {
+    "name": "Innovate BV",
+    "street": "Keizersgracht 100",
+    "postcode": "1015 AA",
+    "city": "Amsterdam",
+    "countryCode": "NL",
+    "vatId": "NL123456789B01"
+  },
+  "buyerReference": "NL-2026-88",
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Software development services, July 2026",
+      "quantityMilli": 80000,
+      "unit": "HUR",
+      "unitPriceE4": 1100000,
+      "vatRate": 0
+    }
+  ],
+  "taxCase": "reverse_charge",
+  "paymentTermsDays": 30
+}

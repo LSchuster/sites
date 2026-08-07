@@ -1,0 +1,58 @@
+{
+  "number": "2026-101",
+  "issueDate": "2026-08-01",
+  "deliveryDate": "2026-07-28",
+  "docLanguage": "de",
+  "seller": {
+    "name": "Muster Webdesign",
+    "street": "Beispielstraße 12",
+    "postcode": "10115",
+    "city": "Berlin",
+    "countryCode": "DE",
+    "taxNumber": "30/123/45678",
+    "vatId": "DE123456789",
+    "email": "kontakt@muster-webdesign.example",
+    "phone": "+49 30 1234567",
+    "iban": "DE02120300000000202051",
+    "bic": "BYLADEM1001",
+    "bankName": "Deutsche Kreditbank"
+  },
+  "buyer": {
+    "name": "Beispiel GmbH",
+    "street": "Industrieweg 3",
+    "postcode": "80331",
+    "city": "München",
+    "countryCode": "DE",
+    "email": "buchhaltung@beispiel.example"
+  },
+  "buyerReference": "PO-4711",
+  "lines": [
+    {
+      "id": "L1",
+      "description": "Konzeption und Gestaltung der Unternehmenswebsite",
+      "quantityMilli": 24000,
+      "unit": "HUR",
+      "unitPriceE4": 950000,
+      "vatRate": 19
+    },
+    {
+      "id": "L2",
+      "description": "Druck Broschüre „Unternehmensprofil“ (Auflage 500)",
+      "quantityMilli": 500000,
+      "unit": "H87",
+      "unitPriceE4": 12300,
+      "vatRate": 7
+    },
+    {
+      "id": "L3",
+      "description": "Hosting-Pauschale August 2026",
+      "quantityMilli": 1000,
+      "unit": "MON",
+      "unitPriceE4": 290000,
+      "vatRate": 19
+    }
+  ],
+  "taxCase": "standard",
+  "paymentTermsDays": 14,
+  "notes": "Vielen Dank für Ihren Auftrag!"
+}

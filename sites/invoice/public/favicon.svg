@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect x="5" y="2" width="22" height="28" rx="2.5" fill="#ffffff" stroke="#1f5eff" stroke-width="2"/>
+  <rect x="9" y="7" width="10" height="2.2" rx="1.1" fill="#8a9096"/>
+  <rect x="9" y="12" width="14" height="2.2" rx="1.1" fill="#c6cad0"/>
+  <rect x="9" y="16.5" width="14" height="2.2" rx="1.1" fill="#c6cad0"/>
+  <text x="9" y="27.5" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1f5eff">€</text>
+</svg>
