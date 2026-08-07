@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#01030a" />
+    <title>Journey — How Far Did This Message Travel?</title>
+    <meta
+      name="description"
+      content="Enter a URL, an IP address or raw email headers and watch the estimated journey of your data across the internet on a cinematic 3D globe — hops, distance, countries and light-speed timing."
+    />
+    <meta property="og:title" content="Journey — How Far Did This Message Travel?" />
+    <meta
+      property="og:description"
+      content="Trace the estimated path of any URL, IP or email across a cinematic 3D globe."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="Interactive 3D globe showing the traced network route"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="brand">
+      <h1 class="wordmark">JOURNEY</h1>
+      <p class="tagline">How far did this message travel?</p>
+    </header>
+
+    <section class="panel" aria-label="Trace input">
+      <textarea
+        id="input"
+        rows="1"
+        spellcheck="false"
+        autocomplete="off"
+        placeholder="URL, IP address, or raw email headers…"
+      ></textarea>
+      <div class="panel-row">
+        <div class="chips" role="group" aria-label="Samples">
+          <button class="chip" data-sample="url">wikipedia.org</button>
+          <button class="chip" data-sample="ip">1.1.1.1</button>
+          <button class="chip" data-sample="email">sample email</button>
+        </div>
+        <button id="trace" class="trace">Trace <span class="key">↵</span></button>
+      </div>
+      <div class="status" id="status" hidden>
+        <span class="spinner" aria-hidden="true"></span><span id="status-text" role="status"></span>
+      </div>
+      <div class="error" id="error" role="alert" hidden></div>
+    </section>
+
+    <section class="stats" id="stats" aria-label="Route statistics" hidden>
+      <div class="stat">
+        <span class="stat-value" id="stat-distance">0</span>
+        <span class="stat-label">distance</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-hops">0</span>
+        <span class="stat-label">hops</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-countries">0</span>
+        <span class="stat-label">countries <span class="stat-flags" id="stat-countries-flags"></span></span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-light">0</span>
+        <span class="stat-label">at light speed in fiber<br /><span class="stat-sub" id="stat-light-sub"></span></span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-measured">—</span>
+        <span class="stat-label">measured<br /><span class="stat-sub" id="stat-measured-sub"></span></span>
+      </div>
+    </section>
+
+    <aside class="inspector" id="inspector" aria-label="Route hops" hidden>
+      <div class="inspector-head">
+        <div class="inspector-title" id="route-title"></div>
+        <button id="close-route" class="close" aria-label="Clear route">✕</button>
+      </div>
+      <ol class="hops" id="hop-list"></ol>
+      <div class="hop-detail" id="hop-detail" hidden></div>
+    </aside>
+
+    <div class="tooltip" id="tooltip" hidden></div>
+
+    <footer class="foot">
+      Estimated visualization — browsers can’t run a real traceroute. Routes are inferred from
+      DNS, IP geolocation and internet-exchange topology; email paths are reconstructed from
+      <code>Received:</code> headers. Nothing you enter is stored or sent anywhere except the
+      lookups themselves.
+    </footer>
+
+    <div id="loading" class="loading" aria-hidden="true">
+      <div class="loading-ring"></div>
+      <div>Preparing the globe…</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

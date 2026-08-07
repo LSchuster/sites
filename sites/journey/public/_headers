@@ -1,0 +1,20 @@
+# Cloudflare Pages headers. Unlike the fully-closed sister sites, this app
+# must talk to the network at runtime — that is the product:
+#   - dns.google / cloudflare-dns.com   DNS-over-HTTPS resolution
+#   - ipwho.is / ipapi.co               IP geolocation
+#   - any https origin                  no-cors latency probes to the traced
+#                                       destination (opaque, timing only)
+# Hence connect-src allows https:. Everything else stays locked down.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:; connect-src 'self' https:; base-uri 'self'; frame-ancestors 'self'
+
+# Vite emits content-hashed filenames under /assets/ — cache forever.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Earth data is versioned by content only implicitly — cache for a day.
+/earth/*
+  Cache-Control: public, max-age=86400

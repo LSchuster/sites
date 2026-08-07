@@ -1,0 +1,25 @@
+{
+  "name": "journey",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "description": "How Far Did This Message Travel? — enter a URL, IP address or raw email headers and watch the estimated route your data takes across the internet on a cinematic 3D globe. Runs entirely in the browser.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "earth": "node tools/build-earth.mjs"
+  },
+  "dependencies": {
+    "three": "^0.172.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.172.0",
+    "topojson-client": "^3.1.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "world-atlas": "^2.0.2"
+  }
+}

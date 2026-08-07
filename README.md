@@ -10,6 +10,7 @@ subdomains are free).
 | conflicts.io — an atlas of human conflict | `sites/conflicts/` | `conflicts.teespoon.io` | pre-launch |
 | invoice — German invoice generator with e-invoice (ZUGFeRD) output | `sites/invoice/` | `invoice.teespoon.io` | in development |
 | dataplant — turn data into a procedurally generated 3D planet | `sites/dataplant/` | `dataplant.teespoon.io` | in development |
+| journey — trace a URL, IP or email's path on a cinematic 3D globe | `sites/journey/` | `journey.teespoon.io` | in development |
 
 ## Structure rules
 
@@ -42,6 +43,6 @@ subdomains are free).
 
 The repository `LICENSE` is **GPL-3.0-or-later**, required by `sites/conflicts/` (it
 redistributes GPL border data — see its README). A site that ships no GPL material may
-carry its own `LICENSE` file inside its folder: `sites/invoice/` and `sites/dataplant/`
-are **MIT** (invoice's fonts are OFL 1.1 under their own notice). Anything without a
-folder-level licence is GPL.
+carry its own `LICENSE` file inside its folder: `sites/invoice/`, `sites/dataplant/` and
+`sites/journey/` are **MIT** (invoice's fonts are OFL 1.1 under their own notice).
+Anything without a folder-level licence is GPL.
