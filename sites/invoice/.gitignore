@@ -3,6 +3,7 @@ dist/
 .DS_Store
 *.local
 .vite/
+.astro/
 tsconfig.tsbuildinfo
 
 # Generated sample invoices (golden inputs in samples/*.json ARE committed)

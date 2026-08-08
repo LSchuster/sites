@@ -2,15 +2,19 @@
 
 Static, client-only German invoice generator ("Rechnung schreiben") producing hybrid
 e-invoices: PDF that is also PDF/A-3 with embedded Factur-X/ZUGFeRD CII XML (EN 16931).
-Vite + React + TypeScript, plain CSS, no server, no runtime API keys, light theme.
-`npm run dev` → http://localhost:5173.
+Astro renders the static shell (landing, SEO content); the React + TypeScript generator
+app mounts client-side into `#root`. Plain CSS, no server, no runtime API keys.
+`npm run dev` → http://localhost:4321.
 
 ## Hard rules
 
 1. **Everything stays client-side.** No fetches to any origin at runtime (the CSP in
    `public/_headers` enforces it — only the Cloudflare analytics beacon is allowed).
    User data lives in `localStorage` only; "your data never leaves your device" is a
-   published promise, not an implementation detail.
+   published promise, not an implementation detail. The CSP is also why
+   `astro.config.mjs` sets `assetsInlineLimit: 0`: `script-src 'self'` forbids inline
+   scripts, so every bundled script must be emitted as an external file (only
+   `public/theme-init.js` runs blocking in `<head>`, as an external classic script).
 2. **All money math is integer cents** (unit prices: integer 1/10000 €). Never use
    floats for amounts. `src/model/compute.ts` → `computeTotals()` is the single source
    of truth feeding BOTH the PDF layout and the CII XML — never compute totals anywhere
@@ -24,19 +28,24 @@ Vite + React + TypeScript, plain CSS, no server, no runtime API keys, light them
    forbids non-embedded fonts — only the subsetted TTFs in `src/assets/fonts/`, never
    the pdf-lib Standard-14 fonts.
 5. **The PDF module stays a lazy chunk** (`import('./pdf/generate')` on download).
-   Landing page uses `system-ui`; no webfont on the first-paint path.
+   Landing page uses `system-ui`; no webfont on the first-paint path. React owns only
+   `#root` — header, hero, SEO sections, footer and theme toggle are static Astro in
+   `src/pages/index.astro` and must keep working before/without the React bundle.
 6. **Licence is MIT (per-site)**; fonts OFL 1.1. Do not add GPL dependencies.
 
 ## Layout
 
+- `src/pages/index.astro` — the one page: shell, landing/SEO content, JSON-LD, and the
+  scripts that wire the theme toggle and mount the React app (`src/main.tsx`)
 - `src/model/` — invoice types, totals, §14 UStG validation, tax cases
 - `src/cii/` — model → EN 16931 CII XML (dependency-free)
 - `src/pdf/` — DIN 5008 Form B layout, PDF/A-3 + Factur-X via @cantoo/pdf-lib (lazy)
 - `src/state/` — hand-rolled useSyncExternalStore store, versioned localStorage envelope
 - `src/i18n/` — UI strings (German), typed catalog; `src/doc-i18n/` — document labels DE/EN
+- `src/styles.css` — design tokens (shared light/dark) + generator app styles;
+  `src/landing.css` — static shell (topbar, hero, bands, footer)
 - `tools/` — font subsetting, golden-sample generator, Mustang validation driver
-- SEO content is static HTML in `index.html` below `#root`; legal pages are static files
-  in `public/` outside the SPA.
+- Legal pages are static files in `public/` outside the app.
 
 ## Before you call it done
 

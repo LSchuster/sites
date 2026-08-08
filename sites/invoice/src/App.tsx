@@ -1,23 +1,18 @@
-import { t } from './i18n';
 import { useAppState } from './state/store';
 import { DownloadPanel } from './ui/DownloadPanel';
-import { Footer } from './ui/Footer';
 import { FormatPicker } from './ui/FormatPicker';
 import { InvoiceForm } from './ui/InvoiceForm';
 import { Preview } from './ui/Preview';
-import { ThemeToggle } from './ui/ThemeToggle';
 
+/**
+ * The generator app. React owns only #root — the page shell around it
+ * (header, hero, SEO sections, footer, theme toggle) is static Astro in
+ * src/pages/index.astro.
+ */
 export function App() {
   const { invoice } = useAppState();
   return (
-    <main className="shell">
-      <header className="masthead">
-        <div className="masthead-row">
-          <h1>{t.appTitle}</h1>
-          <ThemeToggle />
-        </div>
-        <p className="tagline">{t.tagline}</p>
-      </header>
+    <div className="app">
       <FormatPicker invoice={invoice} />
       <div className="workspace">
         <div className="pane-form">
@@ -28,7 +23,6 @@ export function App() {
           <Preview invoice={invoice} />
         </div>
       </div>
-      <Footer />
-    </main>
+    </div>
   );
 }

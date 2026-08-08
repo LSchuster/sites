@@ -1,4 +1,5 @@
 /* Light-first business tool. Design tokens on :root; plain CSS, no framework.
+   These tokens are shared with the static landing shell (src/landing.css).
    Theming: 'system' = no data-theme attribute (prefers-color-scheme decides);
    an explicit user choice sets data-theme="light|dark" (src/theme.ts).
    The dark token block appears twice on purpose — once for the system
@@ -14,13 +15,15 @@
   --ink-faint: #8a9096; /* hints, placeholders */
   --line: #dcdfe2; /* borders, rules */
   --accent: #1f5eff; /* actions, links */
+  --accent-strong: #1748d8; /* hover/active state of accent surfaces */
   --accent-ink: #ffffff;
   --danger: #b3261e;
   --accent-soft: #f4f7ff; /* dropzone hover, subtle accent washes */
   --card-soft: #fafbfc; /* affiliate card background */
   --issue-bg: #fdf3f2; /* validation issue box */
   --issue-border: #efc7c4;
-  --shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 2px 6px rgb(16 24 40 / 0.06);
+  --shadow-lg: 0 12px 32px rgb(16 24 40 / 0.12);
 
   --font-sans:
     system-ui,
@@ -44,6 +47,7 @@
   --ink-faint: #7c838a;
   --line: #34383c;
   --accent: #6b96ff;
+  --accent-strong: #8aabff;
   --accent-ink: #0f1420;
   --danger: #f2726d;
   --accent-soft: #1f2636;
@@ -51,6 +55,7 @@
   --issue-bg: #322220;
   --issue-border: #5c3835;
   --shadow: 0 1px 5px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,6 +69,7 @@
     --ink-faint: #7c838a;
     --line: #34383c;
     --accent: #6b96ff;
+    --accent-strong: #8aabff;
     --accent-ink: #0f1420;
     --danger: #f2726d;
     --accent-soft: #1f2636;
@@ -71,6 +77,7 @@
     --issue-bg: #322220;
     --issue-border: #5c3835;
     --shadow: 0 1px 5px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.55);
   }
 }
 
@@ -89,36 +96,6 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.5;
-}
-
-.shell {
-  max-width: 82rem;
-  margin: 0 auto;
-  padding: 2rem 1rem 3rem;
-}
-
-.masthead-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.masthead h1 {
-  font-size: 1.6rem;
-  margin: 0 0 0.4rem;
-}
-
-.theme-toggle {
-  flex-shrink: 0;
-  white-space: nowrap;
-  margin-top: 0.25rem;
-}
-
-.tagline {
-  color: var(--ink-soft);
-  margin: 0 0 1.8rem;
-  max-width: 52rem;
 }
 
 /* ---- format picker --------------------------------------------------------- */
@@ -665,73 +642,9 @@ button.ghost.tall {
   color: var(--ink-faint);
 }
 
-/* ---- static landing content (index.html, below #root) --------------------------- */
-
-.landing {
-  max-width: 46rem;
-  margin: 3rem auto 0;
-  padding: 0 1rem;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-}
-
-.landing h2 {
-  color: var(--ink);
-  font-size: 1.05rem;
-  margin: 2rem 0 0.5rem;
-}
-
-.landing li {
-  margin-bottom: 0.3rem;
-}
-
-.landing dt {
-  font-weight: 600;
-  color: var(--ink);
-  margin-top: 0.8rem;
-}
-
-.landing dd {
-  margin: 0.15rem 0 0;
-}
-
-.landing-disclaimer {
-  font-size: 0.8rem;
-  color: var(--ink-faint);
-  border-top: 1px solid var(--line);
-  padding-top: 1rem;
-  margin-top: 2rem;
-}
-
-/* ---- site footer ---------------------------------------------------------------- */
-
-.site-footer {
-  margin-top: 2rem;
-  border-top: 1px solid var(--line);
-  padding-top: 1rem;
-  font-size: 0.8rem;
-  color: var(--ink-faint);
-}
-
-.site-footer a {
-  color: var(--ink-soft);
-}
-
 /* ---- small screens ---------------------------------------------------------- */
 
 @media (max-width: 40rem) {
-  .shell {
-    padding: 1.1rem 0.75rem 2rem;
-  }
-
-  .masthead h1 {
-    font-size: 1.25rem;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
   .invoice-form section,
   .download-panel {
     padding: 0.8rem 0.8rem 0.9rem;
