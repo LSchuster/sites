@@ -100,8 +100,11 @@ function buildOcean(): { mesh: THREE.Mesh; material: THREE.ShaderMaterial } {
         vec3 halfway = normalize(lightView + vViewDir);
         float spec = pow(max(dot(vNormal, halfway), 0.0), 42.0) * 0.35 * lit;
 
-        // fresnel rim — the inner edge of the atmosphere
-        float rim = pow(1.0 - max(dot(vNormal, vViewDir), 0.0), 3.2);
+        // fresnel rim — the inner edge of the atmosphere. The base MUST be
+        // clamped: interpolated normals can push dot() past 1.0, and a
+        // negative base with a fractional exponent is NaN — which the bloom
+        // pass smears into flickering black rectangles.
+        float rim = pow(clamp(1.0 - dot(vNormal, vViewDir), 0.0, 1.0), 3.2);
         vec3 rimColor = vec3(0.22, 0.55, 1.0) * rim * 0.9;
 
         gl_FragColor = vec4(base + spec * vec3(0.9, 0.95, 1.0) + rimColor, 1.0);

@@ -73,8 +73,11 @@ export class World {
 
     const size = new THREE.Vector2();
     this.renderer.getSize(size);
+    // 4× MSAA: visually indistinguishable from 8× here, and high sample
+    // counts on multisampled half-float targets are a known source of
+    // transient black-tile artifacts on Windows (ANGLE/D3D) drivers.
     const rt = new THREE.WebGLRenderTarget(size.x, size.y, {
-      samples: 8,
+      samples: 4,
       type: THREE.HalfFloatType,
     });
     this.composer = new EffectComposer(this.renderer, rt);
