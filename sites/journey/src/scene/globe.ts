@@ -157,11 +157,14 @@ function buildLandDots(data: EarthData): { points: THREE.Points; material: THREE
       uniform vec3 uLightDir;
       varying float vRnd;
       varying float vDay;
+      varying float vFacing;
       void main() {
         vec4 mv = modelViewMatrix * vec4(position, 1.0);
         gl_Position = projectionMatrix * mv;
         vRnd = aRnd;
         vDay = smoothstep(-0.3, 0.55, dot(normalize(mat3(modelMatrix) * position), uLightDir));
+        // on the unit sphere the position direction IS the surface normal
+        vFacing = dot(normalize(normalMatrix * position), normalize(-mv.xyz));
         gl_PointSize = (1.85 + aRnd * 1.1) * uPixelRatio * (3.3 / -mv.z);
       }
     `,
@@ -169,9 +172,13 @@ function buildLandDots(data: EarthData): { points: THREE.Points; material: THREE
       uniform float uTime;
       varying float vRnd;
       varying float vDay;
+      varying float vFacing;
       void main() {
         vec2 uv = gl_PointCoord - 0.5;
         float alpha = smoothstep(0.5, 0.18, length(uv));
+        // fade dots toward the silhouette — grazing-angle dots otherwise
+        // pile up into harsh bright specks along the planet's edge
+        alpha *= smoothstep(0.02, 0.22, vFacing);
         // daytime land: cool cyan matrix; night side: dim, except sparse warm
         // "city light" dots that glow and gently flicker
         vec3 dayColor = mix(vec3(0.16, 0.45, 0.72), vec3(0.35, 0.75, 1.0), vRnd);

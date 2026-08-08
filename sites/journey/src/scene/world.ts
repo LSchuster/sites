@@ -8,6 +8,8 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { FXAAShader } from 'three/addons/shaders/FXAAShader.js';
 import type { Hop } from '../net/route';
 import { buildRouteLayer, type RouteLayer } from './arcs';
 import { buildGlobe, type EarthData, type Globe } from './globe';
@@ -37,6 +39,7 @@ export class World {
 
   private globe: Globe | null = null;
   private route: RouteLayer | null = null;
+  private fxaa!: ShaderPass;
   private tween: CameraTween | null = null;
   private frameCallbacks: Array<(time: number, dt: number) => void> = [];
 
@@ -73,17 +76,19 @@ export class World {
 
     const size = new THREE.Vector2();
     this.renderer.getSize(size);
-    // 4× MSAA: visually indistinguishable from 8× here, and high sample
-    // counts on multisampled half-float targets are a known source of
-    // transient black-tile artifacts on Windows (ANGLE/D3D) drivers.
+    // NO MSAA on the composer target: resolving a multisampled half-float
+    // buffer through ANGLE/D3D causes transient black/white tile artifacts
+    // on Windows drivers. Anti-aliasing is done by the FXAA pass instead,
+    // which also softens the bright dot specks at the globe's silhouette.
     const rt = new THREE.WebGLRenderTarget(size.x, size.y, {
-      samples: 4,
       type: THREE.HalfFloatType,
     });
     this.composer = new EffectComposer(this.renderer, rt);
     this.composer.addPass(new RenderPass(this.scene, this.camera));
     this.composer.addPass(new UnrealBloomPass(new THREE.Vector2(size.x, size.y), 0.65, 0.85, 0.68));
     this.composer.addPass(new OutputPass());
+    this.fxaa = new ShaderPass(FXAAShader);
+    this.composer.addPass(this.fxaa); // after OutputPass: FXAA wants LDR input
 
     canvas.addEventListener('pointermove', (e) => this.pick(e, false));
     canvas.addEventListener('click', (e) => this.pick(e, true));
@@ -234,6 +239,8 @@ export class World {
     this.renderer.setSize(w, h, false);
     this.composer.setPixelRatio(pr);
     this.composer.setSize(w, h);
+    const res = this.fxaa.material.uniforms['resolution']!.value as THREE.Vector2;
+    res.set(1 / (w * pr), 1 / (h * pr));
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
   }
